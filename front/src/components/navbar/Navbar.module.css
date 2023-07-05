@@ -1,0 +1,36 @@
+.navbar {
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  box-shadow: 0 0.5px 10px black;
+
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+  width: 90%;
+}
+.imgContainer {
+  width: 50%;
+}
+.imgContainer img {
+  width: 100%;
+}
+.contenedorLupa {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+.iconLupa {
+  color: #fff;
+}

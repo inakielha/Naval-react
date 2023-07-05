@@ -1,0 +1,128 @@
+footer {
+  /* margin-top: 1em; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 2px grey;
+  padding: 1em 0;
+}
+
+.footerContainer { 
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  align-items: stretch;
+  /* align-items: start; */
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+footer .text {
+  color: #DF0404;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.info p:nth-child(2) {
+  color: #000000;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: 500;
+  font-size: 0.8rem;
+  
+}
+
+.info p:nth-child(3) {
+  color: #000000;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.numero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.numero span {
+  width: 100%;
+  color: #000000;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: 500;
+  font-size: 0.8rem;
+
+}
+
+.wspContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 10%;
+}
+
+.wspContainer img {
+  width: 100%;
+}
+
+.redes {
+  /* width: 100%; */
+  display: flex;
+
+  flex-direction: column;
+  gap: 0.3em;
+  justify-content: start;
+  align-items: start;
+}
+
+.redesContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.redesContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.5px solid #edf0f2;
+  box-shadow: 0px 0px 5px #6e6e6e;
+  cursor: pointer;
+  width: 11vw;
+  height: 11vw;
+}
+.redesContainer div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redesContainer img {
+  width: 80%;
+}
+
+.redesContainer div:hover {
+  box-shadow: 0px 0px 10px #6e6e6e;
+}
+
+.redes .text {
+  display: none;
+}
+
+/* MOBIULe */
+
+
+
