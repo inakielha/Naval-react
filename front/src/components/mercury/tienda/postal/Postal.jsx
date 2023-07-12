@@ -15,7 +15,6 @@ export default function Postal() {
       <div className={s.imgContainer}>
         <img src={img} alt="barco" />
       </div>
-      {/* <div className={s.imgContainer}><img src={""} alt="barco" /></div> */}
       <div className={s.absolute}>
         <div className={s.titles}>
           <h3>Bienvenidos a la tienda Mercury</h3>

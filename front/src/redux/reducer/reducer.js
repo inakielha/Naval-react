@@ -2,7 +2,7 @@ import { createReducer } from '@reduxjs/toolkit'
 import { ALL_PROJECTS, COMMUNITY, FLOOR_PRICE, HYPE, MARKET_CAP, SUPPLY, UPCOMING_PROJECTS, CATEGORY } from '../actions/actions'
 
 const initialState = {
-    category: "Repuestos y Accesorios",
+    category: "repuestos y accesorios",
 }
 
 export const clientReducer = createReducer(initialState, (callback) => {

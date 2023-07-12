@@ -16,10 +16,15 @@
   width: 90%;
 }
 .imgContainer {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .imgContainer img {
-  width: 100%;
+  /* width: 50%; */
+  max-width: 60%;
+  object-fit: cover;
 }
 .contenedorLupa {
   background-color: black;

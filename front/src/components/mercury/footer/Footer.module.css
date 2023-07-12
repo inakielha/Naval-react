@@ -29,23 +29,23 @@ footer {
 footer .text {
   color: #DF0404;
   font-family: "Segoe UI", "Open Sans";
-  font-weight: bold;
-  font-size: 0.8rem;
+  font-weight: regular;
+  font-size: 1.313rem;
 }
 
 .info p:nth-child(2) {
   color: #000000;
   font-family: "Segoe UI", "Open Sans";
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1.125rem;
+  font-weight: bold;
   
 }
 
 .info p:nth-child(3) {
   color: #000000;
   font-family: "Segoe UI", "Open Sans";
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
 
 .numero {
@@ -59,8 +59,8 @@ footer .text {
   width: 100%;
   color: #000000;
   font-family: "Segoe UI", "Open Sans";
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-weight: bold;
+  font-size: 1.125rem;
 
 }
 

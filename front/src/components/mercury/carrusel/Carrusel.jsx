@@ -10,9 +10,9 @@ export default function Carrusel() {
   const [category, setCategory] = useState("Repuestos y Accesorios");
   const dispatch = useDispatch();
   const handleCategory = (e) => {
-    console.log(e.target.innerText);
-    setCategory(e.target.innerText);
-    dispatch(CATEGORY(e.target.innerText));
+    let category = e.target.innerText.toLowerCase()
+    setCategory(category);
+    dispatch(CATEGORY(category));
   };
   const settings = {
     // dots: true,
@@ -36,7 +36,7 @@ export default function Carrusel() {
             <div
               className={s.borde}
               style={
-                category === "Motores" ? {
+                category === "motores" ? {
                   backgroundColor: "#DF0404",
                   color: "#fff",
                 } : {}
@@ -52,7 +52,7 @@ export default function Carrusel() {
             <div
               className={s.borde}
               style={
-                category === "Sist. Integral de Propulsión" ? {
+                category === "sist. integral de propulsión" ? {
                   backgroundColor: "#DF0404",
                   color: "#fff",
                 } : {}
@@ -67,7 +67,7 @@ export default function Carrusel() {
           >
             <div
               style={
-                category === "Repuestos y Accesorios" ? {
+                category === "repuestos y accesorios" ? {
                   backgroundColor: "#DF0404",
                   color: "#fff",
                 } : {}
@@ -84,7 +84,7 @@ export default function Carrusel() {
             <div
               className={s.borde}
               style={
-                category === "Concesionarios y Servicios" ? {
+                category === "concesionarios y servicios" ? {
                   backgroundColor: "#DF0404",
                   color: "#fff",
                 } : {}
@@ -100,7 +100,7 @@ export default function Carrusel() {
             <div
               className={s.borde}
               style={
-                category === "Contacto" ? {
+                category === "contacto" ? {
                   backgroundColor: "#DF0404",
                   color: "#fff",
                 } : {}

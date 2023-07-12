@@ -41,25 +41,25 @@ export default function Productos() {
                 <img src={img2} alt="promo" />
               </div>
               <span>4 Tiempos</span>
-            </div>{" "}
+            </div>
             <div className={s.borde}>
               <div className={s.imgContainer}>
                 <img src={img3} alt="promo" />
               </div>
               <span>Lubricantes</span>
-            </div>{" "}
+            </div>
             <div className={s.borde}>
               <div className={s.imgContainer}>
                 <img src={img4} alt="promo" />
               </div>
               <span>Lubricantes</span>
-            </div>{" "}
+            </div>
             <div className={s.borde}>
               <div className={s.imgContainer}>
                 <img src={img1} alt="promo" />
               </div>
               <span>2 Tiempos</span>
-            </div>{" "}
+            </div>
             <div className={s.borde}>
               <div className={s.imgContainer}>
                 <img src={img2} alt="promo" />

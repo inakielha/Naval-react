@@ -2,7 +2,10 @@ import s from "./header.module.css";
 import { HiOutlineArrowSmallLeft, HiOutlineArrowLeft, HiChevronLeft } from "react-icons/hi";
 import { IconContext } from "react-icons";
 // import logo from "../../../assets/mercury.svg"
-import logo from "../../../assets/logo-naval.png"
+// import logo from "../../../assets/logo-naval.png"
+import mercury from "../../../assets/Logos Mercury blanco.png"
+
+
 
 export default function Header() {
   return (
@@ -15,8 +18,8 @@ export default function Header() {
 
           <span>Home</span>
         </div>
-        <div className={s.imgContainer}><img src={logo} alt="logo" /></div>
-        <div>ss</div>
+        <div className={s.imgContainer}><img src={mercury} alt="logo" /></div>
+        <span>ss</span>
       </div>
     </div>
   );
