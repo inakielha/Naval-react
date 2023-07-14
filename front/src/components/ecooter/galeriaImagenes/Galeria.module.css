@@ -1,0 +1,30 @@
+.section {
+    background-color: #000000;
+    padding-bottom: 3em;
+}
+ div {
+    outline: none;
+}
+.section h3 {
+    padding: 1.5em 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #6EC1E4;
+    font-weight: bold;
+    font-size: 0.632rem;
+}
+.slider {
+    width: 100%;
+    /* height: 0%; */
+    /* background-color: blue; */
+}
+.slide {
+    /* height: 90%; */
+    /* background-color: red; */
+    width: 100%;
+}
+.slide img {
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+}
