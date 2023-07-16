@@ -123,9 +123,9 @@
   align-items: center;
   justify-content: center;
   /* justify-content: center; */
-  gap: 2em;
+  /* gap: 2em; */
   /* gap: 3em; */
-  width: 50%;
+  width: 70%;
   /* background-color: orange; */
 }
 .columnAlign {
@@ -134,5 +134,9 @@
   justify-content: flex-start;
   gap: 2em;
   /* background-color: gray; */
-  width: 70%;
+  width: 100%;
+}
+.infoCont {
+  width: 100%;
+  /* background-color: red; */
 }

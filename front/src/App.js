@@ -5,6 +5,7 @@ import Footer from './components/mercury/footer/Footer';
 import { useEffect, useState } from 'react';
 import NavbarWeb from './components/navbar/navbarWeb/NavbarWeb';
 import Ecooter from './components/ecooter/Ecooter';
+import NavbarEcooter from './components/ecooter/navbarEcooter/NavbarEcooter';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
    <Routes>
     {/* <Route path='/' element={<Navbar/>}/> */}
     {/* <Route path='/' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Mercury isMobile={isMobile} /> <Footer/></>}/> */}
-    <Route path='/' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Ecooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
+    {/* <Route path='/' element={<>{isMobile ? <NavbarEcooter/> : <NavbarEcooter/>} <Ecooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/> */}
    </Routes>
    </>
   );
