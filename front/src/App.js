@@ -26,8 +26,8 @@ function App() {
    <>
    <Routes>
     {/* <Route path='/' element={<Navbar/>}/> */}
-    <Route path='/' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Mercury isMobile={isMobile} /> <Footer/></>}/>
-    <Route path='/ecooter' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Ecooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
+    {/* <Route path='/' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Mercury isMobile={isMobile} /> <Footer/></>}/> */}
+    <Route path='/' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Ecooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
    </Routes>
    </>
   );
