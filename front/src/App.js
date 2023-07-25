@@ -11,6 +11,7 @@ import NavMobileEcooter from './components/ecooter/navbarEcooter/NavbarMobile/Na
 
 
 function App() {
+  console.log("")
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
