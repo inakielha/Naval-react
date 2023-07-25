@@ -1,5 +1,5 @@
-import img from "../../../assets/ecooter/portada.png";
-import imgAbs from "../../../assets/ecooter/abs.jpg";
+import img from "../../../../assets/ecooter/portada.png";
+import imgAbs from "../../../../assets/ecooter/abs.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 

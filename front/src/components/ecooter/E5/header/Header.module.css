@@ -1,0 +1,130 @@
+.section {
+  padding: 0;
+  /* width: 100vw; */
+  /* background-color: aqua; */
+  position: relative;
+}
+
+.imgContainer {
+  width: 100%;
+}
+.imgContainer img {
+  object-fit: cover;
+  /* background-color: aqua; */
+  /* border: 5px solid black; */
+  width: 100%;
+}
+.absolute {
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: violet; */
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+.textCont {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.number {
+  font-size: 2.447rem;
+}
+.texto {
+  font-size: 0.632rem;
+  padding-left: 0.5em;
+}
+.titContainer {
+  display: flex;
+}
+.ltres {
+  align-self: flex-start;
+  text-align: end;
+  line-height: 1em;
+  font-weight: 500;
+  font-size: 1.921rem;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo p {
+  font-size: 9.237rem;
+  padding: 0;
+  margin: 0;
+  text-align: end;
+  line-height: 1em;
+  font-weight: bold;
+}
+.titulo span {
+  font-size: 0.632rem;
+  font-weight: bold;
+  background-color: #6ec1e4;
+  text-align: center;
+  width: 90%;
+  width: 14em;
+  padding: 1em 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: 30vh;
+  }
+  .absolute {
+    flex-direction: column-reverse;
+    /* background-color: #6ec1e4; */
+    /* align-items: flex-start; */
+    /* background-color: green; */
+    height: 90%;
+  }
+  .titulo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .titulo p {
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+    font-size: 7.5rem;
+    text-align: center;
+    line-height: 1;
+  }
+  .titulo span {
+    display: none;
+    /* font-size: ; */
+  }
+
+  .info {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* justify-self: start; */
+  }
+  .number {
+    font-size: 2rem;
+  }
+  .texto {
+    font-size: 0.5rem;
+  }
+  .imgContainer {
+    height: 100%;
+    width: 100%;
+  }
+  .imgContainer img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -5,7 +5,7 @@ import ImagenMobile from "./imagenMobile/ImagenMobile"
 import Mandos from "./mandos/Mandos"
 
 
-export default function Ecooter () {
+export default function EcooterE3 () {
     return (
         <>
             <HeaderEcooter/>

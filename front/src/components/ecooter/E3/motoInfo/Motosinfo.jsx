@@ -2,13 +2,13 @@ import s from "./Motosinfo.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../assets/ecooter/Carrusel1.jpg";
-import img2 from "../../../assets/ecooter/Carrusel2.jpg";
-import img3 from "../../../assets/ecooter/Carrusel3.jpg";
-import img4 from "../../../assets/ecooter/Carrusel4.jpg";
-import img5 from "../../../assets/ecooter/Carrusel5.jpg";
-import img6 from "../../../assets/ecooter/carrusel6.jpg";
-import img7 from "../../../assets/ecooter/carrusel7.jpg";
+import img1 from "../../../../assets/ecooter/Carrusel1.jpg";
+import img2 from "../../../../assets/ecooter/Carrusel2.jpg";
+import img3 from "../../../../assets/ecooter/Carrusel3.jpg";
+import img4 from "../../../../assets/ecooter/Carrusel4.jpg";
+import img5 from "../../../../assets/ecooter/Carrusel5.jpg";
+import img6 from "../../../../assets/ecooter/carrusel6.jpg";
+import img7 from "../../../../assets/ecooter/carrusel7.jpg";
 
 export default function MotosInfo() {
   const settings = {
@@ -97,19 +97,6 @@ export default function MotosInfo() {
               <h5>Basculante de aluminio</h5>
               <ul>
                 <li>Basculante de doble brazo más ligero con una mayor durabilidad y sostenibilidad.</li>
-              </ul>
-            </div>
-          </div>
-          <div className={s.slide}>
-            <div>
-              <img src={img7} alt="test" />
-            </div>
-            <div className={s.texto}>
-              <h5>TEST</h5>
-              <ul>
-                <li>habia una vez un perro</li>
-                <li>habia una vez un perro</li>
-                <li>habia una vez un perro</li>
               </ul>
             </div>
           </div>

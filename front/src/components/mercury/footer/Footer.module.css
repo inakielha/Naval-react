@@ -149,8 +149,12 @@ footer .text {
     justify-content: space-between;
   }
 
-  .redes .text {
+  .redes p {
     display: none;
+    background-color: #DF0404;
+  }
+  footer .text {
+    font-size: 1.31rem;
   }
   .redesContainer div {
     width: 11vw;
@@ -158,14 +162,14 @@ footer .text {
   }
 
   .numero span {
-    font-size: 0.8rem;
+    font-size: 1.125rem;
   }
   .info p:nth-child(2) {
-    font-size: 0.8rem;
+    font-size: 1.125rem;
   }
 
   .info p:nth-child(3) {
-    font-size: 0.8rem;
+    font-size: 1.125rem;
   }
 
 }

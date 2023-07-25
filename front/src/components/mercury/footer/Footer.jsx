@@ -40,22 +40,22 @@ export default function Footer({color}) {
                 <BsYoutube size={"2.5em"} color={"#707070"}/>
               </a>
             </div>
-            <div>
+            {/* <div>
               <a
                 href="https://www.ambito.com/contenidos/mercados.html"
                 target="_blank"
               >
                 <BsCurrencyDollar size={"2.5em"} color={"#707070"}/>
               </a>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <a
                 href="https://www.linkedin.com/company/naval-motor/mycompany/"
                 target="_blank"
               >
                 <BsLinkedin size={"2.5em"} color={"#707070"}/>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

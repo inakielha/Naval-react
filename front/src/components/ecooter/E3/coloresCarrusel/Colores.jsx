@@ -2,11 +2,11 @@ import s from "./Colores.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../assets/ecooter/foto1.jpg";
-import img2 from "../../../assets/ecooter/foto2.jpg";
-import img3 from "../../../assets/ecooter/foto3.jpg";
-import img4 from "../../../assets/ecooter/foto4.jpg";
-import img5 from "../../../assets/ecooter/foto5.jpg";
+import img1 from "../../../../assets/ecooter/foto1.jpg";
+import img2 from "../../../../assets/ecooter/foto2.jpg";
+import img3 from "../../../../assets/ecooter/foto3.jpg";
+import img4 from "../../../../assets/ecooter/foto4.jpg";
+import img5 from "../../../../assets/ecooter/foto5.jpg";
 
 export default function Colores() {
   const settings = {

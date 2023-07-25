@@ -1,10 +1,10 @@
 import s from "./Mandos.module.css";
-import img from "../../../assets/ecooter/Enmascarar grupo 454.jpg";
-import imgPanel from "../../../assets/ecooter/panel.jpg";
-import imgControl from "../../../assets/ecooter/CONTROL TOTAL.jpg";
-import imgMobil from "../../../assets/ecooter/app.jpg";
-import imgLlave from "../../../assets/ecooter/Arranque sin llave.jpg";
-import video from "../../../assets/ecooter/video.mp4";
+import img from "../../../../assets/ecooter/Enmascarar grupo 454.jpg";
+import imgPanel from "../../../../assets/ecooter/panel.jpg";
+import imgControl from "../../../../assets/ecooter/CONTROL TOTAL.jpg";
+import imgMobil from "../../../../assets/ecooter/app.jpg";
+import imgLlave from "../../../../assets/ecooter/Arranque sin llave.jpg";
+import video from "../../../../assets/ecooter/video.mp4";
 export default function Mandos() {
   return (
     <>

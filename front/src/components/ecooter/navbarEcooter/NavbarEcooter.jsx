@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CATEGORY } from "../../../redux/actions/actions";
 
-export default function NavbarEcooter() {
+export default function NavbarEcooter({isMobile}) {
   const [category, setCategory] = useState("repuestos y accesorios");
   const dispatch = useDispatch();
   const handleCategory = (e) => {
