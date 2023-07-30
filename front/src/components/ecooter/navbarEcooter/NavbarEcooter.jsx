@@ -53,14 +53,14 @@ export default function NavbarEcooter({isMobile}) {
             <span
               onClick={(e) => handleCategory(e)}
               style={
-                category === "motores"
+                category === "modelos"
                 ? {
                   color: "#6EC1E4",
                 }
                 : {}
               }
               >
-              Motores
+              Modelos
             </span>
             <span
               onClick={(e) => handleCategory(e)}

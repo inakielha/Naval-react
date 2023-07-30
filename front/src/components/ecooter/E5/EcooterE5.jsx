@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import Colores from "./coloresCarrusel/Colores"
-import Test from "./coloresCarrusel/test"
 import Galeria from "./galeriaImagenes/Galeria"
 import HeaderEcooter from "./header/HeaderEcoter"
 import ImagenMobile from "./imagenMobile/ImagenMobile"
@@ -15,7 +14,6 @@ export default function Ecooter ({isMobile}) {
             <ImagenMobile/>
             <Galeria/>
             <Colores/>
-            {/* <Test/> */}
         </>
     )
 }

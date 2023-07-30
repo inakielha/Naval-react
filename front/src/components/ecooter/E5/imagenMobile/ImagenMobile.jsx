@@ -10,8 +10,17 @@ import { AiOutlineColumnHeight } from "react-icons/ai";
 import { GiWeight, GiFlatTire, GiBattery75, GiBreakingChain, GiCompactDisc, GiCrackedDisc } from "react-icons/gi";
 import { PiEngineLight, PiMonitorLight} from "react-icons/pi";
 import { FaStumbleupon} from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 export default function ImagenMobile() {
+  const Color = useSelector((state)=> state.clientReducer.backgroundColor)
+
+  // const closeDialog = (e)=>{
+  //   if (e.target.id === "close"){
+  //     setImagen({ok: false, src:""})
+  //     dispatch(BLACK_BACKGROUND("neutral"))
+  //   }
+  // }
   return (
     <>
       <div className={s.section}>
@@ -49,7 +58,9 @@ export default function ImagenMobile() {
         </div>
       </div>
       {/* -------------------------------------------------------------------- */}
-      <div className={s.caracter}>
+      {/* style={Color === "black" ? {backgroundColor:"#000000a3"} : "" */}
+      <div className={s.caracter} >
+        {Color === "black" && <div id="close" className={s.filtro}></div>}
         <h3>caracterísitcas</h3>
         <div className={s.grid}>
           <div className={s.column}>

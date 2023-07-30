@@ -21,8 +21,8 @@ export const UPCOMING_PROJECTS = createAsyncThunk(
     }
 )
 
-export const HYPE = createAsyncThunk(
-    'HYPE', (type) => {
+export const BLACK_BACKGROUND = createAsyncThunk(
+    'BLACK_BACKGROUND', (type) => {
         return type
     }
 )

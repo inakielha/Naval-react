@@ -1,4 +1,5 @@
 .section {
+    position: relative;
     background-color: #000000;
     padding-bottom: 3em;
 }
@@ -6,7 +7,13 @@
     outline: none;
 }
 
-
+.filtro {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a3;
+}
 .container {
     position: relative;
 }
@@ -43,7 +50,6 @@
 .slider {
     width: 100%;
     /* height: 0%; */
-    /* background-color: blue; */
 }
 .slide {
     /* height: 90%; */

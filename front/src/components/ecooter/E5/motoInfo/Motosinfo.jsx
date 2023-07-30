@@ -13,17 +13,17 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import { useRef } from "react";
 
 
-export default function MotosInfo({isMobile}) {
+export default function MotosInfo({ isMobile }) {
   const sliderRef = useRef(null);
   let itemsShowCarrusel = 0
-  isMobile ? itemsShowCarrusel = 2.9 : itemsShowCarrusel = 4
+  isMobile ? itemsShowCarrusel = 3 : itemsShowCarrusel = 4
   const settings = {
     // dots: true,
     infinite: true,
     speed: 1000,
     arrows: false,
     slidesToShow: itemsShowCarrusel,
-    autoplay: true,
+    // autoplay: true,
     slidesToScroll: 1,
     adaptiveHeight: true,
   };
@@ -51,10 +51,23 @@ export default function MotosInfo({isMobile}) {
             <div className={s.texto}>
               <h5>ABS Delantero y trasero</h5>
               <ul>
-                <li>Dificulta la pérdida de control.</li>
-                <li>Distancia de frenada más corta.</li>
-                <li>Capacidad de maniobra durante la frenada.</li>
-                <li>Menor probabilidad de tener un accidente.</li>
+                <li><span>
+                  Dificulta la pérdida de control.
+                </span>
+                </li>
+                <li><span>
+
+                  Distancia de frenada más corta.
+                </span>
+                </li>
+                <li><span>
+                  Capacidad de maniobra durante la frenada.
+                </span>
+                </li>
+                <li><span>
+                  Menor probabilidad de tener un accidente.
+                </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -66,8 +79,11 @@ export default function MotosInfo({isMobile}) {
               <h5>Ruedas de gran diámetro</h5>
               <ul>
                 <li>
-                  Una rueda delantera más grande de 14 pulgadas para una
-                  estabilidad sin precedentes y una trasera de 13 pulgadas.{" "}
+                  <span>
+                    Una rueda delantera más grande de 14 pulgadas para una
+                    estabilidad sin precedentes y una trasera de 13 pulgadas.
+
+                  </span>
                 </li>
               </ul>
             </div>
@@ -79,10 +95,22 @@ export default function MotosInfo({isMobile}) {
             <div className={s.texto}>
               <h5>TESTEADO CON 3 MILLONES DE VIBRACIONES</h5>
               <ul>
-                <li>Estructura de jaula.</li>
-                <li>Diseño superligero.</li>
-                <li>Alta rigidez.</li>
-                <li>Carga de 300 Kg.</li>
+                <li><span>
+                  Estructura de jaula.
+                </span>
+                </li>
+                <li><span>
+                  Diseño superligero.
+                </span>
+                </li>
+                <li><span>
+                  Alta rigidez.
+                </span>
+                </li>
+                <li><span>
+                  Carga de 300 Kg.
+                </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -93,7 +121,10 @@ export default function MotosInfo({isMobile}) {
             <div className={s.texto}>
               <h5>Transmisión por cadena sellada</h5>
               <ul>
-                <li>Debido a la gran potencia del motor, el sistema de cadena es el más adecuado para garantizar un funcionamiento perfecto.</li>
+                <li><span>
+                  Debido a la gran potencia del motor, el sistema de cadena es el más adecuado para garantizar un funcionamiento perfecto.
+                </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -104,7 +135,11 @@ export default function MotosInfo({isMobile}) {
             <div className={s.texto}>
               <h5>baúl para el casco</h5>
               <ul>
-                <li>Con las baterías en posición central se consigue un reparto de masas perfecto y hueco para el casco debajo del asiento. </li>
+                <li><span>
+
+                  Con las baterías en posición central se consigue un reparto de masas perfecto y hueco para el casco debajo del asiento.
+                </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -115,7 +150,11 @@ export default function MotosInfo({isMobile}) {
             <div className={s.texto}>
               <h5>Basculante de aluminio</h5>
               <ul>
-                <li>Basculante de doble brazo más ligero con una mayor durabilidad y sostenibilidad.</li>
+                <li><span>
+
+                  Basculante de doble brazo más ligero con una mayor durabilidad y sostenibilidad.
+                </span>
+                </li>
               </ul>
             </div>
           </div>

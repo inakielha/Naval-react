@@ -13,7 +13,7 @@ import { useState } from "react";
 
 
 export default function NavMobileEcooter() {
-  const [category, setCategory] = useState("motores");
+  const [category, setCategory] = useState("modelos");
   const dispatch = useDispatch();
   const handleCategory = (e) => {
     let category = e.target.innerText.toLowerCase();
@@ -54,13 +54,13 @@ export default function NavMobileEcooter() {
       </div>
       <div className={s.btnContainer}>
         <button onClick={(e) => handleCategory(e) } style={
-                category === "motores"
+                category === "modelos"
                   ? {
                     color: "white",
                     backgroundColor: "#000000"
                   }
                   : {}
-              }>Motores</button>
+              }>Modelos</button>
         <button onClick={(e) => handleCategory(e) } style={
                 category === "contacto"
                   ? {

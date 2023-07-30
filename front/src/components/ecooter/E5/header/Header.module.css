@@ -76,10 +76,13 @@
   width: 14em;
   padding: 1em 0;
 }
+.descargarFicha {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .section {
-    height: 30vh;
+    height: 40vh;
   }
   .absolute {
     flex-direction: column-reverse;
@@ -113,11 +116,33 @@
     justify-content: space-around;
     /* justify-self: start; */
   }
+  .textCont {
+    text-align: center;
+  }
   .number {
     font-size: 2rem;
   }
   .texto {
     font-size: 0.5rem;
+  }
+  .descargarFicha {
+    width: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .descargarFicha span {
+    font-size: 0.5rem;
+    font-weight: bold;
+    background-color: #6ec1e4;
+    text-align: center;
+    width: 30%;
+    padding: 0.5em 0;
+  }
+
+  .sectionTwo {
+    height: 30vh;
   }
   .imgContainer {
     height: 100%;

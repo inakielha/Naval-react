@@ -3,7 +3,7 @@ import imgAbs from "../../../../assets/ecooter/abs.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 
-export default function HeaderEcooter({isMobile}) {
+export default function HeaderEcooter({ isMobile }) {
   return (
     <>
       <div className={s.section}>
@@ -11,6 +11,9 @@ export default function HeaderEcooter({isMobile}) {
           <img src={img} alt="portada" />
         </div>
         <div className={s.absolute}>
+          <div className={s.descargarFicha}>
+            <span>DESCARGAR FICHA</span>
+          </div>
           <div className={s.info}>
             <div className={s.textCont}>
               <span className={s.number}>8000</span>
@@ -26,20 +29,20 @@ export default function HeaderEcooter({isMobile}) {
             </div>
           </div>
           <div className={s.titContainer}>
-          <div className={s.titulo}>
-            <p>E5</p>
-            <span>DESCARGAR FICHA</span>
-          </div>
-          <p className={s.ltres}>L3</p>
+            <div className={s.titulo}>
+              <p>E5</p>
+              <span>DESCARGAR FICHA</span>
+            </div>
+            <p className={s.ltres}>L3</p>
           </div>
         </div>
       </div>
-      <div>
+      <div className={s.sectionTwo}>
         <div className={s.imgContainer}>
           <img src={imgAbs} alt="abs" />
         </div>
-      </div> 
-      <MotosInfo isMobile={isMobile}/>
+      </div>
+      <MotosInfo isMobile={isMobile} />
     </>
   );
 }
