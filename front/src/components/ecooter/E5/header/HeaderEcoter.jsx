@@ -1,14 +1,17 @@
 import img from "../../../../assets/ecooter/portada.png";
+import imgMobile from "../../../../assets/ecooter/portadamodificada.jpg";
 import imgAbs from "../../../../assets/ecooter/abs.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
+
 
 export default function HeaderEcooter({ isMobile }) {
   return (
     <>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={img} alt="portada" />
+          <img src={isMobile ? imgMobile : img} alt="portada" />
+          {/* <img src={img} alt="portada" /> */}
         </div>
         <div className={s.absolute}>
           <div className={s.descargarFicha}>
@@ -36,6 +39,7 @@ export default function HeaderEcooter({ isMobile }) {
             <p className={s.ltres}>L3</p>
           </div>
         </div>
+        <div className={s.filtro}></div>
       </div>
       <div className={s.sectionTwo}>
         <div className={s.imgContainer}>

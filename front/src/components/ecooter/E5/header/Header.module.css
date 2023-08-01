@@ -80,15 +80,17 @@
   display: none;
 }
 
+.filtro {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .section {
     height: 40vh;
   }
   .absolute {
     flex-direction: column-reverse;
-    /* background-color: #6ec1e4; */
-    /* align-items: flex-start; */
-    /* background-color: green; */
+    z-index: 3;
     height: 90%;
   }
   .titulo {
@@ -109,25 +111,31 @@
     /* font-size: ; */
   }
 
+  .titContainer {
+    /* background-color: orange; */
+    height: 100%;
+  }
   .info {
-    /* background-color: red; */
+    align-self: flex-start;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 1em;
     /* justify-self: start; */
   }
   .textCont {
     text-align: center;
+    width: 100%;
   }
   .number {
     font-size: 2rem;
   }
   .texto {
     font-size: 0.5rem;
+    padding: 0;
   }
   .descargarFicha {
     width: 100%;
-    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,5 +159,14 @@
   .imgContainer img {
     height: 100%;
     object-fit: cover;
+  }
+  .filtro {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(#00000000, #000000);    
+    z-index: 2;
+    height: 5vh;
   }
 }

@@ -4,7 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
-    width: 50%;
+    width: 60%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -20,11 +20,11 @@
     object-fit: cover;
     width: 100%;
 }
+
 .close {
-    width: 15%;
+    padding-left: 1em;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -35,7 +35,22 @@
 @media (max-width: 768px) {
     .icon {
         font-size: 1em;
-        padding-left: 1em;
+    }
+
+    .imgDialog {
+        width: 75%;
+        flex-direction: column-reverse;
+    }
+
+    .close {
+        padding-left: 0;
+        width: 100%;
+        padding-bottom: 1em;
+        justify-content: flex-end;
+    }
+
+    .imgContainer {
+        width: 100%;
     }
 
 }

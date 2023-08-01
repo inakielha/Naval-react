@@ -21,6 +21,7 @@ div {
 
 .containerColores {
     position: relative;
+    width: 100%;
 }
 
 .absolute {
@@ -28,7 +29,6 @@ div {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: red; */
     z-index: 2;
     /* transform: translate(-50%, -50%); */
 }
@@ -55,33 +55,66 @@ div {
 }
 
 .slider {
-    padding-bottom: 3em;
+    /* padding-bottom: 3em; */
     width: 100%;
-    padding-left: 1em;
+    /* padding-left: 1em; */
     /* background-color: orange; */
+    /* height: 15vh; */
+    /* display: grid;
+    justify-content: center;
+    align-items: center; */
 }
+.test {
+    width: 100%;
 
+}
 .slide {
     width: 100%;
-    height: 100%;
-    /* height: 500px; */
+    margin-top: 8em;
+    /* background-color: red; */
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+.leftSlide{
+    width: 100%;
+    margin-top: 8em;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.rightSlide{
+    width: 100%;
+    margin-top: 8em;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
     justify-content: flex-end;
+}
+.rightSlide img {
+    opacity: 0.3;
+    width: 60%;
+    /* background-color: violet; */
+}
+.leftSlide img {
+    opacity: 0.3;
+    width: 60%;
+    /* background-color: violet; */
 }
 
 .slide img {
     opacity: 0.3;
-    width: 90%;
-    background-color: aquamarine;
-    max-width: 100%;
-    max-height: 100%;
+    width: 60%;
+    /* background-color: violet; */
 }
 
 .red {
-    background-color: red;
+    padding: 5em 0;
     width: 100%;
-    transform: scale(1.2);
+    transform: scale(1.6);
 }
 
 .red img {
@@ -109,13 +142,17 @@ div {
 }
 
 @media (max-width: 768px) {
-    .absolute {
+    /* .absolute {
         top: 30%;
+    } */
+    .test {
+        width: 100%;
+        /* background-color: red; */
     }
 
-    .absoluteR {
+    /* .absoluteR {
         top: 30%;
-    }
+    } */
 
     .flecha {
         font-size: 2em;
@@ -123,5 +160,15 @@ div {
 
     .btnCont button {
         width: 40%;
+    }
+
+    .slide {
+        margin-top: 6em;
+    }
+    .leftSlide{
+        margin-top: 6em;
+    }
+    .rightSlide{
+        margin-top: 6em;
     }
 }

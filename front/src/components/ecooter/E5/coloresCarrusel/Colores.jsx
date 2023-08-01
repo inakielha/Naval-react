@@ -8,7 +8,7 @@ import img2 from "../../../../assets/ecooter/gris.jpg";
 import img3 from "../../../../assets/ecooter/negro.jpg";
 import img4 from "../../../../assets/ecooter/rojo.jpg";
 import img5 from "../../../../assets/ecooter/blanco.jpg";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ImgOpenColors from "./imgOpenColors";
 
@@ -29,7 +29,7 @@ export default function Colores() {
       setDesplazamiento("atras")
     }
   };
-  
+
   const handlePrevSlide = () => {
     if (sliderRef.current) {
       // setCurrentSlide((prev)=> prev === 4 ? prev = 0 : parseInt(prev) + 1)
@@ -42,6 +42,22 @@ export default function Colores() {
     console.log(e.target.id)
     setCurrentSlide(parseInt(e.target.id))
   }
+  const defineClass = (index) => {
+    if (currentSlide == index) {
+      // console.log({index: currentSlide})
+      return s.red
+    } else if (currentSlide == index + 1 || currentSlide == 0 && index == 4) {
+      // console.log({index: currentSlide}, "left")
+
+      return s.leftSlide
+    } else if (currentSlide == index - 1 || currentSlide == 4 && index == 0) {
+      // console.log({index: currentSlide}, "right")
+      return s.rightSlide
+    } else {
+      // console.log({index: currentSlide}, "nadaaa")
+      return s.slide
+    }
+  }
 
   const settings = {
     // dots: true,
@@ -51,20 +67,19 @@ export default function Colores() {
     slidesToShow: 3,
     autoplay: false,
     slidesToScroll: 1,
-    // adaptiveHeight: true,
     beforeChange: (current) => {
-      if(desplazamiento === "atras") {
-      setCurrentSlide((prev)=> prev === 0 ? prev = 4 : parseInt(prev) - 1)
+      if (desplazamiento === "atras") {
+        setCurrentSlide((prev) => prev === 0 ? prev = 4 : parseInt(prev) - 1)
 
       } else {
-        setCurrentSlide((prev)=> prev === 4 ? prev = 0 : parseInt(prev) + 1)
+        setCurrentSlide((prev) => prev === 4 ? prev = 0 : parseInt(prev) + 1)
 
 
       }
     },
   };
 
-  let style = {backgroundColor: "red"}
+  let style = { backgroundColor: "red" }
 
   return (
     <div className={s.section}>
@@ -75,20 +90,35 @@ export default function Colores() {
         <div className={s.absolute} onClick={() => handleNextSlide()}><IoIosArrowBack className={s.flecha} color="#6EC1E4" /></div>
         <div className={s.absoluteR} onClick={() => handlePrevSlide()}><IoIosArrowForward className={s.flecha} color="#6EC1E4" /></div>
         <Slider className={s.slider} {...settings} ref={sliderRef}>
-          <div  className={currentSlide == 0 ? s.red : s.slide}>
-            <img id={0} onClick={(e) => bigPicture(e)} src={img1} alt="test" />
+          <div className={s.test}>
+            <div className={defineClass(0)}>
+              {/* <div className={currentSlide == 0 ? s.red : s.slide}></div> */}
+              <img id={0} onClick={(e) => bigPicture(e)} src={img1} alt="test" />
+            </div>
           </div>
-          <div  className={currentSlide == 1 ? s.red : s.slide}>
-            <img id={1} onClick={(e) => bigPicture(e)} src={img2} alt="test" />
+          <div className={s.test}>
+            <div className={defineClass(1)}>
+              {/* <div className={currentSlide == 1 ? s.red : s.slide}></div> */}
+              <img id={1} onClick={(e) => bigPicture(e)} src={img2} alt="test" />
+            </div>
           </div>
-          <div  className={currentSlide == 2 ? s.red : s.slide}>
-            <img id={2} onClick={(e) => bigPicture(e)} src={img3} alt="test" />
+          <div className={s.test}>
+            <div className={defineClass(2)}>
+              {/* <div className={currentSlide == 2 ? s.red : s.slide}></div> */}
+              <img id={2} onClick={(e) => bigPicture(e)} src={img3} alt="test" />
+            </div>
           </div>
-          <div  className={currentSlide == 3 ? s.red : s.slide}>
-            <img id={3} onClick={(e) => bigPicture(e)} src={img4} alt="test" />
+          <div className={s.test}>
+            <div className={defineClass(3)}>
+              {/* <div className={currentSlide == 3 ? s.red : s.slide}></div> */}
+              <img id={3} onClick={(e) => bigPicture(e)} src={img4} alt="test" />
+            </div>
           </div>
-          <div  className={currentSlide == 4 ? s.red : s.slide}>
-            <img id={4} onClick={(e) => bigPicture(e)} src={img5} alt="test" />
+          <div className={s.test}>
+            <div className={defineClass(4)}>
+              {/* <div className={currentSlide == 4 ? s.red : s.slide}></div> */}
+              <img id={4} onClick={(e) => bigPicture(e)} src={img5} alt="test" />
+            </div>
           </div>
         </Slider>
       </div>
