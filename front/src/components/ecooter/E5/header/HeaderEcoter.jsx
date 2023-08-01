@@ -1,6 +1,7 @@
 import img from "../../../../assets/ecooter/portada.png";
 import imgMobile from "../../../../assets/ecooter/portadamodificada.jpg";
 import imgAbs from "../../../../assets/ecooter/abs.jpg";
+import E5 from "../../../../assets/ecooter/E5.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 
@@ -10,8 +11,8 @@ export default function HeaderEcooter({ isMobile }) {
     <>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={isMobile ? imgMobile : img} alt="portada" />
-          {/* <img src={img} alt="portada" /> */}
+          <img src={isMobile ? E5 : img} alt="portada" />
+          {/* <img src={isMobile ? imgMobile : img} alt="portada" /> */}
         </div>
         <div className={s.absolute}>
           <div className={s.descargarFicha}>
