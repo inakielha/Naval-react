@@ -102,13 +102,11 @@ div {
 .leftSlide img {
     opacity: 0.3;
     width: 60%;
-    /* background-color: violet; */
 }
 
 .slide img {
     opacity: 0.3;
     width: 60%;
-    /* background-color: violet; */
 }
 
 .red {
@@ -145,14 +143,13 @@ div {
     /* .absolute {
         top: 30%;
     } */
+    .section h3 {
+        padding-bottom: 0;
+    }
     .test {
         width: 100%;
         /* background-color: red; */
     }
-
-    /* .absoluteR {
-        top: 30%;
-    } */
 
     .flecha {
         font-size: 2em;
@@ -163,12 +160,26 @@ div {
     }
 
     .slide {
-        margin-top: 6em;
+        margin-top: 3em;
+    }
+    .slide {
+        width: 80%;
     }
     .leftSlide{
-        margin-top: 6em;
+        margin-top: 3em;
+    }
+    .leftSlide img{
+        width: 80%;
     }
     .rightSlide{
-        margin-top: 6em;
+        margin-top: 3em;
+    }
+    .rightSlide img{
+        width: 80%;
+    }
+    .red {
+        padding: 2.5em 0;
+        width: 100%;
+        /* transform: scale(1.8); */
     }
 }
