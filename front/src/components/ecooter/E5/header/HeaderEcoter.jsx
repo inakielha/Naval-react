@@ -34,7 +34,7 @@ export default function HeaderEcooter({ isMobile }) {
           <div className={s.info}>
             <div className={s.textCont}>
               <span className={s.number}>8000</span>
-              <span className={s.texto}>WHATSS DE POTENCIA</span>
+              <span className={s.texto}>WHATTS DE POTENCIA</span>
             </div>
             <div className={s.textCont}>
               <span className={s.number}>150</span>
