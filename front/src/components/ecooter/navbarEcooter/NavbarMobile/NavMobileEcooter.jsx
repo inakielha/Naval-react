@@ -21,27 +21,27 @@ export default function NavMobileEcooter() {
     // dispatch(CATEGORY(category));
   };
   return (
-    <>
+    <div className={style.nabMobile}>
       <nav className={style.navbar}>
         <div className={style.container}>
           <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>
             <LuMenu />
           </IconContext.Provider>
           <div className={style.imgContainer}>
-            <img src={logo} alt="logo" />
+            <img onClick={()=>window.location.href = "https://www.navalmotor.com/"} src={logo} alt="logo" />
           </div>
           <div>
             <div className={style.contenedorLupa}>
-              <IconContext.Provider value={{ className: style.iconLupa, size: "1.5em" }}>
+              {/* <IconContext.Provider value={{ className: style.iconLupa, size: "1.5em" }}>
                 <BiSearch />
-              </IconContext.Provider>
+              </IconContext.Provider> */}
             </div>
           </div>
         </div>
       </nav>
       <div className={j.section} style={{ marginBottom: "0"}}>
         <div className={j.contenedor}>
-          <div className={j.back}>
+          <div onClick={()=>window.location.href = "https://www.navalmotor.com/"} className={j.back}>
             <IconContext.Provider value={{ className: j.icon, size: "1em" }}>
               <HiChevronLeft />
             </IconContext.Provider>
@@ -61,7 +61,7 @@ export default function NavMobileEcooter() {
                   }
                   : {}
               }>Modelos</button>
-        <button onClick={(e) => handleCategory(e) } style={
+        <button onClick={(e) => window.open("https://www.navalmotor.com/contacto") } style={
                 category === "contacto"
                   ? {
                     color: "white",
@@ -70,6 +70,6 @@ export default function NavMobileEcooter() {
                   : {}
               }>Contacto</button>
       </div>
-    </>
+    </div>
   )
 }

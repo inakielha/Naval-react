@@ -22,18 +22,14 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: red; */
-    z-index: 500;
-    /* transform: translate(-50%, -50%); */
+    z-index: 10;
 }
 .absoluteR {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    /* transform: translate(-50%, -50%); */
-    /* background-color: red; */
-    z-index: 500;
+    z-index: 10;
 }
 
 .flecha {

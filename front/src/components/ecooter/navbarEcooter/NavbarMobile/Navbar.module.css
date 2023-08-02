@@ -1,6 +1,13 @@
+.nabMobile{
+  position: fixed;
+  z-index: 500;
+  background-color: #fff;
+
+}
+
 .navbar {
   width: 100%;
-  /* background-color: orange; */
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +35,7 @@
 }
 .contenedorLupa {
   background-color: black;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;

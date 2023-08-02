@@ -5,6 +5,8 @@ import imgControl from "../../../../assets/ecooter/CONTROL TOTAL.jpg";
 import imgMobil from "../../../../assets/ecooter/app.jpg";
 import imgLlave from "../../../../assets/ecooter/Arranque sin llave.jpg";
 import video from "../../../../assets/ecooter/video.mp4";
+import VideoPlayer from "./videoPlayer/VideoPlayer";
+
 export default function Mandos() {
   return (
     <>
@@ -45,13 +47,14 @@ export default function Mandos() {
       </div>
       <div className={s.section}>
         <div className={s.videoContainer}>
-          <video
+          {/* <video
             controls
             src={video}
             alt="red"
             autoPlay="autoplay"
             loop="loop"
-          />
+          /> */}
+          <VideoPlayer/>
         </div>
       </div>
       <div className={s.section}>

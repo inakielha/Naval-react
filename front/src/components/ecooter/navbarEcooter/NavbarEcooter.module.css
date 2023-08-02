@@ -1,4 +1,6 @@
 .navbar {
+    position: fixed;
+    z-index: 500;
     width: 100%;
     /* background-color: orange; */
     display: flex;
@@ -7,6 +9,7 @@
     height: 15vh;
     padding: 1em 0;
     box-shadow: 0 0.5px 10px black;
+    background-color: #fff;
   }
   .navContainer {
     display: flex;
@@ -30,6 +33,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    cursor: pointer;
 }
 .imgContainer {
     /* background-color: blue; */
@@ -41,6 +45,7 @@
   }
   .imgContainer img {
     /* width: 100%; */
+    cursor: pointer;
     max-width: 50%;
     object-fit: cover;
   }

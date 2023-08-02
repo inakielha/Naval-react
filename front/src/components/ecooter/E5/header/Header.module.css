@@ -1,3 +1,8 @@
+.navSpace{
+  height: 15vh;
+  padding: 1em 0;
+}
+
 .section {
   padding: 0;
   /* width: 100vw; */
@@ -75,6 +80,7 @@
   width: 90%;
   width: 14em;
   padding: 1em 0;
+  cursor: pointer;
 }
 .descargarFicha {
   display: none;
@@ -85,6 +91,10 @@
 }
 
 @media (max-width: 768px) {
+  .navSpace{
+    height: 20vh;
+    padding: 1em 0;
+  }
   .section {
     height: 60vh;
   }
@@ -109,7 +119,6 @@
   }
   .titulo span {
     display: none;
-    /* font-size: ; */
   }
 
   .titContainer {
