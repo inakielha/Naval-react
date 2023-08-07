@@ -17,7 +17,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 export default function NavMobileEcooter() {
   const [mobileMenu, setMobileMenu] = useState("hide")
   const [category, setCategory] = useState("modelos");
-  const dispatch = useDispatch();
   const handleCategory = (e) => {
     let category = e.target.innerText.toLowerCase();
     setCategory(category);
@@ -25,6 +24,7 @@ export default function NavMobileEcooter() {
   };
   return (
     <div className={style.nabMobile}>
+      {mobileMenu === "show" && <div onClick={()=>setMobileMenu("hide")} className={style.filtro}></div>}
       <nav className={style.navbar}>
         <div className={style.container}>
           <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>

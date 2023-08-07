@@ -38,7 +38,7 @@ export default function MenuMobile({ setMobileMenu, show }) {
             <div>
             <React.Fragment key={"left"}>
                 <Drawer
-                    style={{ zIndex: 480 }}
+                    style={{ zIndex: 499 }}
                     anchor={"left"}
                     open={show === "show" }
                     onClose={() => setMobileMenu("hide")}

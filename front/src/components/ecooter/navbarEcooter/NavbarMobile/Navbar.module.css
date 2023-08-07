@@ -4,7 +4,13 @@
   background-color: #fff;
 
 }
-
+.filtro {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a3;
+}
 .navbar {
   width: 100%;
   background-color: #fff;
