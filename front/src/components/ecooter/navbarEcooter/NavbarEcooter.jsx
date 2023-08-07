@@ -2,7 +2,7 @@ import s from "./NavbarEcooter.module.css";
 import { IconContext } from "react-icons";
 import { LuMenu } from "react-icons/lu";
 import { IoSearchCircleSharp } from "react-icons/io5";
-import { IoIosSearch } from "react-icons/io";
+import { IoIosSearch,  } from "react-icons/io";
 import { BsWhatsapp } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RxDividerVertical } from "react-icons/rx";
@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import Hamburger from "./NavbarMobile/hamburger/Hamburger";
 
 export default function NavbarEcooter({ isMobile }) {
-  const [mobileMenu, setMobileMenu] = useState("hide")
+  const [mobileMenu, setMobileMenu] = useState(false)
   const [category, setCategory] = useState("repuestos y accesorios");
   const dispatch = useDispatch();
   const handleCategory = (e) => {
@@ -32,7 +32,7 @@ export default function NavbarEcooter({ isMobile }) {
         <div className={s.navContainer}>
           <div className={s.flex}>
             <div className={s.alignMenu}>
-              <LuMenu size={"3em"} onClick={() => setMobileMenu("show")} />
+              <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
             </div>
             <div className={s.imgContainer}>
               <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={logo} alt="logo" />

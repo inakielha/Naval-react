@@ -8,13 +8,17 @@ import Ecooter from './components/ecooter/E5/EcooterE5';
 import EcooterE3 from './components/ecooter/E3/EcooterE3';
 import NavbarEcooter from './components/ecooter/navbarEcooter/NavbarEcooter';
 import NavMobileEcooter from './components/ecooter/navbarEcooter/NavbarMobile/NavMobileEcooter';
+import { useDispatch } from 'react-redux';
+import { IS_MOBILE } from './redux/actions/actions';
 
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const dispatch = useDispatch()
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768); // Establece el límite de ancho para considerarlo "mobile"
+    dispatch(IS_MOBILE(window.innerWidth <= 768))
   };
 
   useEffect(() => {

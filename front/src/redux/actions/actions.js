@@ -55,3 +55,10 @@ export const FLOOR_PRICE = createAsyncThunk(
         return
     }
 )
+
+export const IS_MOBILE = createAsyncThunk(
+    "IS_MOBILE", (action)=>{
+        console.log("entre a la action", action)
+        return action
+    }
+)

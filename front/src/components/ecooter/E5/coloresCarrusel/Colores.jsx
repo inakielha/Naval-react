@@ -11,6 +11,7 @@ import img5 from "../../../../assets/ecooter/blanco.jpg";
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ImgOpenColors from "./imgOpenColors";
+import pdf from "../../../../assets/ecooter/E5.pdf"
 
 export default function Colores() {
   const dispatch = useDispatch()
@@ -58,6 +59,18 @@ export default function Colores() {
       return s.slide
     }
   }
+
+  const handleDownload = () => {
+    const fileUrl = '../../../../assets/ecooter/E5.pdf'; // Reemplaza esto con la URL real del PDF
+    const fileName = 'E5.pdf'; // Reemplaza esto con el nombre que desees para el archivo
+
+    // Crear un enlace temporal para la descarga
+    const link = document.createElement('a');
+    link.href = pdf;
+    link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
+    link.download = fileName;
+    link.click();
+  };
 
   const settings = {
     // dots: true,
@@ -123,7 +136,7 @@ export default function Colores() {
         </Slider>
       </div>
       <div className={s.btnCont}>
-        <button>DESCARGA EL CATALOGO</button>
+        <button onClick={()=>handleDownload()}>DESCARGA EL CATALOGO</button>
       </div>
     </div>
   );
