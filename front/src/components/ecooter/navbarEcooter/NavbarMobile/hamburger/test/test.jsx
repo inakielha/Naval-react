@@ -16,7 +16,7 @@ const Accordion = ({ titulo, arrlink, id, setIsOpen, isOpen }) => {
     return (
         <div className={s.section} style={isOpen === id ? { backgroundColor: "#CCCCCC" } : {}} onClick={() => toggleAccordion(id)}>
             <div className={s.accordion}>
-                <div className={s.tituloText} style={isOpen === id ? { color: "#000000",borderBottom: "2px solid #7070709d",paddingBottom:"0.5em" } : {}} onClick={() => toggleAccordion(id)}>
+                <div className={s.tituloText} style={isOpen === id ? { color: "#000000",borderBottom: "2px solid #7070709d",padding:"0.5em 0" } : {}} onClick={() => toggleAccordion(id)}>
                     <span>
                         {titulo}
                     </span>
