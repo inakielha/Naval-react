@@ -25,7 +25,7 @@ export default function MenuMobile({ setMobileMenu, show }) {
                 </li>
                 <div className={j.container}>
                     <Accordion  id={1} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÓN FUERA DE BORDA"} arrlink={[{ text: "MERCURY", url: "https://www.navalmotor.com/mercury" }]}  />
-                    <Accordion  id={2} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÒN INTERNA"} arrlink={[{ text: "VOLVO PENTA", url: "https://www.navalmotor.com/volvo-penta-propulsion" }, { text: "MITSUBISHI", url: "https://www.navalmotor.com/mitsubishi" }, { text: "kongsberg", url: "https://www.kongsberg.com/" }]} />
+                    <Accordion  id={2} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÓN INTERNA"} arrlink={[{ text: "VOLVO PENTA", url: "https://www.navalmotor.com/volvo-penta-propulsion" }, { text: "MITSUBISHI", url: "https://www.navalmotor.com/mitsubishi" }, { text: "kongsberg", url: "https://www.kongsberg.com/" }]} />
                     <Accordion  id={3} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"MOVILIDAD"} arrlink={[{ text: "POLARIS", url: "https://www.navalmotor.com/polaris" }, { text: "CLUB CAR", url: "https://www.navalmotor.com/clubcar" }]} />
                     <Accordion  id={4} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"EMBARCACIONES"} arrlink={embarcaciones} />
                     <div className={j.tituloText}>CLUB YATES</div>

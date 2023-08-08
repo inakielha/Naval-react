@@ -22,7 +22,7 @@ export default function Sidebar({ open, close }) {
         <div className={s.container}>
             <Accordion style={isOpen === 1 ? { backgroundColor: "#CCCCCC" } : {}} id={1} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÓN FUERA DE BORDA"} arrlink={[{ text: "MERCURY", url: "https://www.navalmotor.com/mercury" }]} i={true} />
 
-            <Accordion style={isOpen === 2 ? { backgroundColor: "#CCCCCC" } : {}} id={2} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÒN INTERNA"} arrlink={[{ text: "VOLVO PENTA", url: "https://www.navalmotor.com/volvo-penta-propulsion" }, { text: "MITSUBISHI", url: "https://www.navalmotor.com/mitsubishi" }, { text: "kongsberg", url: "https://www.kongsberg.com/" }]} />
+            <Accordion style={isOpen === 2 ? { backgroundColor: "#CCCCCC" } : {}} id={2} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÓN INTERNA"} arrlink={[{ text: "VOLVO PENTA", url: "https://www.navalmotor.com/volvo-penta-propulsion" }, { text: "MITSUBISHI", url: "https://www.navalmotor.com/mitsubishi" }, { text: "kongsberg", url: "https://www.kongsberg.com/" }]} />
 
             <Accordion style={isOpen === 3 ? { backgroundColor: "#CCCCCC" } : {}} id={3} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"MOVILIDAD"} arrlink={[{ text: "POLARIS", url: "https://www.navalmotor.com/polaris" }, { text: "CLUB CAR", url: "https://www.navalmotor.com/clubcar" }]} />
 
