@@ -2,10 +2,10 @@ import Slider from "react-slick";
 import s from "./Productos.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../../assets/prd1.svg"
-import img2 from "../../../../assets/prd2.svg"
-import img3 from "../../../../assets/prd3.svg"
-import img4 from "../../../../assets/prd4.svg"
+import img1 from "../../../../assets/mercury/prd1.svg"
+import img2 from "../../../../assets/mercury/prd2.svg"
+import img3 from "../../../../assets/mercury/prd3.svg"
+import img4 from "../../../../assets/mercury/prd4.svg"
 
 export default function Productos() {
   const settings = {

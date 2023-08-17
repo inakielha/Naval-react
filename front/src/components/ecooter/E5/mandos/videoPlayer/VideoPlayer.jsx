@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import video from "../../../../../assets/ecooter/video.mp4";
+import video from "../../../../../assets/ecooter/e5/video.mp4";
 
 
 const VideoPlayer = () => {

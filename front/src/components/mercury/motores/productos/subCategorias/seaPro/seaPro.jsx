@@ -1,5 +1,5 @@
 import s from "../../ProductosMotores.module.css";
-import img2 from "../../../../../../assets/motor.svg";
+import img2 from "../../../../../../assets/mercury/motor.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

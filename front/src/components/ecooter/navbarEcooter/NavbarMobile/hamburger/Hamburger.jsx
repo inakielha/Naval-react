@@ -1,9 +1,5 @@
 import s from "./Hamburguer.module.css"
-import cross from "../../../../../assets/ecooter/cross.svg"
-import navalMenu from "../../../../../assets/ecooter/navalMenu.svg"
-import slogan from "../../../../../assets/ecooter/slogan.svg"
-import { IoIosSearch, IoIosArrowDown,IoIosArrowUp } from "react-icons/io";
-import BasicAccordion from "./accordion/Acordion";
+
 import Sidebar from "./sideBar/Sidebar";
 import MenuMobile from "./menuMobile/MenuMobile";
 import { useSelector } from "react-redux";

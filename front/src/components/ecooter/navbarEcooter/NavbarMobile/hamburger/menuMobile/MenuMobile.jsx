@@ -2,12 +2,9 @@ import * as React from 'react';
 
 import s from "../Hamburguer.module.css"
 import j from "../sideBar/side.module.css"
-import cross from "../../../../../../assets/ecooter/crossNegra.svg"
-// import navalMenu from "../../../../../../assets/ecooter/navalMenu.svg"
-import slogan from "../../../../../../assets/ecooter/slogan.svg"
 import Accordion from "../test/test"
 import {AiOutlineClose} from "react-icons/ai"
-import navalMenu from "../../../../../../assets/logo-naval.png"
+import navalMenu from "../../../../../../assets/mercury/logo-naval.png"
 import Drawer from '@mui/material/Drawer';
 
 

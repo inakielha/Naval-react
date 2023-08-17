@@ -1,15 +1,16 @@
+import { useSelector } from "react-redux"
 import Colores from "./coloresCarrusel/Colores"
 import Galeria from "./galeriaImagenes/Galeria"
-import HeaderEcooter from "./header/HeaderEcoter"
+import HeaderEcooterE3 from "./header/HeaderEcoter"
 import ImagenMobile from "./imagenMobile/ImagenMobile"
 import Mandos from "./mandos/Mandos"
 
 
-export default function EcooterE3 () {
+export default function Ecooter ({isMobile}) {    
     return (
         <>
-            <HeaderEcooter/>
-            <Mandos/>
+            <HeaderEcooterE3 isMobile={isMobile}/>
+            <Mandos isMobile={isMobile}/>
             <ImagenMobile/>
             <Galeria/>
             <Colores/>

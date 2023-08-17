@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import s from "./Promo.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import producto from "../../../../assets/producto.svg";
+import producto from "../../../../assets/mercury/producto.svg";
 
 export default function Promos({isMobile}) {
   console.log(isMobile)

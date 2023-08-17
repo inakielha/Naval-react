@@ -1,10 +1,9 @@
-import img from "../../../../assets/ecooter/portada.png";
-import imgMobile from "../../../../assets/ecooter/portadamodificada.jpg";
-import imgAbs from "../../../../assets/ecooter/abs.jpg";
-import E5 from "../../../../assets/ecooter/E5.jpg";
+import img from "../../../../assets/ecooter/e5/header/portada.png";
+import imgAbs from "../../../../assets/ecooter/e5/header/abs.jpg";
+import E5 from "../../../../assets/ecooter/e5/header/E5.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
-import pdf from "../../../../assets/ecooter/E5.pdf"
+import pdf from "../../../../assets/ecooter/e5/E5.pdf"
 
 export default function HeaderEcooter({ isMobile }) {
 

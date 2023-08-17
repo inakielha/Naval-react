@@ -1,5 +1,5 @@
 import s from "./Postal.module.css";
-import img from "../../../../assets/4300hp_SeaPro_850Impact_Saltwater_2017_Running_55.jpg";
+import img from "../../../../assets/mercury/4300hp_SeaPro_850Impact_Saltwater_2017_Running_55.jpg";
 import { IconContext } from "react-icons";
 import { BiSearch } from "react-icons/bi";
 import { useRef } from "react";

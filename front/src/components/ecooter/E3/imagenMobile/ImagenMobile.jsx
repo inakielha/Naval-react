@@ -1,20 +1,28 @@
 import s from "./ImagenMobile.module.css";
-import imgMobil from "../../../../assets/ecooter/app.jpg";
-import imgControl from "../../../../assets/ecooter/REVERSA.png";
+import imgMobil from "../../../../assets/ecooter/e3/mandos/Enmascarar grupo 501.jpg";
 import { BsLightbulb, BsSpeedometer2, BsPower, BsFillLockFill } from "react-icons/bs";
 import { MdFlashAuto } from "react-icons/md";
 import { FiSmartphone } from "react-icons/fi";
-import { GrSecure } from "react-icons/gr";
 import { RxDimensions } from "react-icons/rx";
 import { AiOutlineColumnHeight } from "react-icons/ai";
-import { GiWeight, GiFlatTire, GiBattery75, GiBreakingChain } from "react-icons/gi";
+import { GiWeight, GiFlatTire, GiBattery75, GiBreakingChain, GiCompactDisc, GiCrackedDisc } from "react-icons/gi";
 import { PiEngineLight, PiMonitorLight} from "react-icons/pi";
 import { FaStumbleupon} from "react-icons/fa";
-
+import { useSelector } from "react-redux";
+import VideoPlayer from "../mandos/videoPlayer/VideoPlayer";
+import videoSrc from "../../../../assets/ecooter/e3/mandos/Detalles Ecooter E3.mp4"
 export default function ImagenMobile() {
+  const Color = useSelector((state)=> state.clientReducer.backgroundColor)
+
+  // const closeDialog = (e)=>{
+  //   if (e.target.id === "close"){
+  //     setImagen({ok: false, src:""})
+  //     dispatch(BLACK_BACKGROUND("neutral"))
+  //   }
+  // }
   return (
     <>
-      <div className={s.section}>
+       <div className={s.section}>
         <div className={s.imgContainer}>
           <img src={imgMobil} alt="portada" />
         </div>
@@ -36,20 +44,8 @@ export default function ImagenMobile() {
           </div>
         </div>
       </div>
-      <div className={s.sectionControl}>
-        <div className={s.control}>
-          <h3>REVERSA</h3>
-          <span>
-            Versatilidad sin precedentes, marcha atrás de ultima generación.
-            Disfruta del andar en todos los sentidos.
-          </span>
-        </div>
-        <div className={s.imgContainerControl}>
-          <img src={imgControl} alt="s" />
-        </div>
-      </div>
-      {/* -------------------------------------------------------------------- */}
-      <div className={s.caracter}>
+      <div className={s.caracter} >
+        {Color === "black" && <div id="close" className={s.filtro}></div>}
         <h3>caracterísitcas</h3>
         <div className={s.grid}>
           <div className={s.column}>
@@ -188,7 +184,7 @@ export default function ImagenMobile() {
             <div className={s.columnAlign}>
 
             <div className={s.imgCont}>
-              <FaStumbleupon size={"2em"}/>
+              <GiCrackedDisc size={"2em"}/>
             </div>
             <div className={s.infoCont}>
               <p>FRENOS</p>
@@ -227,7 +223,7 @@ export default function ImagenMobile() {
             <div className={s.columnAlign}>
 
             <div className={s.imgCont}>
-              <GiBreakingChain size={"2em"}/>
+              <GiCompactDisc size={"2em"}/>
             </div>
             <div className={s.infoCont}>
               <p>TRANSMISIÓN</p>
@@ -235,6 +231,12 @@ export default function ImagenMobile() {
             </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={s.sectionVideo}>
+        <div className={s.videoContainer}>
+        <h3>detalles</h3>
+          <VideoPlayer video={videoSrc}/>
         </div>
       </div>
     </>

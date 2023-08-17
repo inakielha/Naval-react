@@ -1,5 +1,5 @@
 import s from "./Concesionarios.module.css";
-import img from "../../../assets/Imagen 318.jpg";
+import img from "../../../assets/mercury/Imagen 318.jpg";
 import { IconContext } from "react-icons";
 import { BiSearch } from "react-icons/bi";
 import { useRef } from "react";

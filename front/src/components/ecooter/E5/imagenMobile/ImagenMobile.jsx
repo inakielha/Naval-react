@@ -1,6 +1,6 @@
 import s from "./ImagenMobile.module.css";
-import imgMobil from "../../../../assets/ecooter/app.jpg";
-import imgControl from "../../../../assets/ecooter/REVERSA.png";
+import imgMobil from "../../../../assets/ecooter/e5/app.jpg";
+import imgControl from "../../../../assets/ecooter/e5/mandos/REVERSA.png";
 import { BsLightbulb, BsSpeedometer2, BsPower, BsFillLockFill } from "react-icons/bs";
 import { MdFlashAuto } from "react-icons/md";
 import { FiSmartphone } from "react-icons/fi";

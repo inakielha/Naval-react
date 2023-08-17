@@ -1,6 +1,6 @@
 import s from "./Motores.module.css";
 // import img from "../../../assets/sun.jpg";
-import img from "../../../assets/Imagen 318.jpg";
+import img from "../../../assets/mercury/Imagen 318.jpg";
 import ProductosMotores from "./productos/ProductosMotores";
 
 export default function Motores({isMobile}) {

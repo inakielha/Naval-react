@@ -2,13 +2,12 @@ import s from "./Motosinfo.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../../assets/ecooter/Carrusel1.jpg";
-import img2 from "../../../../assets/ecooter/Carrusel2.jpg";
-import img3 from "../../../../assets/ecooter/Carrusel3.jpg";
-import img4 from "../../../../assets/ecooter/Carrusel4.jpg";
-import img5 from "../../../../assets/ecooter/Carrusel5.jpg";
-import img6 from "../../../../assets/ecooter/carrusel6.jpg";
-import img7 from "../../../../assets/ecooter/carrusel7.jpg";
+import img1 from "../../../../assets/ecooter/e5/carrusel/Carrusel1.jpg";
+import img2 from "../../../../assets/ecooter/e5/carrusel/Carrusel2.jpg";
+import img3 from "../../../../assets/ecooter/e5/carrusel/Carrusel3.jpg";
+import img4 from "../../../../assets/ecooter/e5/carrusel/Carrusel4.jpg";
+import img5 from "../../../../assets/ecooter/e5/carrusel/Carrusel5.jpg";
+import img6 from "../../../../assets/ecooter/e5/carrusel/carrusel6.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import { useRef } from "react";
 

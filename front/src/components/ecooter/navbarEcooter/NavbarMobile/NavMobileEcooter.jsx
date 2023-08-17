@@ -1,12 +1,12 @@
 import { LuMenu } from "react-icons/lu";
 import { BiSearch } from "react-icons/bi";
 import style from "./Navbar.module.css";
-import logo from "../../../../assets/logo-naval.png"
+import logo from "../../../../assets/mercury/logo-naval.png"
 import j from "../../../mercury/header/header.module.css";
 import s from "./Navbar.module.css";
 import { HiOutlineArrowSmallLeft, HiOutlineArrowLeft, HiChevronLeft } from "react-icons/hi";
 import { IconContext } from "react-icons";
-import ecooterLogo from "../../../../assets/ecooter/blanco Logo Ecooter.png";
+import ecooterLogo from "../../../../assets/ecooter/e5/blanco Logo Ecooter.png";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import Hamburger from "./hamburger/Hamburger";

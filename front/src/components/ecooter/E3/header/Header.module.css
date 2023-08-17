@@ -1,11 +1,17 @@
+.navSpace{
+  height: 15vh;
+  padding: 1em 0;
+}
+
 .section {
   padding: 0;
   /* width: 100vw; */
-  background-color: aqua;
+  /* background-color: aqua; */
   position: relative;
 }
 
 .imgContainer {
+  position: relative;
   width: 100%;
 }
 .imgContainer img {
@@ -14,6 +20,7 @@
   /* border: 5px solid black; */
   width: 100%;
 }
+
 .absolute {
   width: 90%;
   height: 80%;
@@ -42,6 +49,16 @@
   font-size: 0.632rem;
   padding-left: 0.5em;
 }
+.titContainer {
+  display: flex;
+}
+.ltres {
+  align-self: flex-start;
+  text-align: end;
+  line-height: 1em;
+  font-weight: 500;
+  font-size: 1.921rem;
+}
 .titulo {
   display: flex;
   flex-direction: column;
@@ -65,4 +82,130 @@
   width: 90%;
   width: 14em;
   padding: 1em 0;
+  cursor: pointer;
+}
+.descargarFicha {
+  display: none;
+}
+
+.filtro {
+  display: none;
+}
+
+.cbsAbsolute {
+  width: 90%;
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.cbsAbsolute h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.105rem;
+  text-align: center;
+  margin: 0;
+}
+.cbsAbsolute span {
+  color: #fff;
+  font-size: 0.63rem;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .navSpace{
+    height: 22.5vh;
+    padding: 1em 0;
+  }
+  .section {
+    height: 60vh;
+  }
+  .absolute {
+    flex-direction: column-reverse;
+    z-index: 3;
+    height: 95%;
+  }
+  .titulo {
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .titulo p {
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+    font-size: 7rem;
+    text-align: center;
+    line-height: 1;
+  }
+  .titulo span {
+    display: none;
+  }
+
+  .titContainer {
+    /* background-color: orange; */
+    height: 100%;
+  }
+  .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* padding-bottom: 1em; */
+    /* background-color: red; */
+  }
+  .textCont {
+    text-align: center;
+    width: 100%;
+  }
+  .number {
+    font-size: 2rem;
+  }
+  .texto {
+    font-size: 0.5rem;
+    padding: 0;
+  }
+  .descargarFicha {
+    padding-top: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .descargarFicha span {
+    font-size: 0.5rem;
+    font-weight: bold;
+    background-color: #6ec1e4;
+    text-align: center;
+    width: 30%;
+    padding: 0.5em 0;
+  }
+
+  .sectionTwo {
+    height: 30vh;
+  }
+  .imgContainer {
+    height: 100%;
+    width: 100%;
+  }
+  .imgContainer img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .filtro {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(#00000000, #000000);    
+    z-index: 2;
+    height: 20vh;
+  }
 }

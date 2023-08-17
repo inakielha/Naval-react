@@ -1,8 +1,8 @@
 import s from "./Propulsion.module.css";
-import img from "../../../assets/150-FourStroke_BWhaler2_Choice_1274.jpg";
-import img2 from "../../../assets/2022-07-MR-Bass-Boat-29 (1).jpg"
-import img3 from "../../../assets/MM_V10_400hp_Ranger_FW095A1537.jpg"
-import img4 from "../../../assets/MM-FreshwaterBoating_DontBlink_ET_DSC4468.jpg"
+import img from "../../../assets/mercury/150-FourStroke_BWhaler2_Choice_1274.jpg";
+import img2 from "../../../assets/mercury/2022-07-MR-Bass-Boat-29 (1).jpg"
+import img3 from "../../../assets/mercury/MM_V10_400hp_Ranger_FW095A1537.jpg"
+import img4 from "../../../assets/mercury/MM-FreshwaterBoating_DontBlink_ET_DSC4468.jpg"
 
 export default function Propulsion() {
   return (

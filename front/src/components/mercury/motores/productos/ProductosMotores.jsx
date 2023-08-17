@@ -1,14 +1,8 @@
 import s from "./ProductosMotores.module.css";
 import "slick-carousel/slick/slick.css";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../../assets/prd1.svg";
-// import img1 from "../../../../assets/Imagen 318.jpg";
 import { useState } from "react";
 
-import img2 from "../../../../assets/motor.svg";
-import img3 from "../../../../assets/prd3.svg";
-import img4 from "../../../../assets/prd4.svg";
 import CuatroTempos from "./subCategorias/cuatroTempos/CuatroTempos";
 import MercuryUniversity from "./subCategorias/mercuryUniversity/mercuryUniversity";
 import Seapro from "./subCategorias/seaPro/seaPro";

@@ -1,17 +1,8 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import BasicAccordion from '../accordion/Acordion';
 import s from "./side.module.css"
 import Accordion from '../test/test';
-import cross from "../../../../../../assets/ecooter/cross.svg"
-import navalMenu from "../../../../../../assets/ecooter/navalMenu.svg"
-import slogan from "../../../../../../assets/ecooter/slogan.svg"
-import j from "../Hamburguer.module.css"
+
 
 export default function Sidebar({ open, close }) {
     const [isOpen, setIsOpen] = React.useState("");

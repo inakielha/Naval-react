@@ -2,7 +2,7 @@ import { IconContext } from "react-icons";
 import { LuMenu } from "react-icons/lu";
 import { BiSearch } from "react-icons/bi";
 import style from "./Navbar.module.css";
-import logo from "../../assets/logo-naval.png"
+import logo from "../../assets/mercury/logo-naval.png"
 
 export default function Navbar() {
   return (

@@ -2,17 +2,14 @@ import s from "./NavbarEcooter.module.css";
 import { IconContext } from "react-icons";
 import { LuMenu } from "react-icons/lu";
 import { IoSearchCircleSharp } from "react-icons/io5";
-import { IoIosSearch,  } from "react-icons/io";
 import { BsWhatsapp } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RxDividerVertical } from "react-icons/rx";
-import logo from "../../../assets/logo-naval.png";
-import ws from "../../../assets/whatsapp.svg";
-import ecooterLogo from "../../../assets/ecooter/ECOOTER_LOGO_black.png";
+import logo from "../../../assets/mercury/logo-naval.png";
+import ecooterLogo from "../../../assets/ecooter/e5/ECOOTER_LOGO_black.png";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CATEGORY } from "../../../redux/actions/actions";
-import { useNavigate } from "react-router-dom";
 import Hamburger from "./NavbarMobile/hamburger/Hamburger";
 
 export default function NavbarEcooter({ isMobile }) {

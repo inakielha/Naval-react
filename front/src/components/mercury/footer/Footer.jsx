@@ -1,8 +1,8 @@
-import whatsapp from "../../../assets/whatsapp.svg"
-import linkedin from "../../../assets/linkedin.png"
-import instagram from "../../../assets/instagram.png"
-import dollar from "../../../assets/dollar.png"
-import youtube from "../../../assets/ytIcon.svg"
+import whatsapp from "../../../assets/mercury/whatsapp.svg"
+import linkedin from "../../../assets/mercury/linkedin.png"
+import instagram from "../../../assets/mercury/instagram.png"
+import dollar from "../../../assets/mercury/dollar.png"
+import youtube from "../../../assets/mercury/ytIcon.svg"
 import s from "./Footer.module.css"
 import {BsCurrencyDollar,BsLinkedin,BsInstagram, BsYoutube} from "react-icons/bs"
 

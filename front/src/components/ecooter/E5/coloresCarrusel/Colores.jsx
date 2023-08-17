@@ -3,15 +3,15 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../../assets/ecooter/gris claro.jpg";
-import img2 from "../../../../assets/ecooter/gris.jpg";
-import img3 from "../../../../assets/ecooter/negro.jpg";
-import img4 from "../../../../assets/ecooter/rojo.jpg";
-import img5 from "../../../../assets/ecooter/blanco.jpg";
+import img1 from "../../../../assets/ecooter/e5/colores/gris claro.jpg";
+import img2 from "../../../../assets/ecooter/e5/colores/gris.jpg";
+import img3 from "../../../../assets/ecooter/e5/colores/negro.jpg";
+import img4 from "../../../../assets/ecooter/e5/colores/rojo.jpg";
+import img5 from "../../../../assets/ecooter/e5/colores/blanco.jpg";
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ImgOpenColors from "./imgOpenColors";
-import pdf from "../../../../assets/ecooter/E5.pdf"
+import pdf from "../../../../assets/ecooter/e5/E5.pdf"
 
 export default function Colores() {
   const dispatch = useDispatch()

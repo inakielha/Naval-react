@@ -3,7 +3,7 @@ import { HiOutlineArrowSmallLeft, HiOutlineArrowLeft, HiChevronLeft } from "reac
 import { IconContext } from "react-icons";
 // import logo from "../../../assets/mercury.svg"
 // import logo from "../../../assets/logo-naval.png"
-import mercury from "../../../assets/Logos Mercury blanco.png"
+import mercury from "../../../assets/mercury/Logos Mercury blanco.png"
 
 
 

@@ -2,11 +2,11 @@ import Slider from "react-slick";
 import s from "./Galeria.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../../../assets/ecooter/foto1.jpg"
-import img2 from "../../../../assets/ecooter/foto2.jpg"
-import img3 from "../../../../assets/ecooter/foto3.jpg"
-import img4 from "../../../../assets/ecooter/foto4.jpg"
-import img5 from "../../../../assets/ecooter/foto5.jpg"
+import img1 from "../../../../assets/ecooter/e5/galeria/foto1.jpg"
+import img2 from "../../../../assets/ecooter/e5/galeria/foto2.jpg"
+import img3 from "../../../../assets/ecooter/e5/galeria/foto3.jpg"
+import img4 from "../../../../assets/ecooter/e5/galeria/foto4.jpg"
+import img5 from "../../../../assets/ecooter/e5/galeria/foto5.jpg"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 
 import { useRef, useState } from "react";
