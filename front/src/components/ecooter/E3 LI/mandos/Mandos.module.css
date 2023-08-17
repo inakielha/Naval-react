@@ -1,0 +1,249 @@
+.section {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    /* gap: 10em; */
+    width: 100%;
+}
+
+.section h3 {
+    color: #6EC1E4;
+    font-weight: bold;
+    font-size: 1.105rem;
+    text-transform: uppercase;
+}
+
+.section span {
+    color: #FFFFFF;
+    font-size: 0.632rem;
+}
+
+.divCol {
+    color: #FFFFFF;
+    font-size: 0.632rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 5em;
+}
+
+.imgContainertwo {
+    /* background-color: red; */
+    position: relative;
+    width: 100%;
+    /* height: 80vh; */
+    height: 100%;
+}
+
+.imgContainertwo img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.absolute {
+    width: 98%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* background-color: red; */
+}
+.textContainer {
+    padding-top: 12em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: start;
+    gap: 2em;
+    width: 40%;
+}
+.textContainer h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.imgContainer {
+    width: 40%;
+}
+
+.imgContainer img {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 0 1em 0 2em;
+}
+
+/* -----------------------------------
+CONTROL */
+.sectionControl {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    width: 100%;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 60%;
+    padding-right: 5em;
+    padding-bottom: 5em;
+}
+
+.control h3 {
+    /* background-color: red; */
+    width: 50%;
+    color: #6EC1E4;
+    font-weight: bold;
+    font-size: 1.105rem;
+    text-transform: uppercase;
+}
+
+.control span {
+    width: 50%;
+    color: #FFFFFF;
+    font-size: 0.632rem;
+}
+
+.imgContainerControl {
+    display: flex;
+    justify-content: flex-end;
+    background-color: red;
+    width: 40%;
+}
+
+.imgContainerControl img {
+    width: 100%;
+}
+
+.videoContainer {
+    width: 100%;
+}
+
+.videoContainer video {
+    width: 100%;
+}
+
+.llave {
+    padding: 0 0 5em 5em;
+    width: 50%;
+}
+
+.llave span {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .section h3 {
+        font-size: 1.125rem;
+    }
+
+    .section span {
+        font-size: 0.625rem;
+    }
+
+    .info {
+        padding: 1em;
+        width: 100%;
+        /* background-color: green; */
+    }
+
+    .section {
+        gap: 0;
+    }
+
+    .divCol {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .divCol p {
+        padding: 0.4em;
+        margin: 0;
+    }
+
+    .imgContainer {
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+    }
+
+    .imgContainer img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .absolute {
+        width: 100%;
+    }
+    .textContainer{
+        width: 50%;
+        padding: 0;
+        padding-right: 0.2em;
+        gap: 0;
+    }
+
+    /* -----------------------------------
+    CONTROL TOTAL  */
+
+    .sectionControl {
+        gap: 0;
+        align-items: center;
+    }
+
+    .control {
+        /* background-color: red; */
+        padding: 0 0 0 1em;
+        width: 100%;
+    }
+
+    .control h3 {
+        width: 100%;
+    }
+
+    .control span {
+        width: 100%;
+    }
+
+    .imgContainerControl {
+        width: 100%;
+        background-color: blue;
+
+    }
+
+    .imgContainerControl img {
+        width: 100%;
+    }
+
+    .control span {
+        padding: 0.5em 0;
+    }
+
+    /* ---------------------------
+    SIN LLAVE  */
+    .imgContainer {
+        width: 100%;
+    }
+
+    .llave {
+        padding: 1em 1em 0 1em;
+        align-self: flex-start;
+        width: 80%;
+    }
+}

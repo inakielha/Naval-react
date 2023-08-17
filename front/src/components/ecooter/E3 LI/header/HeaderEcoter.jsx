@@ -1,5 +1,5 @@
 import imgAbs from "../../../../assets/ecooter/e3/cbs.svg";
-import E5 from "../../../../assets/ecooter/e3/e3portada.jpg";
+import E5 from "../../../../assets/ecooter/e3/header.svg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/e3/E3.pdf"
