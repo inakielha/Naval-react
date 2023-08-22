@@ -1,8 +1,8 @@
-import img from "../../../assets/ecooter/landing/header.svg"
-import motoecinco from "../../../assets/ecooter/landing/motoe5.jpg"
-import motoetresla from "../../../assets/ecooter/landing/motoe3la.jpg"
-import ecincoli from "../../../assets/ecooter/landing/e5li.jpg"
-import ettres from "../../../assets/ecooter/landing/et3.jpg"
+import img from "../../../assets/ecooter/landing/header (1).jpg"
+import motoecinco from "../../../assets/ecooter/landing/Grupo 501.jpg"
+import motoetresla from "../../../assets/ecooter/landing/Grupo 502.jpg"
+import ecincoli from "../../../assets/ecooter/landing/Grupo 503.jpg"
+import ettres from "../../../assets/ecooter/landing/Grupo 504.jpg"
 import s from "./Landing.module.css"
 import { useNavigate } from "react-router-dom"
 
@@ -30,13 +30,13 @@ export default function LandingEcooter (){
                         <div className={s.imgContainer}><img src={motoetresla} alt="" /></div>
                         <button onClick={()=>handleRedirect("/e3")}>E3 l3</button>
                     </div>
-                    <div className={s.moto}>
+                    <div onClick={()=>handleRedirect("/e3l1")} className={s.moto}>
                         <div className={s.imgContainer}><img src={ecincoli} alt="" /></div>
                         <button>E3 l1</button>
                     </div>
-                    <div className={s.moto}>
+                    <div onClick={()=>handleRedirect("/et3")} className={s.moto}>
                         <div className={s.imgContainer}><img src={ettres} alt="" /></div>
-                        <button>ET3</button>
+                        <button onClick={()=>handleRedirect("/et3")}>ET3</button>
                     </div>
                 </div>
             </section>

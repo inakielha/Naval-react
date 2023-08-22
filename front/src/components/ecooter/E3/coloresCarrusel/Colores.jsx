@@ -57,7 +57,7 @@ export default function Colores() {
 
   const handleDownload = () => {
     const fileUrl = '../../../../assets/ecooter/E5.pdf'; // Reemplaza esto con la URL real del PDF
-    const fileName = 'E5.pdf'; // Reemplaza esto con el nombre que desees para el archivo
+    const fileName = 'E3.pdf'; // Reemplaza esto con el nombre que desees para el archivo
 
     // Crear un enlace temporal para la descarga
     const link = document.createElement('a');

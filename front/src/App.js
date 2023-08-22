@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import NavbarWeb from './components/navbar/navbarWeb/NavbarWeb';
 import Ecooter from './components/ecooter/E5/EcooterE5';
 import EcooterE3 from './components/ecooter/E3/EcooterE3';
+import EcooterE3L1 from './components/ecooter/E3L1/EcooterE3L1';
+import EcooterET3 from './components/ecooter/ET3/EcooterET3';
 import NavbarEcooter from './components/ecooter/navbarEcooter/NavbarEcooter';
 import NavMobileEcooter from './components/ecooter/navbarEcooter/NavbarMobile/NavMobileEcooter';
 import { useDispatch } from 'react-redux';
@@ -38,6 +40,8 @@ function App() {
     <Route path='/' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile}/> : <NavbarEcooter isMobile={isMobile}/>} <LandingEcooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
     <Route path='/e5' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile}/> : <NavbarEcooter isMobile={isMobile}/>} <Ecooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
     <Route path='/e3' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile}/> : <NavbarEcooter isMobile={isMobile}/>} <EcooterE3 isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
+    <Route path='/e3l1' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile}/> : <NavbarEcooter isMobile={isMobile}/>} <EcooterE3L1 isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
+    <Route path='/et3' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile}/> : <NavbarEcooter isMobile={isMobile}/>} <EcooterET3 isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
    </Routes>
    </>
   );
