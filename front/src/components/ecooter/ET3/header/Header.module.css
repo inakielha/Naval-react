@@ -144,6 +144,12 @@
   .section {
     height: 60vh;
   }
+  .filtroIzq {
+    display: none;
+  }
+  .filtroDer {
+    display: none;
+  }
   .absolute {
     flex-direction: column-reverse;
     z-index: 3;

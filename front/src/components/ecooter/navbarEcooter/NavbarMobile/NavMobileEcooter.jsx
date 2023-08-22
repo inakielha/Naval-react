@@ -11,16 +11,17 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import Hamburger from "./hamburger/Hamburger";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 
 
-export default function NavMobileEcooter() {
+export default function NavMobileEcooter({isMobile,landing}) {
   const [mobileMenu, setMobileMenu] = useState("hide")
   const [category, setCategory] = useState("modelos");
-  const handleCategory = (e) => {
-    let category = e.target.innerText.toLowerCase();
-    setCategory(category);
-    // dispatch(CATEGORY(category));
+  const navigate = useNavigate()
+ 
+  const navigateLanding = (e) => {
+    navigate("/")
   };
   return (
     <div className={style.nabMobile}>
@@ -61,8 +62,8 @@ export default function NavMobileEcooter() {
         </div>
       </div>
       <div className={s.btnContainer}>
-        <button onClick={(e) => handleCategory(e)} style={
-          category === "modelos"
+        <button onClick={() => navigateLanding()} style={
+          landing
             ? {
               color: "white",
               backgroundColor: "#000000"

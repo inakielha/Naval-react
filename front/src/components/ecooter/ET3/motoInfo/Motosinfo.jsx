@@ -99,34 +99,6 @@ export default function MotosInfo({ isMobile }) {
               </ul>
             </div>
           </div>
-          <div className={s.slide}>
-            <div>
-              <img src={img2} alt="test" />
-            </div>
-            <div className={s.texto}>
-              <h5>Remplazar en futuro</h5>
-              <ul>
-                <li><span>
-                  Con las baterías en posición central se consigue un reparto de masas perfecto y hueco para el casco debajo del asiento.
-                </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={s.slide}>
-            <div>
-              <img src={img4} alt="test" />
-            </div>
-            <div className={s.texto}>
-              <h5>Remplazar en futuro</h5>
-              <ul>
-                <li><span>
-                  Basculante de doble brazo más ligero con una mayor durabilidad y sostenibilidad.
-                </span>
-                </li>
-              </ul>
-            </div>
-          </div>
         </Slider>
       </div>
     </div>

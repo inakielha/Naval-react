@@ -1,4 +1,6 @@
 import imgAbs from "../../../../assets/ecooter/et3/ESCRITORIO/Enmascarar grupo 448.jpg";
+import ET3 from "../../../../assets/ecooter/et3/ESCRITORIO/portada et3.jpg";
+import ET3MOBILE from "../../../../assets/ecooter/et3/MOBILE/MOBILE PORTADA.jpg";
 import E5 from "../../../../assets/ecooter/et3/ESCRITORIO/portada et3.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
@@ -21,10 +23,10 @@ export default function HeaderEcooterE3({ isMobile }) {
       <div className={s.navSpace}></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={E5} alt="portada" />
+          {/* <img src={E5} alt="portada" /> */}
           <div className={s.filtroIzq}></div>
           <div className={s.filtroDer}></div>
-          {/* <img src={isMobile ? imgMobile : img} alt="portada" /> */}
+          <img src={isMobile ? ET3MOBILE : ET3} alt="portada" />
         </div>
         <div className={s.absolute}>
           <div onClick={()=> handleDownload()} className={s.descargarFicha}>
