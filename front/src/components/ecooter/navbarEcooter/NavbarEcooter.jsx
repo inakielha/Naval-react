@@ -11,16 +11,15 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CATEGORY } from "../../../redux/actions/actions";
 import Hamburger from "./NavbarMobile/hamburger/Hamburger";
+import { useNavigate } from "react-router-dom";
 
-export default function NavbarEcooter({ isMobile }) {
+export default function NavbarEcooter({ isMobile, landing }) {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [category, setCategory] = useState("repuestos y accesorios");
+  const navigate = useNavigate()
   const dispatch = useDispatch();
-  const handleCategory = (e) => {
-    let category = e.target.innerText.toLowerCase();
-
-    setCategory(category);
-    dispatch(CATEGORY(category));
+  const navigateLanding = (e) => {
+    navigate("/")
   };
 
   return (
@@ -51,9 +50,9 @@ export default function NavbarEcooter({ isMobile }) {
             <div className={s.spanCont}>
 
               <span
-                onClick={(e) => handleCategory(e)}
+                onClick={(e) => navigateLanding(e)}
                 style={
-                  category === "modelos"
+                  landing
                     ? {
                       color: "#6EC1E4",
                     }
