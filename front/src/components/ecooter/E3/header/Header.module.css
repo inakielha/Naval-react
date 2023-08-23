@@ -208,4 +208,10 @@
     z-index: 2;
     height: 20vh;
   }
+  .cbsAbsolute h3 {
+    font-size: 0.625rem;
+  }
+  .cbsAbsolute span {
+    font-size: 0.5rem;
+  }
 }
