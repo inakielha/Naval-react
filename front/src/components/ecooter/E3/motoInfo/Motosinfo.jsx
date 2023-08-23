@@ -46,9 +46,12 @@ export default function MotosInfo({ isMobile }) {
               <img src={img1} alt="test" />
             </div>
             <div className={s.texto}>
-              <h5>TESTEADO CON 3 MILLONES
-                DE VIBRACIONES</h5>
+              <h5>CUADRO</h5>
               <ul>
+                <li><span>
+                  Testeado con 3 millones de vibraciones
+                </span>
+                </li>
                 <li><span>
                   Cuadro de soldadura robótica totalmente automatizada.
                 </span>
@@ -65,7 +68,7 @@ export default function MotosInfo({ isMobile }) {
               <ul>
                 <li>
                   <span>
-                  Todo el sistema de iluminación en tecnología LED totalmente de serie para proporcionar un campo de visión perfecto con un consumo de energía mínimo. 
+                    Todo el sistema de iluminación en tecnología LED totalmente de serie para proporcionar un campo de visión perfecto con un consumo de energía mínimo.
                   </span>
                 </li>
               </ul>
@@ -79,7 +82,7 @@ export default function MotosInfo({ isMobile }) {
               <h5>SMART DESIGN</h5>
               <ul>
                 <li><span>
-                Diseñada con reparto de pesos lo más al centro posible para obtener una estabilidad y sin perder espacio para los pies ni la capacidad de extraer las baterías. 
+                  Diseñada con reparto de pesos lo más al centro posible para obtener una estabilidad y sin perder espacio para los pies ni la capacidad de extraer las baterías.
                 </span>
                 </li>
               </ul>
@@ -93,7 +96,7 @@ export default function MotosInfo({ isMobile }) {
               <h5>POTENCIA EXTREMA</h5>
               <ul>
                 <li><span>
-                Motor central de alto rendimiento con sistema de transmisión de doble fase engranaje-cadena que proporciona un equilibrio perfecto entre velocidad máxima y torque. 
+                  Motor central de alto rendimiento con sistema de transmisión de doble fase engranaje-cadena que proporciona un equilibrio perfecto entre velocidad máxima y torque.
                 </span>
                 </li>
               </ul>
