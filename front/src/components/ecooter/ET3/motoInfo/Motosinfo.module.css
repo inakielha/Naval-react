@@ -37,7 +37,7 @@ div {
 .texto h5 {
     /* height: 5vh; */
     /* background-color: red; */
-    padding: 1em 0 0 1em;
+    padding: 1em 0 1em 1em;
     margin: 0;
     text-align: start;
     text-transform: uppercase;
@@ -49,6 +49,7 @@ div {
 .texto ul {
     margin: 0;
 }
+
 .texto ul:active {
     margin: 0;
 }
@@ -80,6 +81,7 @@ div {
         display: block;
         top: 20%;
     }
+
     .container {
         height: 30vh;
     }
@@ -96,12 +98,15 @@ div {
     }
 
     .texto h5 {
-        height: 3vh;
+        /* height: 3vh; */
         font-size: 0.55rem;
         width: 95%;
         text-align: start;
         padding-left: 0.5em;
+        padding: 1em 0 1em 0.5em;
+
     }
+
     /* .texto ul {
         margin: 0;
         background-color: blue;
