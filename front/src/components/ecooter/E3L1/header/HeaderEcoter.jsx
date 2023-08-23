@@ -1,5 +1,6 @@
 import imgAbs from "../../../../assets/ecooter/e3/cbs.svg";
 import E5 from "../../../../assets/ecooter/e3l1/portada e3 l1.jpg";
+import E5MOBILE from "../../../../assets/ecooter/e3l1/Grupo 505.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/e3l1/E3-.pdf"
@@ -22,7 +23,7 @@ export default function HeaderEcooterE3({ isMobile }) {
       <div className={s.navSpace}></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={isMobile ? E5 : E5} alt="portada" />
+          <img src={isMobile ? E5MOBILE : E5} alt="portada" />
           <div className={s.filtroIzq}></div>
           <div className={s.filtroDer}></div>
           {/* <img src={isMobile ? imgMobile : img} alt="portada" /> */}
@@ -50,7 +51,7 @@ export default function HeaderEcooterE3({ isMobile }) {
               <p>E3</p>
               <span>DESCARGAR FICHA</span>
             </div>
-            <p className={s.ltres}>L3</p>
+            <p className={s.ltres}>L1</p>
           </div>
         </div>
         <div className={s.filtro}></div>

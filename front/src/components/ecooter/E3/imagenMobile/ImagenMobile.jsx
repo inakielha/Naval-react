@@ -1,5 +1,6 @@
 import s from "./ImagenMobile.module.css";
-import imgMobil from "../../../../assets/ecooter/e3/mandos/Enmascarar grupo 501.jpg";
+import imgMobil from "../../../../assets/ecooter/e3/mandos/Enmascarar grupo 414.png";
+
 import { BsLightbulb, BsSpeedometer2, BsPower, BsFillLockFill } from "react-icons/bs";
 import { MdFlashAuto } from "react-icons/md";
 import { FiSmartphone } from "react-icons/fi";

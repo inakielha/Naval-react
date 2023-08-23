@@ -1,5 +1,6 @@
 import imgAbs from "../../../../assets/ecooter/e3/cbs.svg";
 import E5 from "../../../../assets/ecooter/e3/e3portada.jpg";
+import E5MOBILE from "../../../../assets/ecooter/e3/Grupo 506.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/e3/E3.pdf"
@@ -22,8 +23,7 @@ export default function HeaderEcooterE3({ isMobile }) {
       <div className={s.navSpace}></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={isMobile ? E5 : E5} alt="portada" />
-          {/* <img src={isMobile ? imgMobile : img} alt="portada" /> */}
+          <img src={isMobile ? E5MOBILE : E5} alt="portada" />
         </div>
         <div className={s.absolute}>
           <div onClick={()=> handleDownload()} className={s.descargarFicha}>
