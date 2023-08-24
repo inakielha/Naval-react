@@ -8,7 +8,7 @@ import { HiOutlineArrowSmallLeft, HiOutlineArrowLeft, HiChevronLeft } from "reac
 import { IconContext } from "react-icons";
 import ecooterLogo from "../../../../assets/ecooter/e5/blanco Logo Ecooter.png";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hamburger from "./hamburger/Hamburger";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -18,15 +18,26 @@ import { useNavigate } from "react-router-dom";
 export default function NavMobileEcooter({isMobile,landing}) {
   const [mobileMenu, setMobileMenu] = useState("hide")
   const [category, setCategory] = useState("modelos");
+  const [scroll, setScroll] = useState(false)
+
   const navigate = useNavigate()
  
   const navigateLanding = (e) => {
     navigate("/")
   };
+  
+  useEffect(()=>{
+    window.addEventListener("scroll",()=>{
+     if(window.scrollY > 0){
+         setScroll(true)
+     }else setScroll(false)
+    })
+},[])
+
   return (
     <div className={style.nabMobile}>
       {mobileMenu === "show" && <div onClick={()=>setMobileMenu("hide")} className={style.filtro}></div>}
-      <nav className={style.navbar}>
+      <nav className={style.navbar} style={scroll ? {display:"none"}:{}}>
         <div className={style.container}>
           <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>
             <LuMenu onClick={() => setMobileMenu("show")} />
@@ -48,7 +59,7 @@ export default function NavMobileEcooter({isMobile,landing}) {
         <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} />
 
       </nav>
-      <div className={j.section} style={{ marginBottom: "0" }}>
+      <div className={j.section} style={scroll ? { margin: "0" } : { marginBottom: "0" }}>
         <div className={j.contenedor}>
           <div onClick={() => window.location.href = "https://www.navalmotor.com/"} className={j.back}>
             <IconContext.Provider value={{ className: j.icon, size: "1em" }}>

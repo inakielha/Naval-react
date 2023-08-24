@@ -12,21 +12,32 @@ import { useDispatch, useSelector } from "react-redux";
 import { CATEGORY } from "../../../redux/actions/actions";
 import Hamburger from "./NavbarMobile/hamburger/Hamburger";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function NavbarEcooter({ isMobile, landing }) {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [category, setCategory] = useState("repuestos y accesorios");
+  const [scroll, setScroll] = useState(false)
   const navigate = useNavigate()
   const dispatch = useDispatch();
   const navigateLanding = (e) => {
     navigate("/")
   };
+  
+
+  useEffect(()=>{
+    window.addEventListener("scroll",()=>{
+     if(window.scrollY > 0){
+         setScroll(true)
+     }else setScroll(false)
+    })
+},[])
 
   return (
     <>
-      <nav className={s.navbar}>
-        <div className={s.navContainer}>
-          <div className={s.flex}>
+      <nav className={s.navbar} style={scroll ? {height:"5vh", boxShadow:"0px 2px 4px #6EC1E4"}:{}}>
+        <div className={s.navContainer} style={scroll ? {gap:"0"}:{}}>
+          <div className={s.flex} style={scroll ? {display:"none"}:{}}>
             <div className={s.alignMenu}>
               <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
             </div>
