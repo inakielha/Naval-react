@@ -68,7 +68,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>VELOCIDAD MÁX</p>
-              <span>110 Km/H</span>
+              <span>45 Km/H</span>
             </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>AUTONOMÍA HOMOLOGADA</p>
-              <span>148Km</span>
+              <span>70 Km</span>
             </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>DIMENSIONES</p>
-              <span>1.890 x 780 x 1.150 mm</span>
+              <span>1.870 x 780 x 1.300 mm</span>
             </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>altura ASIENTO</p>
-              <span>790 mm</span>
+              <span>740 mm</span>
             </div>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>PESO SIN BATERIA</p>
-              <span>110 Kg</span>
+              <span>83 Kg</span>
             </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>NEUMÁTICOS</p>
-              <span>Del: 110/80 - 14" Tras: 130/70 - 13"</span>
+              <span>Del: 90/80 - 12" Tras: 90/80 - 12"</span>
             </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>BATERIA</p>
-              <span>(x2) LG - Litio 64 V / 34 Amp</span>
+              <span>(x2) LG - Litio 60 V / 24 Amp</span>
             </div>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default function ImagenMobile() {
             <div className={s.infoCont}>
               <p>FRENOS</p>
               <span>
-                Sistema ABS de doble Canal Disco/Disco en las dos ruedas
+                Sistema Discos
               </span>
             </div>
             </div>
@@ -203,7 +203,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>MOTOR</p>
-              <span>Central</span>
+              <span>En Rueda Trasera</span>
             </div>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>TRANSMISIÓN</p>
-              <span>Cadena</span>
+              <span>Directo A La Rueda</span>
             </div>
             </div>
           </div>

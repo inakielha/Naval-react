@@ -69,7 +69,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>VELOCIDAD MÁX</p>
-              <span>110 Km/H</span>
+              <span>75 Km/H</span>
             </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>AUTONOMÍA HOMOLOGADA</p>
-              <span>148Km</span>
+              <span>90 Km</span>
             </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>DIMENSIONES</p>
-              <span>1.890 x 780 x 1.150 mm</span>
+              <span>1.950 x 710 x 1.100 mm</span>
             </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>PESO SIN BATERIA</p>
-              <span>110 Kg</span>
+              <span>92 Kg</span>
             </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function ImagenMobile() {
             </div>
             <div className={s.infoCont}>
               <p>BATERIA</p>
-              <span>(x2) LG - Litio 64 V / 34 Amp</span>
+              <span>(x2) LG - Litio 64 V / 45 Amp</span>
             </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function ImagenMobile() {
             <div className={s.infoCont}>
               <p>FRENOS</p>
               <span>
-                Sistema ABS de doble Canal Disco/Disco en las dos ruedas
+                Sistema CBS en las dos ruedas
               </span>
             </div>
             </div>
