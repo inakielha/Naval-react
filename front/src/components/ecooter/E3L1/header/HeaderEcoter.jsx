@@ -38,11 +38,11 @@ export default function HeaderEcooterE3({ isMobile }) {
               <span className={s.texto}>WHATTS DE POTENCIA</span>
             </div>
             <div className={s.textCont}>
-              <span className={s.number}>90</span>
+              <span className={s.number}>100</span>
               <span className={s.texto}>km de autonomía</span>
             </div>
             <div className={s.textCont}>
-              <span className={s.number}>75</span>
+              <span className={s.number}>45</span>
               <span className={s.texto}>km/h</span>
             </div>
           </div>

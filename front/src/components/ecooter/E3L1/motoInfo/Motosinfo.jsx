@@ -38,8 +38,8 @@ export default function MotosInfo({ isMobile }) {
   return (
     <div className={s.section}>
       <div className={s.container}>
-        <div className={s.absolute} onClick={() => handleNextSlide()}><IoIosArrowBack size={isMobile ? "2em" : "5em"} color="#6EC1E4" /></div>
-        <div className={s.absoluteR} onClick={() => handlePrevSlide()}><IoIosArrowForward size={isMobile ? "2em" : "5em"} color="#6EC1E4" /></div>
+        {/* <div className={s.absolute} onClick={() => handleNextSlide()}><IoIosArrowBack size={isMobile ? "2em" : "5em"} color="#6EC1E4" /></div> */}
+        {/* <div className={s.absoluteR} onClick={() => handlePrevSlide()}><IoIosArrowForward size={isMobile ? "2em" : "5em"} color="#6EC1E4" /></div> */}
         <Slider className={s.slider} {...settings} ref={sliderRef}>
           <div className={s.slide}>
             <div >
@@ -97,36 +97,6 @@ export default function MotosInfo({ isMobile }) {
               <ul>
                 <li><span>
                   Motor central de alto rendimiento con sistema de transmisión de doble fase engranaje-cadena que proporciona un equilibrio perfecto entre velocidad máxima y torque.
-                </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={s.slide}>
-            <div>
-              <img src={img2} alt="test" />
-            </div>
-            <div className={s.texto}>
-              <h5>Remplazar en futuro</h5>
-              <ul>
-                <li><span>
-
-                  Con las baterías en posición central se consigue un reparto de masas perfecto y hueco para el casco debajo del asiento.
-                </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={s.slide}>
-            <div>
-              <img src={img4} alt="test" />
-            </div>
-            <div className={s.texto}>
-              <h5>Remplazar en futuro</h5>
-              <ul>
-                <li><span>
-
-                  Basculante de doble brazo más ligero con una mayor durabilidad y sostenibilidad.
                 </span>
                 </li>
               </ul>
