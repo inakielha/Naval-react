@@ -3,13 +3,13 @@ import E5 from "../../../../assets/ecooter/e3l1/portada e3 l1.jpg";
 import E5MOBILE from "../../../../assets/ecooter/e3l1/Grupo 505.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
-import pdf from "../../../../assets/ecooter/e3l1/E3-.pdf"
+import pdf from "../../../../assets/ecooter/e3l1/E3-l1.pdf"
 
 export default function HeaderEcooterE3({ isMobile }) {
 
   const handleDownload = () => {
     const fileUrl = '../../../../assets/ecooter/E5.pdf'; // Reemplaza esto con la URL real del PDF
-    const fileName = 'E3.pdf'; // Reemplaza esto con el nombre que desees para el archivo
+    const fileName = 'E3-L1.pdf'; // Reemplaza esto con el nombre que desees para el archivo
 
     // Crear un enlace temporal para la descarga
     const link = document.createElement('a');
