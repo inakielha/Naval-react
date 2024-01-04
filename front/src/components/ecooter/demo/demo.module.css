@@ -1,0 +1,210 @@
+.section {
+    padding-top: 3em;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+
+    top: 30vh;
+    width: 80%;
+    height: 50vh;
+    height: auto;
+    margin: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    z-index: 5;
+    /* background-color: orange; */
+
+
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.form button {
+    border: none;
+    background-color: #0c4c6b;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.6em 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+}
+
+.imgCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.imgCont img {
+    width: 100%;
+}
+
+.inputMaterial {
+    width: 100%;
+}
+
+.form span {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.back {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.registrar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: green; */
+    gap: 1em;
+}
+
+.registrar span {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.registrar a {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: #0c4c6b;
+}
+
+.terminos {
+    margin-top: 3em;
+    border-top: 1px solid #707070;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.terminos span {
+    color: #0c4c6b;
+}
+
+.selectMoto {
+    width: 100%;
+    /* background-color: red; */
+}
+
+.btnCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.btnCont button {
+    color: #142848;
+    border: 0.5px solid #142848;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.btnCont button:hover {
+    color: #FFFFFF;
+    background-color: #142848;
+}
+
+.enviar {
+    background-color: #142848;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enviar button {
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    background-color: #142848;
+}
+.enviar:hover {
+    opacity: 0.9;
+}
+
+
+@media (min-width: 768px) {
+    .section {
+        /* top: 25vh; */
+        /* background-color: orange; */
+        width: 30%;
+        left: 30%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    .form {
+        gap: 1.5em;
+    }
+
+    .inputMaterial {
+        font-weight: 5px;
+        font-size: 5px;
+    }
+
+    .back span {
+        font-weight: bold;
+        font-size: 30px;
+        /* background-color: red; */
+    }
+
+    .selectMoto p {
+        font-size: 21px;
+    }
+
+    .btnCont button {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .enviar button {
+        font-size: 30px;
+    }
+
+    .terminos {
+        font-size: 21px;
+    }
+
+    .icon {
+        font-size: 4em;
+        cursor: pointer;
+    }
+}

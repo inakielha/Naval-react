@@ -12,45 +12,46 @@ import { useEffect, useState } from "react";
 import Hamburger from "./hamburger/Hamburger";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { pathImages } from "../../../../pathImages";
 
 
 
-export default function NavMobileEcooter({isMobile,landing}) {
+export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
   const [mobileMenu, setMobileMenu] = useState("hide")
   const [category, setCategory] = useState("modelos");
   const [scroll, setScroll] = useState(false)
 
   const navigate = useNavigate()
- 
+
   const navigateLanding = (e) => {
-    navigate("/")
+    navigate("/ecooter/")
   };
-  
-  useEffect(()=>{
-    window.addEventListener("scroll",()=>{
-     if(window.scrollY > 0){
-         setScroll(true)
-     }else setScroll(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScroll(true)
+      } else setScroll(false)
     })
-},[])
+  }, [])
 
   return (
     <div className={style.nabMobile}>
-      {mobileMenu === "show" && <div onClick={()=>setMobileMenu("hide")} className={style.filtro}></div>}
-      <nav className={style.navbar} style={scroll ? {display:"none"}:{}}>
+      {mobileMenu === "show" && <div onClick={() => setMobileMenu("hide")} className={style.filtro}></div>}
+      <nav className={style.navbar} style={scroll ? { display: "none" } : {}}>
         <div className={style.container}>
           <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>
             <LuMenu onClick={() => setMobileMenu("show")} />
           </IconContext.Provider>
           <div className={style.imgContainer}>
-            <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={logo} alt="logo" />
+            <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={pathImages + logo} alt="logo" />
           </div>
           <div>
             <div className={style.contenedorLupa}>
               {/* <IconContext.Provider value={{ className: style.iconLupa, size: "1.5em" }}>
                 <BiSearch />
               </IconContext.Provider> */}
-               <IoLogoWhatsapp size={"2.4em"} onClick={() => window.open("https://api.whatsapp.com/send?phone=5491126661777&", '_blank')}
+              <IoLogoWhatsapp size={"2.4em"} onClick={() => window.open("https://api.whatsapp.com/send?phone=5491126661777&", '_blank')}
                 style={{ color: "#25d366", cursor: "pointer" }}
               />
             </div>
@@ -68,19 +69,39 @@ export default function NavMobileEcooter({isMobile,landing}) {
 
             <span>Home</span>
           </div>
-          <div className={j.imgContainer}><img src={ecooterLogo} alt="logo" /></div>
+          <div className={j.imgContainer}><img src={pathImages + ecooterLogo} alt="logo" /></div>
           <span>ss</span>
         </div>
       </div>
       <div className={s.btnContainer}>
-        <button onClick={() => navigateLanding()} style={
-          landing
+        <button onClick={() => {
+          navigateLanding()
+          setDemo(false)
+        }
+        }
+          style={
+            landing && !demo
+              ? {
+                color: "white",
+                backgroundColor: "#000000"
+              }
+              : {}
+          }>Modelos</button>
+
+        <button onClick={(e) => {
+
+          setDemo((prev) => !prev)
+
+        }
+        } style={
+          demo
             ? {
               color: "white",
               backgroundColor: "#000000"
             }
             : {}
-        }>Modelos</button>
+        }>Demo</button>
+
         <button onClick={(e) => window.open("https://www.navalmotor.com/contacto")} style={
           category === "contacto"
             ? {

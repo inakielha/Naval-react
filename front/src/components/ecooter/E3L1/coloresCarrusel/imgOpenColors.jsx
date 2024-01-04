@@ -3,6 +3,7 @@ import { GrFormClose, GrClose } from "react-icons/gr"
 import { AiOutlineClose } from "react-icons/ai"
 import { useDispatch } from "react-redux"
 import { BLACK_BACKGROUND } from "../../../../redux/actions/actions"
+import { pathImages } from "../../../../pathImages"
 
 
 export default function ImgOpenColors({ src, setImagen, imagen }) {
@@ -17,7 +18,7 @@ export default function ImgOpenColors({ src, setImagen, imagen }) {
     return (
         <div className={s.imgDialog} id="close" onClick={(e) => closeDialog(e)}>
             <div className={s.imgContainer}>
-                <img src={src} alt="" />
+                <img src={pathImages+src} alt="" />
             </div>
             <div className={s.close}>
                 <AiOutlineClose id="close" onClick={(e) => closeDialog(e)} className={s.icon} color="#fff" />

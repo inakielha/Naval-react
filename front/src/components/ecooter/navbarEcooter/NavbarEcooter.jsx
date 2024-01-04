@@ -13,36 +13,38 @@ import { CATEGORY } from "../../../redux/actions/actions";
 import Hamburger from "./NavbarMobile/hamburger/Hamburger";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { pathImages } from "../../../pathImages";
 
-export default function NavbarEcooter({ isMobile, landing }) {
+export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [category, setCategory] = useState("repuestos y accesorios");
   const [scroll, setScroll] = useState(false)
   const navigate = useNavigate()
   const dispatch = useDispatch();
   const navigateLanding = (e) => {
-    navigate("/")
+    setDemo(false)
+    navigate("/ecooter/")
   };
-  
 
-  useEffect(()=>{
-    window.addEventListener("scroll",()=>{
-     if(window.scrollY > 0){
-         setScroll(true)
-     }else setScroll(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScroll(true)
+      } else setScroll(false)
     })
-},[])
+  }, [])
 
   return (
     <>
-      <nav className={s.navbar} style={scroll ? {height:"5vh", boxShadow:"0px 2px 4px #6EC1E4"}:{}}>
-        <div className={s.navContainer} style={scroll ? {gap:"0"}:{}}>
-          <div className={s.flex} style={scroll ? {display:"none"}:{}}>
+      <nav className={s.navbar} style={scroll || demo ? { height: "5vh", boxShadow: "0px 2px 4px #6EC1E4" } : {}}>
+        <div className={s.navContainer} style={scroll || demo ? { gap: "0" } : {}}>
+          <div className={s.flex} style={scroll || demo ? { display: "none" } : {}}>
             <div className={s.alignMenu}>
               <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
             </div>
             <div className={s.imgContainer}>
-              <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={logo} alt="logo" />
+              <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={pathImages + logo} alt="logo" />
             </div>
             <div className={s.iconContainer}>
               {/* <IoSearchCircleSharp
@@ -56,14 +58,14 @@ export default function NavbarEcooter({ isMobile, landing }) {
           </div>
           <div className={s.categorias}>
             <div className={s.mercuryContainer}>
-              <img src={ecooterLogo} alt="" />
+              <img src={pathImages + ecooterLogo} alt="" />
             </div>
             <div className={s.spanCont}>
 
               <span
                 onClick={(e) => navigateLanding(e)}
                 style={
-                  landing
+                  landing && !demo
                     ? {
                       color: "#6EC1E4",
                     }
@@ -71,6 +73,21 @@ export default function NavbarEcooter({ isMobile, landing }) {
                 }
               >
                 Modelos
+              </span>
+              <span onClick={(e) => {
+
+                setDemo((prev)=>!prev)
+                
+              }
+              }
+                style={
+                  demo
+                    ? {
+                      color: "#6EC1E4",
+                    }
+                    : {}
+                }>
+                DEMO
               </span>
               <span
                 onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}

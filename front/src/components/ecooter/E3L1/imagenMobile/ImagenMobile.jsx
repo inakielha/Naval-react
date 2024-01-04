@@ -11,6 +11,7 @@ import { FaStumbleupon } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import VideoPlayer from "../mandos/videoPlayer/VideoPlayer";
 import videoSrc from "../../../../assets/ecooter/e3/mandos/Detalles Ecooter E3.mp4"
+import { pathImages } from "../../../../pathImages";
 export default function ImagenMobile() {
   const Color = useSelector((state) => state.clientReducer.backgroundColor)
 
@@ -240,7 +241,7 @@ export default function ImagenMobile() {
       <div className={s.sectionVideo}>
         <div className={s.videoContainer}>
           <h3>detalles</h3>
-          <VideoPlayer video={videoSrc} />
+          <VideoPlayer video={pathImages+videoSrc} />
         </div>
       </div>
     </>

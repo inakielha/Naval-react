@@ -6,7 +6,6 @@ import { BLACK_BACKGROUND } from "../../../../redux/actions/actions"
 export default function ImageOpen({ src, setImagen, imagen }) {
     const dispatch = useDispatch()
     const closeDialog = (e) => {
-        console.log(e)
         if (imagen.open && e.target.id === "close") {
             setImagen({ ok: false, src: "" })
             dispatch(BLACK_BACKGROUND("neutral"))

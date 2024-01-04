@@ -8,6 +8,7 @@ import img3 from "../../../../assets/ecooter/e3/motosInfo/caracterisitas3.jpg";
 import img4 from "../../../../assets/ecooter/e3/motosInfo/caracterisitas4.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import { useRef } from "react";
+import { pathImages } from "../../../../pathImages";
 
 
 export default function MotosInfo({ isMobile }) {
@@ -43,7 +44,7 @@ export default function MotosInfo({ isMobile }) {
         <Slider className={s.slider} {...settings} ref={sliderRef}>
           <div className={s.slide}>
             <div >
-              <img src={img1} alt="test" />
+              <img src={pathImages + img1} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>CUADRO</h5>
@@ -61,7 +62,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img2} alt="test" />
+              <img src={pathImages + img2} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>FULL LED</h5>
@@ -76,7 +77,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img3} alt="test" />
+              <img src={pathImages + img3} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>SMART DESIGN</h5>
@@ -90,7 +91,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img4} alt="test" />
+              <img src={pathImages + img4} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>POTENCIA EXTREMA</h5>

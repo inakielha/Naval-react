@@ -5,6 +5,7 @@ import E5 from "../../../../assets/ecooter/et3/ESCRITORIO/portada et3.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/et3/ET3.pdf"
+import { pathImages } from "../../../../pathImages";
 
 export default function HeaderEcooterE3({ isMobile }) {
 
@@ -13,7 +14,7 @@ export default function HeaderEcooterE3({ isMobile }) {
 
     // Crear un enlace temporal para la descarga
     const link = document.createElement('a');
-    link.href = pdf;
+    link.href = pathImages + pdf;
     link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
     link.download = fileName;
     link.click();
@@ -26,10 +27,10 @@ export default function HeaderEcooterE3({ isMobile }) {
           {/* <img src={E5} alt="portada" /> */}
           <div className={s.filtroIzq}></div>
           <div className={s.filtroDer}></div>
-          <img src={isMobile ? ET3MOBILE : ET3} alt="portada" />
+          <img src={isMobile ? pathImages + ET3MOBILE : pathImages + ET3} alt="portada" />
         </div>
         <div className={s.absolute}>
-          <div onClick={()=> handleDownload()} className={s.descargarFicha}>
+          <div onClick={() => handleDownload()} className={s.descargarFicha}>
             <span>DESCARGAR FICHA</span>
           </div>
           <div className={s.info}>
@@ -47,7 +48,7 @@ export default function HeaderEcooterE3({ isMobile }) {
             </div>
           </div>
           <div className={s.titContainer}>
-            <div onClick={()=> handleDownload()} className={s.titulo}>
+            <div onClick={() => handleDownload()} className={s.titulo}>
               <p>ET3</p>
               <span>DESCARGAR FICHA</span>
             </div>
@@ -58,7 +59,7 @@ export default function HeaderEcooterE3({ isMobile }) {
       </div>
       <div className={s.sectionTwo}>
         <div className={s.imgContainer}>
-          <img src={imgAbs} alt="abs" />
+          <img src={pathImages + imgAbs} alt="abs" />
           <div className={s.cbsAbsolute}>
             <h3>lleno de movimiento y conducción fresca</h3>
             <span>Diseño avanzado y espléndido, configuración especial, aspecto agradable y atractivo, lo hace más distintivo</span>

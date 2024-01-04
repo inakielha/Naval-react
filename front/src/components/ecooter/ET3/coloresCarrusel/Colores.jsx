@@ -10,6 +10,7 @@ import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ImgOpenColors from "./imgOpenColors";
 import pdf from "../../../../assets/ecooter/et3/ET3.pdf"
+import { pathImages } from "../../../../pathImages";
 
 export default function Colores() {
   const dispatch = useDispatch()
@@ -93,43 +94,43 @@ export default function Colores() {
           <div className={s.test}>
             <div className={defineClass(0)}>
               {/* <div className={currentSlide == 0 ? s.red : s.slide}></div> */}
-              <img id={0} onClick={(e) => bigPicture(e)} src={img1} alt="test" />
+              <img id={0} onClick={(e) => bigPicture(e)} src={pathImages + img1} alt="test" />
             </div>
           </div>
           <div className={s.test}>
             <div className={defineClass(1)}>
               {/* <div className={currentSlide == 1 ? s.red : s.slide}></div> */}
-              <img id={1} onClick={(e) => bigPicture(e)} src={img2} alt="test" />
+              <img id={1} onClick={(e) => bigPicture(e)} src={pathImages + img2} alt="test" />
             </div>
           </div>
           <div className={s.test}>
             <div className={defineClass(2)}>
               {/* <div className={currentSlide == 2 ? s.red : s.slide}></div> */}
-              <img id={2} onClick={(e) => bigPicture(e)} src={img3} alt="test" />
+              <img id={2} onClick={(e) => bigPicture(e)} src={pathImages + img3} alt="test" />
             </div>
           </div>
           <div className={s.test}>
             <div className={defineClass(3)}>
               {/* <div className={currentSlide == 3 ? s.red : s.slide}></div> */}
-              <img id={3} onClick={(e) => bigPicture(e)} src={img1} alt="test" />
+              <img id={3} onClick={(e) => bigPicture(e)} src={pathImages + img1} alt="test" />
             </div>
           </div>
           <div className={s.test}>
             <div className={defineClass(4)}>
               {/* <div className={currentSlide == 4 ? s.red : s.slide}></div> */}
-              <img id={4} onClick={(e) => bigPicture(e)} src={img2} alt="test" />
+              <img id={4} onClick={(e) => bigPicture(e)} src={pathImages + img2} alt="test" />
             </div>
           </div>
           <div className={s.test}>
             <div className={defineClass(5)}>
               {/* <div className={currentSlide == 4 ? s.red : s.slide}></div> */}
-              <img id={5} onClick={(e) => bigPicture(e)} src={img3} alt="test" />
+              <img id={5} onClick={(e) => bigPicture(e)} src={pathImages + img3} alt="test" />
             </div>
           </div>
         </Slider>
       </div>
       <div className={s.btnCont}>
-        <button onClick={()=>handleDownload()}>DESCARGA EL CATALOGO</button>
+        <button onClick={() => handleDownload()}>DESCARGA EL CATALOGO</button>
       </div>
     </div>
   );

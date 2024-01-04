@@ -6,12 +6,13 @@ import imgLlave from "../../../../assets/ecooter/et3/ESCRITORIO/mandos/Enmascara
 import imgDisplay from "../../../../assets/ecooter/et3/ESCRITORIO/mandos/tablero escritorio.gif";
 import VideoPlayer from "./videoPlayer/VideoPlayer";
 import videoSrc from "../../../../assets/ecooter/et3/ESCRITORIO/mandos/x2mate.com-Ecooter ET3.mp4"
-export default function Mandos({isMobile}) {
+import { pathImages } from "../../../../pathImages";
+export default function Mandos({ isMobile }) {
   return (
     <>
-       <div className={s.section}>
+      <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={imgDisplay} alt="s" />
+          <img src={pathImages + imgDisplay} alt="s" />
         </div>
         <div className={s.llave}>
           <h3>pantalla flotante</h3>
@@ -20,21 +21,21 @@ export default function Mandos({isMobile}) {
       </div>
       <div className={s.section}>
         <div className={s.videoContainer}>
-          <VideoPlayer video={videoSrc}/>
+          <VideoPlayer video={pathImages + videoSrc} />
         </div>
       </div>
       <div className={s.sectionControl}>
         <div className={s.control}>
           <h3>CONTROL TOTAL</h3>
           <span>
-          Control de marcha retro iluminado.
+            Control de marcha retro iluminado.
           </span>
         </div>
         <div className={s.imgContainerControl}>
-          <img src={imgLlave} alt="s" />
+          <img src={pathImages + imgLlave} alt="s" />
         </div>
       </div>
-      
+
     </>
   );
 }

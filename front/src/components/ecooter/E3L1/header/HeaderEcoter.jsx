@@ -4,6 +4,7 @@ import E5MOBILE from "../../../../assets/ecooter/e3l1/Grupo 505.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/e3l1/E3-l1.pdf"
+import { pathImages } from "../../../../pathImages";
 
 export default function HeaderEcooterE3({ isMobile }) {
 
@@ -13,7 +14,7 @@ export default function HeaderEcooterE3({ isMobile }) {
 
     // Crear un enlace temporal para la descarga
     const link = document.createElement('a');
-    link.href = pdf;
+    link.href = pathImages + pdf;
     link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
     link.download = fileName;
     link.click();
@@ -23,13 +24,13 @@ export default function HeaderEcooterE3({ isMobile }) {
       <div className={s.navSpace}></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={isMobile ? E5MOBILE : E5} alt="portada" />
+          <img src={isMobile ? pathImages + E5MOBILE : pathImages + E5} alt="portada" />
           <div className={s.filtroIzq}></div>
           <div className={s.filtroDer}></div>
           {/* <img src={isMobile ? imgMobile : img} alt="portada" /> */}
         </div>
         <div className={s.absolute}>
-          <div onClick={()=> handleDownload()} className={s.descargarFicha}>
+          <div onClick={() => handleDownload()} className={s.descargarFicha}>
             <span>DESCARGAR FICHA</span>
           </div>
           <div className={s.info}>
@@ -47,7 +48,7 @@ export default function HeaderEcooterE3({ isMobile }) {
             </div>
           </div>
           <div className={s.titContainer}>
-            <div onClick={()=> handleDownload()} className={s.titulo}>
+            <div onClick={() => handleDownload()} className={s.titulo}>
               <p>E3</p>
               <span>DESCARGAR FICHA</span>
             </div>
@@ -58,11 +59,11 @@ export default function HeaderEcooterE3({ isMobile }) {
       </div>
       <div className={s.sectionTwo}>
         <div className={s.imgContainer}>
-          <img src={imgAbs} alt="abs" />
+          <img src={pathImages + imgAbs} alt="abs" />
           <div className={s.cbsAbsolute}>
             <h3>Sistema de frenos combinados de disco cbs delantero y trasero</h3>
             <span>Freno de disco hidráulico delantero y trasero adoptado, bomba superior de empuje directo/manguera de freno.
-combinando científicamente la mejor fuerza de frenado, los frenos son más sensibles y seguros</span>
+              combinando científicamente la mejor fuerza de frenado, los frenos son más sensibles y seguros</span>
           </div>
         </div>
       </div>

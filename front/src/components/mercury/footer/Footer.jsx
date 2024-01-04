@@ -4,19 +4,21 @@ import instagram from "../../../assets/mercury/instagram.png"
 import dollar from "../../../assets/mercury/dollar.png"
 import youtube from "../../../assets/mercury/ytIcon.svg"
 import s from "./Footer.module.css"
-import {BsCurrencyDollar,BsLinkedin,BsInstagram, BsYoutube} from "react-icons/bs"
+import { BsCurrencyDollar, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs"
+import { pathImages } from "../../../pathImages"
 
-export default function Footer({color}) {
+export default function Footer({ color, demo, setDemo }) {
   return (
-    <footer id={s.contacto}>
+    <footer id={s.contacto} onClick={()=>setDemo(false)}>
+      {demo && <div id="close" className={s.filtro}></div>}
       <div className={s.footerContainer}>
         <div className={s.info}>
-          <p className={s.text} style={color ? {color:color} : {color:"#DF0404"}}>EXPOSICIÓN, VENTAS Y SHOWROOM</p>
+          <p className={s.text} style={color ? { color: color } : { color: "#DF0404" }}>EXPOSICIÓN, VENTAS Y SHOWROOM</p>
           <p>Av. del Libertador 701, Vicente López, Buenos Aires</p>
           <p>info@navalmotor.com</p>
           <div className={s.numero}>
             <div className={s.wspContainer}>
-              <img src={whatsapp} alt="contact" />
+              <img src={pathImages + whatsapp} alt="contact" />
             </div>
             <span>+541126661777</span>
           </div>
@@ -37,7 +39,7 @@ export default function Footer({color}) {
                 href="https://www.youtube.com/channel/UCT1SJPaMSOsG1_3H0tflf0A"
                 target="_blank"
               >
-                <BsYoutube size={"2.5em"} color={"#707070"}/>
+                <BsYoutube size={"2.5em"} color={"#707070"} />
               </a>
             </div>
             {/* <div>

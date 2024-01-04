@@ -13,10 +13,12 @@ import NavMobileEcooter from './components/ecooter/navbarEcooter/NavbarMobile/Na
 import { useDispatch } from 'react-redux';
 import { IS_MOBILE } from './redux/actions/actions';
 import LandingEcooter from './components/ecooter/landingEcooter/LandingEcooter';
+import Demo from './components/ecooter/demo/Demo';
 
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [demo, setDemo] = useState(false);
   const dispatch = useDispatch()
 
   const handleResize = () => {
@@ -31,17 +33,17 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  
+  console.log({demo})
   return (
    <>
    <Routes>
     {/* <Route path='/' element={<Navbar/>}/> */}
     {/* <Route path='/' element={<>{isMobile ? <Navbar/> : <NavbarWeb/>} <Mercury isMobile={isMobile} /> <Footer/></>}/> */}
-    <Route path='/' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile} landing={true}/> : <NavbarEcooter isMobile={isMobile} landing={true}/>} <LandingEcooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
-    <Route path='/e5' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile} landing={false}/> : <NavbarEcooter isMobile={isMobile} landing={false}/>} <Ecooter isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
-    <Route path='/e3' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile} landing={false}/> : <NavbarEcooter isMobile={isMobile} landing={false}/>} <EcooterE3 isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
-    <Route path='/e3l1' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile} landing={false}/> : <NavbarEcooter isMobile={isMobile} landing={false}/>} <EcooterE3L1 isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
-    <Route path='/et3' element={<>{isMobile ? <NavMobileEcooter isMobile={isMobile} landing={false}/> : <NavbarEcooter isMobile={isMobile} landing={false}/>} <EcooterET3 isMobile={isMobile} /> <Footer color={"#6EC1E4"}/></>}/>
+    <Route path='/ecooter/' element={<>{isMobile ? <NavMobileEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={true}/> : <NavbarEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={true}/>} <LandingEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/><Footer demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
+    <Route path='/ecooter/e5' element={<>{isMobile ? <NavMobileEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/> : <NavbarEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/>} <Ecooter demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/><Footer demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
+    <Route path='/ecooter/e3' element={<>{isMobile ? <NavMobileEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/> : <NavbarEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/>} <EcooterE3 demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/><Footer demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
+    <Route path='/ecooter/e3l1' element={<>{isMobile ? <NavMobileEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/> : <NavbarEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/>} <EcooterE3L1 demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/><Footer demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
+    <Route path='/ecooter/et3' element={<>{isMobile ? <NavMobileEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/> : <NavbarEcooter demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false}/>} <EcooterET3 demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/><Footer demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
    </Routes>
    </>
   );

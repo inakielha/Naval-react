@@ -4,6 +4,7 @@ import E5MOBILE from "../../../../assets/ecooter/e3/Grupo 506.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/e3/E3-l3.pdf"
+import { pathImages } from "../../../../pathImages";
 
 export default function HeaderEcooterE3({ isMobile }) {
 
@@ -13,7 +14,7 @@ export default function HeaderEcooterE3({ isMobile }) {
 
     // Crear un enlace temporal para la descarga
     const link = document.createElement('a');
-    link.href = pdf;
+    link.href = pathImages + pdf;
     link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
     link.download = fileName;
     link.click();
@@ -23,7 +24,7 @@ export default function HeaderEcooterE3({ isMobile }) {
       <div className={s.navSpace}></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={isMobile ? E5MOBILE : E5} alt="portada" />
+          <img src={isMobile ? pathImages + E5MOBILE : pathImages + E5} alt="portada" />
         </div>
         <div className={s.absolute}>
           <div onClick={()=> handleDownload()} className={s.descargarFicha}>
@@ -55,7 +56,7 @@ export default function HeaderEcooterE3({ isMobile }) {
       </div>
       <div className={s.sectionTwo}>
         <div className={s.imgContainer}>
-          <img src={imgAbs} alt="abs" />
+          <img src={pathImages +imgAbs} alt="abs" />
           <div className={s.cbsAbsolute}>
             <h3>Sistema de frenos combinados de disco cbs delantero y trasero</h3>
             <span>Freno de disco hidráulico delantero y trasero adoptado, bomba superior de empuje directo/manguera de freno.

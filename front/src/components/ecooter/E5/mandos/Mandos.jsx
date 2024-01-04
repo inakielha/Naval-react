@@ -4,13 +4,14 @@ import imgPanel from "../../../../assets/ecooter/e5/panel.jpg";
 import imgControl from "../../../../assets/ecooter/e5/mandos/CONTROL TOTAL.jpg";
 import imgLlave from "../../../../assets/ecooter/e5/mandos/Arranque sin llave.jpg";
 import VideoPlayer from "./videoPlayer/VideoPlayer";
+import { pathImages } from "../../../../pathImages";
 
 export default function Mandos() {
   return (
     <>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={img} alt="s" />
+          <img src={pathImages + img} alt="s" />
         </div>
         <div className={s.info}>
           <h3>mandos retroiluminadas</h3>
@@ -29,7 +30,7 @@ export default function Mandos() {
       </div>
       <div className={s.section}>
         <div className={s.imgContainertwo}>
-          <img src={imgPanel} alt="panel" />
+          <img src={pathImages + imgPanel} alt="panel" />
         </div>
       </div>
       <div className={s.sectionControl}>
@@ -40,7 +41,7 @@ export default function Mandos() {
           </span>
         </div>
         <div className={s.imgContainerControl}>
-          <img src={imgControl} alt="s" />
+          <img src={pathImages + imgControl} alt="s" />
         </div>
       </div>
       <div className={s.section}>
@@ -52,12 +53,12 @@ export default function Mandos() {
             autoPlay="autoplay"
             loop="loop"
           /> */}
-          <VideoPlayer/>
+          <VideoPlayer />
         </div>
       </div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={imgLlave} alt="s" />
+          <img src={pathImages + imgLlave} alt="s" />
         </div>
         <div className={s.llave}>
           <h3>Arranque sin llave</h3>

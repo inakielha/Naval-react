@@ -10,6 +10,7 @@ import img5 from "../../../../assets/ecooter/e5/carrusel/Carrusel5.jpg";
 import img6 from "../../../../assets/ecooter/e5/carrusel/carrusel6.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import { useRef } from "react";
+import { pathImages } from "../../../../pathImages";
 
 
 export default function MotosInfo({ isMobile }) {
@@ -45,7 +46,7 @@ export default function MotosInfo({ isMobile }) {
         <Slider className={s.slider} {...settings} ref={sliderRef}>
           <div className={s.slide}>
             <div >
-              <img src={img1} alt="test" />
+              <img src={pathImages + img1} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>ABS Delantero y trasero</h5>
@@ -72,7 +73,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img2} alt="test" />
+              <img src={pathImages + img2} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>Ruedas de gran diámetro</h5>
@@ -89,7 +90,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img3} alt="test" />
+              <img src={pathImages + img3} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>TESTEADO CON 3 MILLONES DE VIBRACIONES</h5>
@@ -115,7 +116,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img4} alt="test" />
+              <img src={pathImages + img4} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>Transmisión por cadena sellada</h5>
@@ -129,7 +130,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img5} alt="test" />
+              <img src={pathImages + img5} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>baúl para el casco</h5>
@@ -144,7 +145,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img6} alt="test" />
+              <img src={pathImages + img6} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>Basculante de aluminio</h5>

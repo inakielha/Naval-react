@@ -6,12 +6,13 @@ import imgLlave from "../../../../assets/ecooter/e3/mandos/arranque sin llave.jp
 import imgDisplay from "../../../../assets/ecooter/e3/mandos/tablero.jpg";
 import VideoPlayer from "./videoPlayer/VideoPlayer";
 import videoSrc from "../../../../assets/ecooter/e3/mandos/Ecooter E3.mp4"
-export default function Mandos({isMobile}) {
+import { pathImages } from "../../../../pathImages";
+export default function Mandos({ isMobile }) {
   return (
     <>
-       <div className={s.section}>
+      <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={imgDisplay} alt="s" />
+          <img src={pathImages + imgDisplay} alt="s" />
         </div>
         <div className={s.llave}>
           <h3>DISPLAY DIGITAL </h3>
@@ -20,31 +21,31 @@ export default function Mandos({isMobile}) {
       </div>
       <div className={s.section}>
         <div className={s.imgContainertwo}>
-          <img src={isMobile ? imgPanelMobile : imgPanel} alt="panel" />
+          <img src={isMobile ? pathImages + imgPanelMobile : pathImages + imgPanel} alt="panel" />
           <div className={s.absolute}>
             <div className={s.textContainer}>
-            <h3>SISTEMA DE FRENADA COMBINADA</h3>
-            <span>Frenos de disco hidráulico delantero y trasero que combinan electrónicamente la fuerza más adecuada para una frenada más precisa y segura. </span>
+              <h3>SISTEMA DE FRENADA COMBINADA</h3>
+              <span>Frenos de disco hidráulico delantero y trasero que combinan electrónicamente la fuerza más adecuada para una frenada más precisa y segura. </span>
             </div>
           </div>
         </div>
       </div>
-     
+
       <div className={s.section}>
         <div className={s.videoContainer}>
-          <VideoPlayer video={videoSrc}/>
+          <VideoPlayer video={pathImages + videoSrc} />
         </div>
       </div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={imgLlave} alt="s" />
+          <img src={pathImages + imgLlave} alt="s" />
         </div>
         <div className={s.llave}>
           <h3>Arranque sin llave</h3>
           <span>Ponte en marcha sin sacar la llave del bolsillo.</span>
         </div>
       </div>
-      
+
     </>
   );
 }

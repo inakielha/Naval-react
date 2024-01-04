@@ -8,6 +8,7 @@ import img3 from "../../../../assets/ecooter/et3/ESCRITORIO/motosInfo/Enmascarar
 import img4 from "../../../../assets/ecooter/et3/ESCRITORIO/motosInfo/Enmascarar grupo 445.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import { useRef } from "react";
+import { pathImages } from "../../../../pathImages";
 
 
 export default function MotosInfo({ isMobile }) {
@@ -43,7 +44,7 @@ export default function MotosInfo({ isMobile }) {
         <Slider className={s.slider} {...settings} ref={sliderRef}>
           <div className={s.slide}>
             <div >
-              <img src={img1} alt="test" />
+              <img src={pathImages + img1} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>freno flexible</h5>
@@ -57,7 +58,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img2} alt="test" />
+              <img src={pathImages + img2} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>alto confort</h5>
@@ -73,7 +74,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img3} alt="test" />
+              <img src={pathImages + img3} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>tiras LED</h5>
@@ -87,7 +88,7 @@ export default function MotosInfo({ isMobile }) {
           </div>
           <div className={s.slide}>
             <div>
-              <img src={img4} alt="test" />
+              <img src={pathImages + img4} alt="test" />
             </div>
             <div className={s.texto}>
               <h5>neumáticos</h5>

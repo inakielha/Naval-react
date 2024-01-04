@@ -4,6 +4,7 @@ import E5 from "../../../../assets/ecooter/e5/header/E5.jpg";
 import s from "./Header.module.css";
 import MotosInfo from "../motoInfo/Motosinfo";
 import pdf from "../../../../assets/ecooter/e5/E5.pdf"
+import { pathImages } from "../../../../pathImages";
 
 export default function HeaderEcooter({ isMobile }) {
 
@@ -23,11 +24,11 @@ export default function HeaderEcooter({ isMobile }) {
       <div className={s.navSpace}></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
-          <img src={isMobile ? E5 : img} alt="portada" />
+          <img src={isMobile ? pathImages + E5 : pathImages + img} alt="portada" />
           {/* <img src={isMobile ? imgMobile : img} alt="portada" /> */}
         </div>
         <div className={s.absolute}>
-          <div onClick={()=> handleDownload()} className={s.descargarFicha}>
+          <div onClick={() => handleDownload()} className={s.descargarFicha}>
             <span>DESCARGAR FICHA</span>
           </div>
           <div className={s.info}>
@@ -45,7 +46,7 @@ export default function HeaderEcooter({ isMobile }) {
             </div>
           </div>
           <div className={s.titContainer}>
-            <div onClick={()=> handleDownload()} className={s.titulo}>
+            <div onClick={() => handleDownload()} className={s.titulo}>
               <p>E5</p>
               <span>DESCARGAR FICHA</span>
             </div>
@@ -56,7 +57,7 @@ export default function HeaderEcooter({ isMobile }) {
       </div>
       <div className={s.sectionTwo}>
         <div className={s.imgContainer}>
-          <img src={imgAbs} alt="abs" />
+          <img src={pathImages + imgAbs} alt="abs" />
         </div>
       </div>
       <MotosInfo isMobile={isMobile} />

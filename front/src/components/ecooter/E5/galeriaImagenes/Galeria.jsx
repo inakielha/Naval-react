@@ -13,6 +13,7 @@ import { useRef, useState } from "react";
 import ImageOpen from "./ImageOpen";
 import { useDispatch, useSelector } from "react-redux";
 import { BLACK_BACKGROUND } from "../../../../redux/actions/actions";
+import { pathImages } from "../../../../pathImages";
 
 
 export default function Galeria() {
@@ -22,7 +23,7 @@ export default function Galeria() {
   const [imagen, setImagen] = useState({ open: false, src: "" })
 
 
-  let imgArr = [img1, img2, img3, img4, img5]
+  let imgArr = [pathImages+img1, pathImages+img2, pathImages+img3, pathImages+img4, pathImages+img5]
   const settings = {
     // dots: true,
     infinite: true,
@@ -35,7 +36,6 @@ export default function Galeria() {
   };
 
   const bigPicture = (e) => {
-    console.log(e.target.src)
     setImagen({ open: true, src: e.target.src })
     dispatch(BLACK_BACKGROUND("black"))
   }
@@ -43,7 +43,6 @@ export default function Galeria() {
   const handleNextSlide = () => {
     if (sliderRef.current) {
       let srcCrurrent = sliderRef.current.innerSlider.state.currentSlide
-      console.log(srcCrurrent)
       sliderRef.current.slickPrev();
       if (imagen.open) {
         setImagen({ open: true, src: imgArr[srcCrurrent] })
@@ -63,37 +62,37 @@ export default function Galeria() {
     }
   };
 
-  const closeDialog = (e)=>{
+  const closeDialog = (e) => {
     console.log(e)
-    if (imagen.open && e.target.id === "close"){
-      setImagen({ok: false, src:""})
+    if (imagen.open && e.target.id === "close") {
+      setImagen({ ok: false, src: "" })
       dispatch(BLACK_BACKGROUND("neutral"))
     }
   }
   return (
     <>
       <div className={s.section}>
-        {imagen.open && <ImageOpen src={imagen.src} setImagen={setImagen} imagen={imagen}/>}
-        {Color === "black" && <div id="close" onClick={(e)=>closeDialog(e)} className={s.filtro}></div>}
+        {imagen.open && <ImageOpen src={imagen.src} setImagen={setImagen} imagen={imagen} />}
+        {Color === "black" && <div id="close" onClick={(e) => closeDialog(e)} className={s.filtro}></div>}
         <h3>galería de imagenes</h3>
         <div className={s.container}>
           <div className={s.absolute} onClick={() => handleNextSlide()}><IoIosArrowBack className={s.flecha} color="#fff" /></div>
           <div className={s.absoluteR} onClick={() => handlePrevSlide()}><IoIosArrowForward className={s.flecha} color="#fff" /></div>
           <Slider className={s.slider} {...settings} ref={sliderRef}>
             <div className={s.slide}>
-              <img onClick={(e) => bigPicture(e)} src={img1} alt="test" />
+              <img onClick={(e) => bigPicture(e)} src={pathImages + img1} alt="test" />
             </div>
             <div className={s.slide}>
-              <img onClick={(e) => bigPicture(e)} src={img2} alt="test" />
+              <img onClick={(e) => bigPicture(e)} src={pathImages + img2} alt="test" />
             </div>
             <div className={s.slide}>
-              <img onClick={(e) => bigPicture(e)} src={img3} alt="test" />
+              <img onClick={(e) => bigPicture(e)} src={pathImages + img3} alt="test" />
             </div>
             <div className={s.slide}>
-              <img onClick={(e) => bigPicture(e)} src={img4} alt="test" />
+              <img onClick={(e) => bigPicture(e)} src={pathImages + img4} alt="test" />
             </div>
             <div className={s.slide}>
-              <img onClick={(e) => bigPicture(e)} src={img5} alt="test" />
+              <img onClick={(e) => bigPicture(e)} src={pathImages + img5} alt="test" />
             </div>
           </Slider>
         </div>
