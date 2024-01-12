@@ -7,10 +7,13 @@ import Mandos from "./mandos/Mandos"
 import s from "../landingEcooter/Landing.module.css"
 
 
-export default function Ecooter ({isMobile, demo, setDemo}) {    
+export default function Ecooter ({isMobile, demo, setDemo, red, setRed}) {    
     return (
         <div style={{position:"relative"}}>
-            {demo && <div onClick={()=>setDemo(false)} id="close" className={s.filtro}></div>}
+            {(demo || red) && <div onClick={()=>{
+                setDemo(false)
+                setRed(false)   
+            }} id="close" className={s.filtro}></div>}
             <HeaderEcooterE3 isMobile={isMobile}/>
             <Mandos isMobile={isMobile}/>
             <ImagenMobile/>

@@ -26,10 +26,10 @@ export default function MenuMobile({ setMobileMenu, show }) {
                     <Accordion id={2} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÓN INTERNA"} arrlink={[{ text: "VOLVO PENTA", url: "https://www.navalmotor.com/volvo-penta-propulsion" }, { text: "MITSUBISHI", url: "https://www.navalmotor.com/mitsubishi" }, { text: "kongsberg", url: "https://www.kongsberg.com/" }]} />
                     <Accordion id={3} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"MOVILIDAD"} arrlink={[{ text: "POLARIS", url: "https://www.navalmotor.com/polaris" }, { text: "CLUB CAR", url: "https://www.navalmotor.com/clubcar" }]} />
                     <Accordion id={4} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"EMBARCACIONES"} arrlink={embarcaciones} />
-                    <div className={j.tituloText}>CLUB YATES</div>
-                    <div className={j.tituloText}>NOVEDADES</div>
-                    <div className={j.tituloText}>SOLUCIONES</div>
-                    <div className={j.tituloText}>GARANTIA</div>
+                    <div className={j.tituloText} onClick={() => window.open("https://www.clubdeyatesnaval.com/","_blank")}>CLUB YATES</div>
+                    <div className={j.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/novedades"}>NOVEDADES</div>
+                    <div className={j.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/#solucionesMobile"}>SOLUCIONES</div>
+                    <div className={j.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/#garantias"}>GARANTIA</div>
                 </div>
 
             </ul>

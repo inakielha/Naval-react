@@ -16,7 +16,7 @@ import { pathImages } from "../../../../pathImages";
 
 
 
-export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
+export default function NavMobileEcooter({ isMobile, landing, setDemo, demo, red, setRed }) {
   const [mobileMenu, setMobileMenu] = useState("hide")
   const [category, setCategory] = useState("modelos");
   const [scroll, setScroll] = useState(false)
@@ -24,6 +24,8 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
   const navigate = useNavigate()
 
   const navigateLanding = (e) => {
+    setDemo(false)
+    setRed(false)
     navigate("/ecooter/")
   };
 
@@ -38,7 +40,7 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
   return (
     <div className={style.nabMobile}>
       {mobileMenu === "show" && <div onClick={() => setMobileMenu("hide")} className={style.filtro}></div>}
-      <nav className={style.navbar} style={scroll ? { display: "none" } : {}}>
+      <nav className={style.navbar} style={(scroll || demo || red) ? { display: "none" } : {}}>
         <div className={style.container}>
           <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>
             <LuMenu onClick={() => setMobileMenu("show")} />
@@ -60,7 +62,7 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
         <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} />
 
       </nav>
-      <div className={j.section} style={scroll ? { margin: "0" } : { marginBottom: "0" }}>
+      <div className={j.section} style={(scroll || demo || red) ? { margin: "0" } : { marginBottom: "0" }}>
         <div className={j.contenedor}>
           <div onClick={() => window.location.href = "https://www.navalmotor.com/"} className={j.back}>
             <IconContext.Provider value={{ className: j.icon, size: "1em" }}>
@@ -76,11 +78,10 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
       <div className={s.btnContainer}>
         <button onClick={() => {
           navigateLanding()
-          setDemo(false)
         }
         }
           style={
-            landing && !demo
+            landing && !demo && !red
               ? {
                 color: "white",
                 backgroundColor: "#000000"
@@ -91,6 +92,7 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
         <button onClick={(e) => {
 
           setDemo((prev) => !prev)
+          setRed(false)
 
         }
         } style={
@@ -102,14 +104,15 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo }) {
             : {}
         }>Demo</button>
 
-        <button onClick={(e) => window.open("https://www.navalmotor.com/contacto")} style={
-          category === "contacto"
-            ? {
-              color: "white",
-              backgroundColor: "#000000"
-            }
-            : {}
-        }>Contacto</button>
+
+        <button onClick={(e) => { 
+          setRed((prev) => !prev)
+          setDemo(false)
+      }} 
+        style={red ? { color: "white", backgroundColor: "#000000" } : {}}>Sumate a la red</button>
+
+        <button onClick={(e) => window.open("https://www.navalmotor.com/contacto")} style={category === "contacto" ? { color: "white", backgroundColor: "#000000" } : {}}>Contacto</button>
+
       </div>
     </div>
   )

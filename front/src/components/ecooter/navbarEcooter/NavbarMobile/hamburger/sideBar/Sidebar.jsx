@@ -19,7 +19,7 @@ export default function Sidebar({ open, close }) {
 
             <Accordion style={isOpen === 4 ? { backgroundColor: "#CCCCCC" } : {}} id={4} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"EMBARCACIONES"} arrlink={embarcaciones} />
 
-            <div className={s.tituloText} onClick={() => window.location.href = "https://www.clubdeyatesnaval.com/"}>CLUB YATES</div>
+            <div className={s.tituloText} onClick={() => window.open("https://www.clubdeyatesnaval.com/","_blank")}>CLUB YATES</div>
             <div className={s.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/novedades"}>NOVEDADES</div>
             <div className={s.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/#soluciones"}>SOLUCIONES</div>
             <div className={s.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/#garantias"}>GARANTIA</div>

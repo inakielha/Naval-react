@@ -8,15 +8,18 @@ import { useNavigate } from "react-router-dom"
 import { pathImages } from "../../../pathImages"
 
 
-export default function LandingEcooter({setDemo, demo}) {
+export default function LandingEcooter({setDemo, demo, red, setRed}) {
     const navigate = useNavigate()
     const handleRedirect = (root) => {
         window.scrollTo(0, 0); // Llevar la ventana al principio
         navigate(root); // Realizar la redirección
     };
     return (
-        <div className={s.landing} onClick={()=>setDemo(false)}>
-            {demo && <div id="close" className={s.filtro}></div>}
+        <div className={s.landing} onClick={()=>{
+            setDemo(false)
+            setRed(false)
+            }}>
+            {(demo || red) && <div id="close" className={s.filtro}></div>}
             <div className={s.navSpace}></div>
             <section className={s.header}>
                 <img src={pathImages + img} alt="" />

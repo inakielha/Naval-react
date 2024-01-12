@@ -6,6 +6,8 @@ import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Snackbar from '@mui/material/Snackbar';
 import { Alert } from '@mui/material';
+import { pathImages } from '../../../pathImages';
+
 
 export default function Demo({ demo, setDemo }) {
     const form = useRef()
@@ -20,6 +22,8 @@ export default function Demo({ demo, setDemo }) {
         let moto = e.target.innerText;
         setButton(moto)
     }
+
+
 
     const handleEnviar = (e) => {
         e.preventDefault()
@@ -46,10 +50,10 @@ export default function Demo({ demo, setDemo }) {
             }, (error) => {
                 console.log(error.text);
             });
-            
-            setDemo(false)
+
+        setDemo(false)
     }
-    console.log(button)
+
     return (
         <>
             {
@@ -58,46 +62,117 @@ export default function Demo({ demo, setDemo }) {
                 < div className={s.section} >
                     <form ref={form} className={s.form} onSubmit={(e) => handleEnviar(e)}>
 
-                        <div className={s.imgCont}><img src={logoEcooter} alt="" /></div>
+                        {/* <div className={s.imgCont}><img src={pathImages+logoEcooter} alt="" /></div> */}
                         <div className={s.back}>
-                            <HiChevronLeft onClick={() => setDemo(false)} className={s.icon} color='#0c4c6b' />
-                            <span>FORMULARIO</span>
-                            <div></div>
+                            <div className={s.iconCont}>
+                                <HiChevronLeft onClick={() => setDemo(false)} className={s.icon} color='#0c4c6b' />
+                            </div>
+                            <div className={s.titleCont}>
+                                <span>FORMULARIO</span>
+                            </div>
+                            <div style={{ width: "100%" }}></div>
                         </div>
-                        <TextField
-                            className={s.inputMaterial}
-                            id="Correo Electronico"
-                            label="Correo Electronico"
-                            type="email"
-                            name="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
 
-                        <TextField
-                            className={s.inputMaterial}
-                            id="Nombre Y Apellido"
-                            label="Nombre Y Apellido"
-                            name="nombre"
-                            value={nombre}
-                            onChange={(e) => setNombre(e.target.value)}
-                        />
+                        <div className={s.inputContWeb}>
+                            <TextField
+                                className={s.inputWeb}
+                                id="Correo Electronico"
+                                label="Correo Electronico"
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                InputProps={{ style: { fontSize: "21px" } }}
+                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                            // size="small"
+                            />
 
-                        <TextField
-                            className={s.inputMaterial}
-                            id="Dirección"
-                            label="Dirección"
-                            value={direccion}
-                            onChange={(e) => setDireccion(e.target.value)}
-                        />
+                            <TextField
+                                className={s.inputWeb}
+                                id="Nombre Y Apellido"
+                                label="Nombre Y Apellido"
+                                name="nombre"
+                                value={nombre}
+                                onChange={(e) => setNombre(e.target.value)}
+                                InputProps={{ style: { fontSize: "21px" } }}
+                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                            // size="small"
 
-                        <TextField
-                            className={s.inputMaterial}
-                            id="Telefono"
-                            label="Telefono"
-                            value={telefono}
-                            onChange={(e) => setTelefono(e.target.value)}
-                        />
+                            />
+
+                            <TextField
+                                className={s.inputWeb}
+                                id="Dirección"
+                                label="Dirección"
+                                value={direccion}
+                                onChange={(e) => setDireccion(e.target.value)}
+                                InputProps={{ style: { fontSize: "21px" } }}
+                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                            // size="small"
+
+                            />
+
+                            <TextField
+                                className={s.inputWeb}
+                                id="Telefono"
+                                label="Telefono"
+                                value={telefono}
+                                onChange={(e) => setTelefono(e.target.value)}
+                                InputProps={{ style: { fontSize: "21px" } }}
+                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                            // size="small"
+
+                            />
+                        </div>
+
+                        {/* -----------------------------------MOBILE-------------------------------------- */}
+                        <div className={s.inputContMobile}>
+                            <TextField
+                                id="Correo Electronico"
+                                label="Correo Electronico"
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                InputProps={{ style: { fontSize: "10px"} }}
+                                InputLabelProps={{ style: { fontSize: "10px"} }}
+                            // size="small"
+                            />
+
+                            <TextField
+                                id="Nombre Y Apellido"
+                                label="Nombre Y Apellido"
+                                name="nombre"
+                                value={nombre}
+                                onChange={(e) => setNombre(e.target.value)}
+                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                            // size="small"
+
+                            />
+
+                            <TextField
+                                id="Dirección"
+                                label="Dirección"
+                                value={direccion}
+                                onChange={(e) => setDireccion(e.target.value)}
+                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                            // size="small"
+
+                            />
+
+                            <TextField
+                                id="Telefono"
+                                label="Telefono"
+                                value={telefono}
+                                onChange={(e) => setTelefono(e.target.value)}
+                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                            // size="small"
+
+                            />
+                        </div>
 
                         <div className={s.selectMoto}>
                             <p>Elige Tu Moto</p>
@@ -118,9 +193,9 @@ export default function Demo({ demo, setDemo }) {
 
                 </div >
             }
-            <Snackbar open={open} autoHideDuration={6000} onClose={()=>setOpen(false)}>
-                <Alert onClose={()=>setOpen(false)} severity="success" sx={{ width: '100%' }}>
-                    ¡Demo enviada con exito!
+            <Snackbar open={open} autoHideDuration={6000} onClose={() => setOpen(false)}>
+                <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
+                    Solicitud de demo
                 </Alert>
             </Snackbar>
         </>

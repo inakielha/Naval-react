@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { pathImages } from "../../../pathImages";
 
-export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
+export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, setRed }) {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [category, setCategory] = useState("repuestos y accesorios");
   const [scroll, setScroll] = useState(false)
@@ -23,6 +23,7 @@ export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
   const dispatch = useDispatch();
   const navigateLanding = (e) => {
     setDemo(false)
+    setRed(false)
     navigate("/ecooter/")
   };
 
@@ -37,9 +38,9 @@ export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
 
   return (
     <>
-      <nav className={s.navbar} style={scroll || demo ? { height: "5vh", boxShadow: "0px 2px 4px #6EC1E4" } : {}}>
-        <div className={s.navContainer} style={scroll || demo ? { gap: "0" } : {}}>
-          <div className={s.flex} style={scroll || demo ? { display: "none" } : {}}>
+      <nav className={s.navbar} style={scroll || demo  || red? { height: "5vh", boxShadow: "0px 2px 4px #6EC1E4" } : {}}>
+        <div className={s.navContainer} style={scroll || demo || red ? { gap: "0" } : {}}>
+          <div className={s.flex} style={scroll || demo || red ? { display: "none" } : {}}>
             <div className={s.alignMenu}>
               <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
             </div>
@@ -65,7 +66,7 @@ export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
               <span
                 onClick={(e) => navigateLanding(e)}
                 style={
-                  landing && !demo
+                  landing && !demo && !red
                     ? {
                       color: "#6EC1E4",
                     }
@@ -75,9 +76,9 @@ export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
                 Modelos
               </span>
               <span onClick={(e) => {
+                setRed(false)
+                setDemo((prev) => !prev)
 
-                setDemo((prev)=>!prev)
-                
               }
               }
                 style={
@@ -89,6 +90,13 @@ export default function NavbarEcooter({ isMobile, landing ,setDemo, demo}) {
                 }>
                 DEMO
               </span>
+
+
+              <span onClick={(e) => { 
+                setDemo(false)
+                setRed((prev) => !prev) 
+                }} style={red ? { color: "#6EC1E4", } : {}}>SUMATE A LA RED</span>
+
               <span
                 onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}
                 style={

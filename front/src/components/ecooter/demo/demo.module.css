@@ -3,13 +3,11 @@
     position: absolute;
     left: 0;
     right: 0;
-
-
-    top: 30vh;
+    top: 0;
     width: 80%;
     height: 50vh;
     height: auto;
-    margin: auto;
+    margin: 0;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -21,7 +19,7 @@
 
 
     position: fixed;
-    top: 65%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -42,6 +40,7 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     padding: 0.6em 0;
     font-size: 14px;
+    font-size: 0,875rem;
     font-weight: bold;
     width: 100%;
     cursor: pointer;
@@ -57,13 +56,24 @@
 .imgCont img {
     width: 100%;
 }
-
+.iconCont{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    align-items: flex-start;
+}
+.titleCont {
+    text-align: center;
+    width: 100%;
+}
 .inputMaterial {
     width: 100%;
 }
 
 .form span {
     font-size: 14px;
+    font-size: 0,875rem;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -75,7 +85,20 @@
     justify-content: space-between;
     /* background-color: red; */
 }
-
+.inputContWeb {
+    display: none;
+}
+.inputContMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+/* .inputCont {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+} */
 .registrar {
     width: 100%;
     display: flex;
@@ -87,11 +110,13 @@
 
 .registrar span {
     font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 500;
 }
 
 .registrar a {
     font-size: 10px;
+    font-size: 0.625rem;
     font-weight: bold;
     text-decoration: none;
     padding: 0;
@@ -108,6 +133,8 @@
     text-align: center;
     justify-content: center;
     font-size: 10px;
+    font-size: 0.625rem;
+
 }
 
 .terminos span {
@@ -160,47 +187,137 @@
     opacity: 0.9;
 }
 
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) and (max-width: 1900px) {
     .section {
-        /* top: 25vh; */
-        /* background-color: orange; */
-        width: 30%;
-        left: 30%;
+        background-color: orange;
         top: 55%;
         transform: translate(-50%, -50%);
+        width: 80%;
+        max-height: 98vh;        
     }
 
     .form {
         gap: 1.5em;
     }
 
-    .inputMaterial {
-        font-weight: 5px;
-        font-size: 5px;
-    }
-
     .back span {
         font-weight: bold;
-        font-size: 30px;
-        /* background-color: red; */
+        font-size: 25px;
     }
+    
+    .MuiInputLabel-root {
+        font-size: 25px !important;
+        padding-bottom: 20px !important;
+      }
+      
+      .MuiInput-root {
+        height: 45px !important;
+      }
 
+    .inputCont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        justify-content: space-between;
+        width: 100%;
+    }
     .selectMoto p {
         font-size: 21px;
     }
 
     .btnCont button {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: bold;
     }
 
     .enviar button {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .terminos {
         font-size: 21px;
+    }
+
+    .icon {
+        font-size: 4em;
+        cursor: pointer;
+    }
+} */
+
+/* @media (min-width: 2000px)  { */
+    @media (min-width: 768px)  {
+    .section {
+        /* top: 25vh; */
+        /* left: 30%; */
+        /* background-color: green; */
+        top: 55%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-height: 98vh;        
+    }
+
+    .form {
+        gap: 1.5em;
+    }
+
+    .inputWeb {
+        display: block;
+    }
+
+    .inputMobile {
+        display: none;
+    }
+
+    .back span {
+        font-weight: bold;
+        font-size: 30px;
+        font-size: 0,7894736842105263rem;
+        font-size: 25px;
+        /* background-color: red; */
+    }
+    .inputContMobile {
+        display: none;
+    }
+    .inputContWeb {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* .inputCont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        justify-content: space-between;
+        width: 100%;
+    } */
+    .selectMoto p {
+        font-size: 21px; 
+        font-size: 0,5526315789473685rem;
+        font-size: 15px;
+    }
+
+    .btnCont button {
+        font-size: 30px;
+        font-size: 0,78947368421052635rem;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .enviar button {
+        font-size: 30px;
+        font-size: 1,875rem;
+        font-size: 0,78947368421052635rem;
+        font-size: 15px;
+
+    }
+
+    .terminos {
+        font-size: 21px;
+        font-size: 0,5526315789473685rem;
+        font-size: 15px;
     }
 
     .icon {
