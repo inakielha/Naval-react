@@ -2,14 +2,14 @@ import TextField from '@mui/material/TextField';
 import s from "./demo.module.css"
 import { HiChevronLeft } from "react-icons/hi";
 import logoEcooter from "../../../assets/ecooter/e5/ECOOTER_LOGO_black.png"
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Snackbar from '@mui/material/Snackbar';
 import { Alert } from '@mui/material';
 import { pathImages } from '../../../pathImages';
 
 
-export default function Demo({ demo, setDemo }) {
+export default function Demo({ demo, setDemo, demoRoute }) {
     const form = useRef()
     const [button, setButton] = useState("")
     const [nombre, setNombre] = useState('');
@@ -53,7 +53,10 @@ export default function Demo({ demo, setDemo }) {
 
         setDemo(false)
     }
-
+    
+    useEffect(()=>{
+       if (demoRoute) setDemo(true) 
+    },[])
     return (
         <>
             {

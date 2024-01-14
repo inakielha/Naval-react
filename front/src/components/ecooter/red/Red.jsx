@@ -2,14 +2,14 @@ import TextField from '@mui/material/TextField';
 import s from "./red.module.css"
 import { HiChevronLeft } from "react-icons/hi";
 import logoEcooter from "../../../assets/ecooter/e5/ECOOTER_LOGO_black.png"
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Snackbar from '@mui/material/Snackbar';
 import { Alert } from '@mui/material';
 import { pathImages } from '../../../pathImages';
 
 
-export default function Red({ red, setRed }) {
+export default function Red({ red, setRed, redRoute }) {
     const form = useRef()
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
@@ -51,6 +51,10 @@ export default function Red({ red, setRed }) {
 
         setRed(false)
     }
+
+    useEffect(()=>{
+        if(redRoute) setRed(true)
+    },[])
 
     return (
         <>
