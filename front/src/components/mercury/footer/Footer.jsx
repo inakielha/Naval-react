@@ -7,10 +7,13 @@ import s from "./Footer.module.css"
 import { BsCurrencyDollar, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs"
 import { pathImages } from "../../../pathImages"
 
-export default function Footer({ color, demo, setDemo }) {
+export default function Footer({ color, demo, setDemo, red, setRed }) {
   return (
-    <footer id={s.contacto} onClick={()=>setDemo(false)}>
-      {demo && <div id="close" className={s.filtro}></div>}
+    <footer id={s.contacto} onClick={()=>{
+      setDemo(false)
+      setRed(false)
+      }}>
+      {(demo || red) && <div id="close" className={s.filtro}></div>}
       <div className={s.footerContainer}>
         <div className={s.info}>
           <p className={s.text} style={color ? { color: color } : { color: "#DF0404" }}>EXPOSICIÓN, VENTAS Y SHOWROOM</p>
