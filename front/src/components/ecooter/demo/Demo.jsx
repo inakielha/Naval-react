@@ -17,6 +17,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     const [direccion, setDireccion] = useState('');
     const [telefono, setTelefono] = useState('');
     const [open, setOpen] = useState("")
+    const [completeForm, setCompleteForm] = useState("")
 
     const handleMotoBtn = (e) => {
         let moto = e.target.innerText;
@@ -34,29 +35,33 @@ export default function Demo({ demo, setDemo, demoRoute }) {
             telefono,
             email
         })
+        if (button && nombre && direccion && telefono && email) {
+            // console.log("entre")
+            // Configurar EmailJS
+            let templateParams = {
+                button,
+                nombre,
+                direccion,
+                telefono,
+                email
+            };
+            emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
+                .then((result) => {
+                    console.log("LISTOOOOOOOOOO", result.text);
+                    setOpen(true)
+                }, (error) => {
+                    console.log(error.text);
+                });
 
-        // Configurar EmailJS
-        let templateParams = {
-            button,
-            nombre,
-            direccion,
-            telefono,
-            email
-        };
-        emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
-            .then((result) => {
-                console.log("LISTOOOOOOOOOO", result.text);
-                setOpen(true)
-            }, (error) => {
-                console.log(error.text);
-            });
-
-        setDemo(false)
+            setDemo(false)
+        } else {
+            setCompleteForm(true)
+        }
     }
-    
-    useEffect(()=>{
-       if (demoRoute) setDemo(true) 
-    },[])
+
+    useEffect(() => {
+        if (demoRoute) setDemo(true)
+    }, [])
     return (
         <>
             {
@@ -137,8 +142,8 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px"} }}
-                                InputLabelProps={{ style: { fontSize: "10px"} }}
+                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
                             />
 
@@ -199,6 +204,11 @@ export default function Demo({ demo, setDemo, demoRoute }) {
             <Snackbar open={open} autoHideDuration={6000} onClose={() => setOpen(false)}>
                 <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
                     Solicitud de demo
+                </Alert>
+            </Snackbar>
+            <Snackbar open={completeForm} autoHideDuration={6000} onClose={() => setCompleteForm(false)}>
+                <Alert onClose={() => setCompleteForm(false)} severity="error" sx={{ width: '100%' }}>
+                    Complete todos los campos
                 </Alert>
             </Snackbar>
         </>

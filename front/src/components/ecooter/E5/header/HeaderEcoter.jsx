@@ -9,12 +9,11 @@ import { pathImages } from "../../../../pathImages";
 export default function HeaderEcooter({ isMobile }) {
 
   const handleDownload = () => {
-    const fileUrl = '../../../../assets/ecooter/E5.pdf'; // Reemplaza esto con la URL real del PDF
     const fileName = 'E5.pdf'; // Reemplaza esto con el nombre que desees para el archivo
 
     // Crear un enlace temporal para la descarga
     const link = document.createElement('a');
-    link.href = pdf;
+    link.href = pathImages + pdf;
     link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
     link.download = fileName;
     link.click();

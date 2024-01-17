@@ -19,6 +19,7 @@ export default function Red({ red, setRed, redRoute }) {
     const [empresa, setEmpresa] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [open, setOpen] = useState("")
+    const [completeForm, setCompleteForm] = useState("")
 
 
 
@@ -30,31 +31,35 @@ export default function Red({ red, setRed, redRoute }) {
             telefono,
             email
         })
+        if (empresa && nombre && email && direccion && telefono && razon && descripcion) {
+            // console.log("entre")
+            // Configurar EmailJS
+            let templateParams = {
+                nombre,
+                direccion,
+                telefono,
+                email,
+                empresa,
+                razon,
+                descripcion
+            };
+            emailjs.send('service_rxbmigl', 'template_6ybfc9i', templateParams, 'xSaC_xEv6lvaUI57S')
+                .then((result) => {
+                    console.log("LISTOOOOOOOOOO", result.text);
+                    setOpen(true)
+                }, (error) => {
+                    console.log(error.text);
+                });
 
-        // Configurar EmailJS
-        let templateParams = {
-            nombre,
-            direccion,
-            telefono,
-            email,
-            empresa,
-            razon,
-            descripcion
-        };
-        emailjs.send('service_rxbmigl', 'template_6ybfc9i', templateParams, 'xSaC_xEv6lvaUI57S')
-            .then((result) => {
-                console.log("LISTOOOOOOOOOO", result.text);
-                setOpen(true)
-            }, (error) => {
-                console.log(error.text);
-            });
-
-        setRed(false)
+            setRed(false)
+        } else {
+            setCompleteForm(true)
+        }
     }
 
-    useEffect(()=>{
-        if(redRoute) setRed(true)
-    },[])
+    useEffect(() => {
+        if (redRoute) setRed(true)
+    }, [])
 
     return (
         <>
@@ -233,8 +238,8 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={descripcion}
                                 onChange={(e) => setDescripcion(e.target.value)}
                                 fullWidth
-                                InputProps={{ style: { fontSize: "10px" , width:"100%"} }}
-                                InputLabelProps={{ style: { fontSize: "10px", width:"100%" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ style: { fontSize: "10px", width: "100%" } }}
                                 multiline
                             />
                         </div>
@@ -246,8 +251,8 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={descripcion}
                                 onChange={(e) => setDescripcion(e.target.value)}
                                 fullWidth
-                                InputProps={{ style: { fontSize: "21px" , width:"100%"} }}
-                                InputLabelProps={{ style: { fontSize: "21px", width:"100%" } }}
+                                InputProps={{ style: { fontSize: "21px", width: "100%" } }}
+                                InputLabelProps={{ style: { fontSize: "21px", width: "100%" } }}
                                 multiline
                             />
                         </div>
@@ -265,6 +270,11 @@ export default function Red({ red, setRed, redRoute }) {
             <Snackbar open={open} autoHideDuration={6000} onClose={() => setOpen(false)}>
                 <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
                     Sumate a la red
+                </Alert>
+            </Snackbar>
+            <Snackbar open={completeForm} autoHideDuration={6000} onClose={() => setCompleteForm(false)}>
+                <Alert onClose={() => setCompleteForm(false)} severity="error" sx={{ width: '100%' }}>
+                    Complete todos los campos
                 </Alert>
             </Snackbar>
         </>
