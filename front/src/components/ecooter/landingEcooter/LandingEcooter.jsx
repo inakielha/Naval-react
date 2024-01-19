@@ -11,6 +11,9 @@ import { pathImages } from "../../../pathImages"
 export default function LandingEcooter({setDemo, demo, red, setRed}) {
     const navigate = useNavigate()
     const handleRedirect = (root) => {
+        if (!pathImages) {
+            root = root.replace("/ecooter","")
+        }
         window.scrollTo(0, 0); // Llevar la ventana al principio
         navigate(root); // Realizar la redirección
     };

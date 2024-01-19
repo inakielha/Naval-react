@@ -7,7 +7,8 @@ import emailjs from 'emailjs-com';
 import Snackbar from '@mui/material/Snackbar';
 import { Alert } from '@mui/material';
 import { pathImages } from '../../../pathImages';
-
+import axios from "axios"
+import axiosJsonp from 'axios-jsonp';
 
 export default function Demo({ demo, setDemo, demoRoute }) {
     const form = useRef()
@@ -19,6 +20,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     const [open, setOpen] = useState("")
     const [completeForm, setCompleteForm] = useState("")
 
+
     const handleMotoBtn = (e) => {
         let moto = e.target.innerText;
         setButton(moto)
@@ -26,36 +28,66 @@ export default function Demo({ demo, setDemo, demoRoute }) {
 
 
 
-    const handleEnviar = (e) => {
-        e.preventDefault()
-        console.log({
-            button,
-            nombre,
-            direccion,
-            telefono,
-            email
-        })
-        if (button && nombre && direccion && telefono && email) {
-            // console.log("entre")
-            // Configurar EmailJS
-            let templateParams = {
-                button,
-                nombre,
-                direccion,
-                telefono,
-                email
+    async function makeRequest() {
+        try {
+            let config = {
+                method: 'get',
+                maxBodyLength: Infinity,
+                url: `api/ecooter/demo/user/create?email=${email}&nombre=${nombre}&direccion=${direccion}&telefono=${telefono}&modelo=${button}`,
+                headers: {}
             };
-            emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
-                .then((result) => {
-                    console.log("LISTOOOOOOOOOO", result.text);
-                    setOpen(true)
-                }, (error) => {
-                    console.log(error.text);
-                });
+            const response = await axios.request(config);
+            console.log(JSON.stringify(response.data));
+            if (response.data) setOpen(true)
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
 
-            setDemo(false)
-        } else {
-            setCompleteForm(true)
+
+    async function send_email() {
+
+    }
+    const handleEnviar = async (e) => {
+        try {
+            e.preventDefault()
+            // console.log({
+            //     button,
+            //     nombre,
+            //     direccion,
+            //     telefono,
+            //     email
+            // })
+            if (button && nombre && direccion && telefono && email) {
+                // console.log("entre")
+                // Configurar EmailJS
+                let templateParams = {
+                    button,
+                    nombre,
+                    direccion,
+                    telefono,
+                    email
+                };
+
+                if (pathImages) {
+                    makeRequest()
+                } else {
+                    emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
+                        .then((result) => {
+                            // console.log("LISTOOOOOOOOOO", result.text);
+                            setOpen(true)
+                        }, (error) => {
+                            console.log(error.text);
+                        });
+                }
+
+                setDemo(false)
+            } else {
+                setCompleteForm(true)
+            }
+        } catch (e) {
+            console.log(e)
         }
     }
 

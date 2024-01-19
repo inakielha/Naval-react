@@ -24,7 +24,11 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
   const navigateLanding = (e) => {
     setDemo(false)
     setRed(false)
-    navigate("/ecooter/")
+    if (pathImages){
+      navigate("/ecooter/")
+    } else {
+      navigate("/")
+    }
   };
 
 
