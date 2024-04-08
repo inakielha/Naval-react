@@ -23,7 +23,8 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
             <div className={s.wspContainer}>
               <img src={pathImages + whatsapp} alt="contact" />
             </div>
-            <span>+541126661777</span>
+            {/* <span>+541126661777</span> */}
+            <span>1164344440</span>
           </div>
         </div>
         <div className={s.redes}>
