@@ -32,6 +32,10 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
   };
 
 
+  const scrollToBottom = () => {
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -44,7 +48,9 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
     <>
       <nav className={s.navbar} style={scroll || demo  || red? { height: "5vh", boxShadow: "0px 2px 4px #6EC1E4" } : {}}>
         <div className={s.navContainer} style={scroll || demo || red ? { gap: "0" } : {}}>
-          <div className={s.flex} style={scroll || demo || red ? { display: "none" } : {}}>
+          {
+            pathImages != "" &&
+            <div className={s.flex} style={scroll || demo || red ? { display: "none" } : {}}>
             <div className={s.alignMenu}>
               <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
             </div>
@@ -58,9 +64,10 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
               {/* <RxDividerVertical style={{ color: "#000000" }} /> */}
               <IoLogoWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5491126661777&", '_blank')}
                 style={{ color: "#25d366", cursor: "pointer" }}
-              />
+                />
             </div>
           </div>
+              }
           <div className={s.categorias}>
             <div className={s.mercuryContainer}>
               <img src={pathImages + ecooterLogo} alt="" />
@@ -101,18 +108,32 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
                 setRed((prev) => !prev) 
                 }} style={red ? { color: "#6EC1E4", } : {}}>SUMATE A LA RED</span>
 
-              <span
-                onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}
-                style={
+
+
+              {pathImages == "" ? <span onClick={(e) => scrollToBottom()}
+              style={
                   category === "contacto"
                     ? {
                       color: "#6EC1E4",
                     }
                     : {}
-                }
-              >
+                  }
+                  >
+                CONTACTO
+              </span> :
+              <span
+              onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}
+              style={
+                  category === "contacto"
+                    ? {
+                      color: "#6EC1E4",
+                    }
+                    : {}
+                  }
+                  >
                 CONTACTO
               </span>
+              }
 
             </div>
           </div>
