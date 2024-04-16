@@ -33,7 +33,7 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
             <div>
               <a
                 target="_blank"
-                href="https://www.instagram.com/navalmotor_arg/"
+                href={pathImages ? "https://www.instagram.com/naval_motor" : "https://www.instagram.com/ecooter_ar/"}
               >
                 <BsInstagram size={"2.5em"} color={"#707070"} />
               </a>
@@ -46,22 +46,6 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
                 <BsYoutube size={"2.5em"} color={"#707070"} />
               </a>
             </div>
-            {/* <div>
-              <a
-                href="https://www.ambito.com/contenidos/mercados.html"
-                target="_blank"
-              >
-                <BsCurrencyDollar size={"2.5em"} color={"#707070"}/>
-              </a>
-            </div> */}
-            {/* <div>
-              <a
-                href="https://www.linkedin.com/company/naval-motor/mycompany/"
-                target="_blank"
-              >
-                <BsLinkedin size={"2.5em"} color={"#707070"}/>
-              </a>
-            </div> */}
           </div>
         </div>
       </div>
