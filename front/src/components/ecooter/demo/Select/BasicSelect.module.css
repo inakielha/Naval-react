@@ -1,0 +1,11 @@
+.fontsize {
+    font-size: 16.8px;
+    font-size: 15px;
+}
+
+@media (min-width: 2000px)  {
+    .fontsize {
+        font-size: 21px;
+    }
+
+}

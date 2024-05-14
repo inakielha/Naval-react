@@ -7,6 +7,7 @@ import emailjs from 'emailjs-com';
 import Snackbar from '@mui/material/Snackbar';
 import { Alert } from '@mui/material';
 import { pathImages } from '../../../pathImages';
+import BasicSelect from '../demo/Select/BasicSelect';
 
 
 export default function Red({ red, setRed, redRoute }) {
@@ -20,9 +21,10 @@ export default function Red({ red, setRed, redRoute }) {
     const [descripcion, setDescripcion] = useState('');
     const [open, setOpen] = useState("")
     const [completeForm, setCompleteForm] = useState("")
+    const [provincia, setProvincia] = useState('');
+    const [ciudad, setCiudad] = useState('');
 
-
-
+    console.log(`Ciudad: ${ciudad}, Provincia: ${provincia}, Descripcion: ${descripcion}, Nombre: ${nombre}, Tel: ${telefono}, razon: ${razon}, empresa: ${empresa}, Direccion: ${direccion}`)
     const handleEnviar = (e) => {
         e.preventDefault()
         console.log({
@@ -75,7 +77,8 @@ export default function Red({ red, setRed, redRoute }) {
                                 <HiChevronLeft onClick={() => setRed(false)} className={s.icon} color='#0c4c6b' />
                             </div>
                             <div className={s.titleCont}>
-                                <span>SÚMATE A LA RED</span>
+                                <span>Sumate a nuestro equipo</span>
+                                <span className={s.subtitulo}>Convertite en consecionario Ecooter</span>
                             </div>
                             <div style={{ width: "100%" }}></div>
                         </div>
@@ -84,25 +87,25 @@ export default function Red({ red, setRed, redRoute }) {
                             <TextField
                                 className={s.inputWeb}
                                 id="Correo Electronico"
-                                label="Correo Electronico"
+                                label="Correo electrónico"
                                 type="email"
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
                             // size="small"
                             />
 
                             <TextField
                                 className={s.inputWeb}
                                 id="Nombre Y Apellido"
-                                label="Nombre Y Apellido"
+                                label="Nombre y apellido"
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: {  backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -113,20 +116,34 @@ export default function Red({ red, setRed, redRoute }) {
                                 label="Dirección"
                                 value={direccion}
                                 onChange={(e) => setDireccion(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
                             // size="small"
 
                             />
 
                             <TextField
                                 className={s.inputWeb}
+                                id="Ciudad"
+                                label="Ciudad"
+                                value={ciudad}
+                                onChange={(e) => setCiudad(e.target.value)}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                            // size="small"
+
+                            />
+
+                            <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} />
+
+                            <TextField
+                                className={s.inputWeb}
                                 id="Telefono"
-                                label="Telefono"
+                                label="Teléfono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -134,11 +151,11 @@ export default function Red({ red, setRed, redRoute }) {
                             <TextField
                                 className={s.inputWeb}
                                 id="Razon social"
-                                label="Razon social"
+                                label="Razón social"
                                 value={razon}
                                 onChange={(e) => setRazon(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -149,8 +166,8 @@ export default function Red({ red, setRed, redRoute }) {
                                 label="Empresa"
                                 value={empresa}
                                 onChange={(e) => setEmpresa(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -160,7 +177,7 @@ export default function Red({ red, setRed, redRoute }) {
                         <div className={s.inputContMobile}>
                             <TextField
                                 id="Correo Electronico"
-                                label="Correo Electronico"
+                                label="Correo electronico"
                                 type="email"
                                 name="email"
                                 value={email}
@@ -172,7 +189,7 @@ export default function Red({ red, setRed, redRoute }) {
 
                             <TextField
                                 id="Nombre Y Apellido"
-                                label="Nombre Y Apellido"
+                                label="Nombre y apellido"
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
@@ -234,7 +251,7 @@ export default function Red({ red, setRed, redRoute }) {
                         <div className={s.descripcionMobile}>
                             <TextField
                                 id="¿Por Qué Quieres Ser Dealer?"
-                                label="¿Por Qué Quieres Ser Dealer?"
+                                label="¿Por qué queres ser dealer?"
                                 value={descripcion}
                                 onChange={(e) => setDescripcion(e.target.value)}
                                 fullWidth
@@ -247,12 +264,12 @@ export default function Red({ red, setRed, redRoute }) {
                         <div className={s.descripcionWeb}>
                             <TextField
                                 id="¿Por Qué Quieres Ser Dealer?"
-                                label="¿Por Qué Quieres Ser Dealer?"
+                                label="¿Por qué queres ser dealer?"
                                 value={descripcion}
                                 onChange={(e) => setDescripcion(e.target.value)}
                                 fullWidth
-                                InputProps={{ style: { fontSize: "21px", width: "100%" } }}
-                                InputLabelProps={{ style: { fontSize: "21px", width: "100%" } }}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { root: s.fontsize }, style: {  backgroundColor: "white" } }}
                                 multiline
                             />
                         </div>

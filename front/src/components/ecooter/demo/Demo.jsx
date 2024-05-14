@@ -9,6 +9,7 @@ import { Alert } from '@mui/material';
 import { pathImages } from '../../../pathImages';
 import axios from "axios"
 import axiosJsonp from 'axios-jsonp';
+import BasicSelect from './Select/BasicSelect';
 
 export default function Demo({ demo, setDemo, demoRoute }) {
     const form = useRef()
@@ -17,6 +18,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     const [email, setEmail] = useState('');
     const [direccion, setDireccion] = useState('');
     const [telefono, setTelefono] = useState('');
+    const [provincia, setProvincia] = useState('');
     const [open, setOpen] = useState("")
     const [completeForm, setCompleteForm] = useState("")
 
@@ -34,7 +36,8 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                 method: 'get',
                 maxBodyLength: Infinity,
                 url: `api/ecooter/demo/user/create?email=${email}&nombre=${nombre}&direccion=${direccion}&telefono=${telefono}&modelo=${button}`,
-                headers: {}
+                headers: {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8', 
+                'accept-language': 'en-US,en;q=0.9,es;q=0.8'}
             };
             const response = await axios.request(config);
             console.log(JSON.stringify(response.data));
@@ -49,7 +52,11 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     async function send_email() {
 
     }
+    console.log(nombre , button , telefono , email, provincia)
     const handleEnviar = async (e) => {
+
+        
+        console.log("test")
         try {
             e.preventDefault()
             // console.log({
@@ -59,13 +66,13 @@ export default function Demo({ demo, setDemo, demoRoute }) {
             //     telefono,
             //     email
             // })
-            if (button && nombre && direccion && telefono && email) {
+            if (button && nombre && provincia && telefono && email) {
                 // console.log("entre")
                 // Configurar EmailJS
                 let templateParams = {
                     button,
                     nombre,
-                    direccion,
+                    provincia,
                     telefono,
                     email
                 };
@@ -73,13 +80,18 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                 if (pathImages) {
                     makeRequest()
                 } else {
-                    emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
+                    if (provincia == "Otra" ){
+
+                    } else {
+
+                        emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
                         .then((result) => {
                             // console.log("LISTOOOOOOOOOO", result.text);
                             setOpen(true)
                         }, (error) => {
                             console.log(error.text);
                         });
+                    }
                 }
 
                 setDemo(false)
@@ -108,7 +120,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 <HiChevronLeft onClick={() => setDemo(false)} className={s.icon} color='#0c4c6b' />
                             </div>
                             <div className={s.titleCont}>
-                                <span>FORMULARIO</span>
+                                <span>Reserva tu Demo</span>
                             </div>
                             <div style={{ width: "100%" }}></div>
                         </div>
@@ -122,8 +134,8 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
+                                InputProps={{ style: { fontSize: "21px", width: "100%"  } }}
+                                InputLabelProps= {{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
                             // size="small"
                             />
 
@@ -134,13 +146,12 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
-                            // size="small"
+                                InputProps={{ style: { fontSize: "21px", width: "100%"  } }}
+                                InputLabelProps= {{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
 
                             />
 
-                            <TextField
+                            {/* <TextField
                                 className={s.inputWeb}
                                 id="Dirección"
                                 label="Dirección"
@@ -150,17 +161,19 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 InputLabelProps={{ style: { fontSize: "21px" } }}
                             // size="small"
 
-                            />
+                            /> */}
 
-                            <TextField
+
+                          <BasicSelect estilo={s.inputWeb} setProvincia= {setProvincia} provincia={provincia}/>
+
+                            <TextField 
                                 className={s.inputWeb}
                                 id="Telefono"
                                 label="Telefono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px" } }}
-                                InputLabelProps={{ style: { fontSize: "21px" } }}
-                            // size="small"
+                                InputProps={{ style: { fontSize: "21px", width: "100%" } }}
+                                InputLabelProps= {{ style: { fontSize: "16.8px" } }}
 
                             />
                         </div>
