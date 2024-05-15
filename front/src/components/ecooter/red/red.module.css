@@ -65,14 +65,13 @@
 
 .titleCont {
     text-align: center;
-    width: 100%;
-
+    width: 4000%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 0.5em;
     font-size: 14px;
     font-size: 0, 875rem;
     font-weight: bold;
@@ -80,6 +79,7 @@
 }
 
 .subtitulo {
+    width: 100%;
     font-size: 10px;
     font-weight: 500;
 }
@@ -244,9 +244,10 @@
     }
 
     .titleCont {
-        font-size: 25px;
         font-size: 20px;
         width: 150%;
+        gap: 1em;
+
     }
 
     .subtitulo {
@@ -314,7 +315,10 @@
 
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1900px) {
+    .section {
+        padding:  2em 0;
+    }
     .titleCont {
         font-size: 25px;
     }
@@ -345,6 +349,6 @@
     }
 
     .fontsize {
-        font-size: 21px;
+        font-size: 15px;
     }
 }

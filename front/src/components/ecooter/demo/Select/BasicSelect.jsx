@@ -7,13 +7,19 @@ import Select from '@mui/material/Select';
 import s from "./BasicSelect.module.css"
 
 export default function BasicSelect({provincia, setProvincia}) {
-  const [age, setAge] = React.useState('');
 
   return (
-    <Box  sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel className={s.fontsize} id="demo-simple-select-label">Provincia</InputLabel>
+    <Box  sx={{ minWidth: 120 }} className={s.fontsize}>
+      <FormControl fullWidth >
+        <div className={s.labelMobile}>
+          <InputLabel style = { {fontSize: "10px"}} className={s.fontsizeLabel} id="demo-simple-select-label">Provincia</InputLabel>
+        </div>
+        <div className={s.labelWeb}>
+          <InputLabel style = { {fontSize: "15px"}} className={s.fontsizeLabel} id="demo-simple-select-label">Provincia</InputLabel>
+        </div>
+       
         <Select
+          style = { {fontSize: "inherit"}}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={provincia}
@@ -21,10 +27,10 @@ export default function BasicSelect({provincia, setProvincia}) {
           className={s.fontsize}
           onChange= {(e) => setProvincia(e.target.value)}
         >
-          <MenuItem className={s.fontsize} value={"Cunning"}>Cunning</MenuItem>
-          <MenuItem className={s.fontsize} value={"Mendoza"}>Mendoza</MenuItem>
-          <MenuItem className={s.fontsize} value={"Vicente Lopez"}>Vicente Lopez</MenuItem>
-          <MenuItem className={s.fontsize} value={"Otra"}>Otra</MenuItem>
+          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Cunning"}>Cunning</MenuItem>
+          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Mendoza"}>Mendoza</MenuItem>
+          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Vicente Lopez"}>Vicente Lopez</MenuItem>
+          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Otra"}>Otra</MenuItem>
         </Select>
       </FormControl>
     </Box>

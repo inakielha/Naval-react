@@ -121,6 +121,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                             </div>
                             <div className={s.titleCont}>
                                 <span>Reserva tu Demo</span>
+                                <span className={s.subtitulo}>Solicita tu demo. Estamos en contacto</span>
                             </div>
                             <div style={{ width: "100%" }}></div>
                         </div>
@@ -134,7 +135,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px", width: "100%"  } }}
+                                InputProps={{ style: { fontSize: "15px", width: "100%"  } }}
                                 InputLabelProps= {{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
                             // size="small"
                             />
@@ -146,7 +147,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px", width: "100%"  } }}
+                                InputProps={{ style: { fontSize: "15px", width: "100%"  } }}
                                 InputLabelProps= {{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
 
                             />
@@ -164,7 +165,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                             /> */}
 
 
-                          <BasicSelect estilo={s.inputWeb} setProvincia= {setProvincia} provincia={provincia}/>
+                          <BasicSelect  setProvincia= {setProvincia} provincia={provincia}/>
 
                             <TextField 
                                 className={s.inputWeb}
@@ -172,7 +173,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 label="Telefono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
-                                InputProps={{ style: { fontSize: "21px", width: "100%" } }}
+                                InputProps={{ style: { fontSize: "15px", width: "100%" } }}
                                 InputLabelProps= {{ style: { fontSize: "16.8px" } }}
 
                             />
@@ -204,7 +205,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
 
                             />
 
-                            <TextField
+                            {/* <TextField
                                 id="Dirección"
                                 label="Dirección"
                                 value={direccion}
@@ -213,7 +214,9 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
 
-                            />
+                            /> */}
+
+                            <BasicSelect setProvincia= {setProvincia} provincia={provincia}/>
 
                             <TextField
                                 id="Telefono"

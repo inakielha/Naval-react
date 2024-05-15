@@ -93,7 +93,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
                             />
 
@@ -105,7 +105,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: {  backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -117,7 +117,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={direccion}
                                 onChange={(e) => setDireccion(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -129,7 +129,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={ciudad}
                                 onChange={(e) => setCiudad(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -143,7 +143,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -155,7 +155,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={razon}
                                 onChange={(e) => setRazon(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -167,7 +167,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={empresa}
                                 onChange={(e) => setEmpresa(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: { backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -182,7 +182,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputProps={{ style: { fontSize: "8px" } }}
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
                             />
@@ -193,7 +193,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputProps={{ style: { fontSize: "8px" } }}
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
 
@@ -204,18 +204,32 @@ export default function Red({ red, setRed, redRoute }) {
                                 label="Dirección"
                                 value={direccion}
                                 onChange={(e) => setDireccion(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputProps={{ style: { fontSize: "8px" } }}
+                                InputLabelProps={{ style: { fontSize: "10px" } }}
+
+                            />
+
+                            <TextField
+                                className={s.inputWeb}
+                                id="Ciudad"
+                                label="Ciudad"
+                                value={ciudad}
+                                onChange={(e) => setCiudad(e.target.value)}
+                                InputProps={{ style: { fontSize: "8px" } }}
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
 
                             />
+
+                            <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} />
+
 
                             <TextField
                                 id="Telefono"
                                 label="Telefono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputProps={{ style: { fontSize: "8px" } }}
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
 
@@ -227,7 +241,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 label="Razon social"
                                 value={razon}
                                 onChange={(e) => setRazon(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputProps={{ style: { fontSize: "8px" } }}
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
 
@@ -239,7 +253,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 label="Empresa"
                                 value={empresa}
                                 onChange={(e) => setEmpresa(e.target.value)}
-                                InputProps={{ style: { fontSize: "10px" } }}
+                                InputProps={{ style: { fontSize: "8px" } }}
                                 InputLabelProps={{ style: { fontSize: "10px" } }}
                             // size="small"
 
@@ -269,7 +283,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 onChange={(e) => setDescripcion(e.target.value)}
                                 fullWidth
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { root: s.fontsize }, style: {  backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                                 multiline
                             />
                         </div>
