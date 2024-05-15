@@ -18,7 +18,8 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
         <div className={s.info}>
           <p className={s.text} style={color ? { color: color } : { color: "#DF0404" }}>EXPOSICIÓN, VENTAS Y SHOWROOM</p>
           <p>Av. del Libertador 701, Vicente López, Buenos Aires</p>
-          <p>info@navalmotor.com</p>
+          {/* <p>info@navalmotor.com</p> */}
+          <p>info@ecooter.com.ar</p>
           <div className={s.numero}>
             <div className={s.wspContainer}>
               <img src={pathImages + whatsapp} alt="contact" />
