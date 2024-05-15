@@ -40,6 +40,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                 'accept-language': 'en-US,en;q=0.9,es;q=0.8'}
             };
             const response = await axios.request(config);
+            console.log("====RESPUESTAA===");
             console.log(JSON.stringify(response.data));
             if (response.data) setOpen(true)
         }
@@ -49,14 +50,42 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     }
 
 
+    
+    // async function makeRequestFromEcooterDomain() {
+    //     try {
+    //         console.log("LLAMADA POSTMAN")
+    //         let data = '';
+        
+    //         let config = {
+    //         method: 'get',
+    //         maxBodyLength: Infinity,
+    //         url: 'navalmotor.com/api/ecooter/demo/user/create?email=julian@navalmotor.com&nombre=Julian Zalba&direccion=Libertador 701&telefono=1153374332&modelo=e3',
+    //         headers: { 
+    //             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8', 
+    //             'accept-language': 'en-US,en;q=0.9,es;q=0.8'
+    //         },
+    //         data : data
+    //         };
+    //         const response = await axios.request(config);
+    //         console.log("====RESPUESTAA===");
+    //         console.log(JSON.stringify(response.data));
+    //     }
+    //     catch (error) {
+    //         console.log(error);
+    //     }
+    //     }
+
+
+
+
     async function send_email() {
 
     }
-    console.log(nombre , button , telefono , email, provincia)
+    // console.log(nombre , button , telefono , email, provincia)
     const handleEnviar = async (e) => {
 
         
-        console.log("test")
+        // console.log("test")
         try {
             e.preventDefault()
             // console.log({
@@ -80,18 +109,26 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                 if (pathImages) {
                     makeRequest()
                 } else {
-                    if (provincia == "Otra" ){
-
-                    } else {
-
-                        emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
+                    emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
                         .then((result) => {
                             // console.log("LISTOOOOOOOOOO", result.text);
                             setOpen(true)
                         }, (error) => {
                             console.log(error.text);
                         });
-                    }
+                    // if (provincia == "Otra" ){
+
+                    // } else {
+                    //     // console.log("entre envio email")
+                    //     emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
+                    //     .then((result) => {
+                    //         // console.log("LISTOOOOOOOOOO", result.text);
+                    //         setOpen(true)
+                    //     }, (error) => {
+                    //         console.log(error.text);
+                    //     });
+                    //     // makeRequestFromEcooterDomain()
+                    // }
                 }
 
                 setDemo(false)

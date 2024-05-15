@@ -24,16 +24,16 @@ export default function Red({ red, setRed, redRoute }) {
     const [provincia, setProvincia] = useState('');
     const [ciudad, setCiudad] = useState('');
 
-    console.log(`Ciudad: ${ciudad}, Provincia: ${provincia}, Descripcion: ${descripcion}, Nombre: ${nombre}, Tel: ${telefono}, razon: ${razon}, empresa: ${empresa}, Direccion: ${direccion}`)
+    // console.log(`Ciudad: ${ciudad}, Provincia: ${provincia}, Descripcion: ${descripcion}, Nombre: ${nombre}, Tel: ${telefono}, razon: ${razon}, empresa: ${empresa}, Direccion: ${direccion}`)
     const handleEnviar = (e) => {
         e.preventDefault()
-        console.log({
-            nombre,
-            direccion,
-            telefono,
-            email
-        })
-        if (empresa && nombre && email && direccion && telefono && razon && descripcion) {
+        // console.log({
+        //     nombre,
+        //     direccion,
+        //     telefono,
+        //     email
+        // })
+        if (empresa && nombre && email && direccion && telefono && razon && descripcion, provincia, ciudad) {
             // console.log("entre")
             // Configurar EmailJS
             let templateParams = {
@@ -43,11 +43,13 @@ export default function Red({ red, setRed, redRoute }) {
                 email,
                 empresa,
                 razon,
-                descripcion
+                descripcion,
+                ciudad,
+                provincia
             };
             emailjs.send('service_rxbmigl', 'template_6ybfc9i', templateParams, 'xSaC_xEv6lvaUI57S')
                 .then((result) => {
-                    console.log("LISTOOOOOOOOOO", result.text);
+                    // console.log("LISTOOOOOOOOOO", result.text);
                     setOpen(true)
                 }, (error) => {
                     console.log(error.text);
