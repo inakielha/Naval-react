@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { pathImages } from "../../../pathImages";
 
-export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, setRed }) {
+export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, setRed, concesionarios }) {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [category, setCategory] = useState("repuestos y accesorios");
   const [scroll, setScroll] = useState(false)
@@ -24,7 +24,7 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
   const navigateLanding = (e) => {
     setDemo(false)
     setRed(false)
-    if (pathImages){
+    if (pathImages) {
       navigate("/ecooter/")
     } else {
       navigate("/")
@@ -46,28 +46,28 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
 
   return (
     <>
-      <nav className={s.navbar} style={scroll || demo  || red? { height: "5vh", boxShadow: "0px 2px 4px #6EC1E4" } : {}}>
+      <nav className={s.navbar} style={scroll || demo || red ? { height: "5vh", boxShadow: "0px 2px 4px #6EC1E4" } : {}}>
         <div className={s.navContainer} style={scroll || demo || red ? { gap: "0" } : {}}>
           {
             pathImages != "" &&
             <div className={s.flex} style={scroll || demo || red ? { display: "none" } : {}}>
-            <div className={s.alignMenu}>
-              <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
-            </div>
-            <div className={s.imgContainer}>
-              <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={pathImages + logo} alt="logo" />
-            </div>
-            <div className={s.iconContainer}>
-              {/* <IoSearchCircleSharp
+              <div className={s.alignMenu}>
+                <LuMenu size={"3em"} onClick={() => setMobileMenu(true)} />
+              </div>
+              <div className={s.imgContainer}>
+                <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={pathImages + logo} alt="logo" />
+              </div>
+              <div className={s.iconContainer}>
+                {/* <IoSearchCircleSharp
                 style={{  color: "#000000", cursor: "pointer" }}
               /> */}
-              {/* <RxDividerVertical style={{ color: "#000000" }} /> */}
-              <IoLogoWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5491126661777&", '_blank')}
-                style={{ color: "#25d366", cursor: "pointer" }}
+                {/* <RxDividerVertical style={{ color: "#000000" }} /> */}
+                <IoLogoWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5491126661777&", '_blank')}
+                  style={{ color: "#25d366", cursor: "pointer" }}
                 />
+              </div>
             </div>
-          </div>
-              }
+          }
           <div className={s.categorias}>
             <div className={s.mercuryContainer}>
               <img src={pathImages + ecooterLogo} alt="" />
@@ -103,36 +103,51 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
               </span>
 
 
-              <span onClick={(e) => { 
+              <span onClick={(e) => {
                 setDemo(false)
-                setRed((prev) => !prev) 
-                }} style={red ? { color: "#6EC1E4", } : {}}>SUMATE A LA RED</span>
+                setRed((prev) => !prev)
+              }} style={red ? { color: "#6EC1E4", } : {}}>SUMATE A LA RED</span>
 
+
+
+
+              <span onClick={(e) => navigate("/concesionarios")}
+                style={
+                  concesionarios && !demo && !red
+                    ? {
+                      color: "#6EC1E4",
+                    }
+                    : {}
+                }
+              >
+                CONCESIONARIOS
+              </span>
 
 
               {pathImages == "" ? <span onClick={(e) => scrollToBottom()}
-              style={
+                style={
                   category === "contacto"
                     ? {
                       color: "#6EC1E4",
                     }
                     : {}
-                  }
-                  >
+                }
+              >
                 CONTACTO
               </span> :
-              <span
-              onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}
-              style={
-                  category === "contacto"
-                    ? {
-                      color: "#6EC1E4",
-                    }
-                    : {}
+                <span
+                  onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}
+                  style={
+                    category === "contacto"
+                      ? {
+                        color: "#6EC1E4",
+                      }
+                      : {}
                   }
-                  >
-                CONTACTO
-              </span>
+                >
+                  CONTACTO
+                </span>
+
               }
 
             </div>
