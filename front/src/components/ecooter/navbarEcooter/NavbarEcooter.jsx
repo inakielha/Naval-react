@@ -31,6 +31,16 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
     }
   };
 
+  const navigateConcesionarios = (e) => {
+    setDemo(false)
+    setRed(false)
+    if (pathImages) {
+      navigate("/ecooter/concesionarios")
+    } else {
+      navigate("/concesionarios")
+    }
+  };
+
 
   const scrollToBottom = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
@@ -111,7 +121,7 @@ export default function NavbarEcooter({ isMobile, landing, setDemo, demo, red, s
 
 
 
-              <span onClick={(e) => navigate("/concesionarios")}
+              <span onClick={(e) => navigateConcesionarios(e)}
                 style={
                   concesionarios && !demo && !red
                     ? {

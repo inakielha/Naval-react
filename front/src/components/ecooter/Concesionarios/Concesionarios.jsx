@@ -10,7 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import portada from "../../../assets/ecooter/concesionarios/portada.jpg"
 import { pathImages } from "../../../pathImages";
 
-export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo, red, setRed }) {
+export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, demo, red, setRed }) {
   let coordinates = Object.values(jsonCordenadas);
   const [ordenConcesionarios, setOrdenConcesionarios] = useState(coordinates)
   const [colorBtn, setColorBtn] = useState("all")
@@ -74,6 +74,10 @@ export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo
 
   };
 
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:info@ecooter.com.ar?subject=Asunto%20Predeterminado&body=Cuerpo%20del%20mensaje';
+};
+
 
   const handleConcesionarios = (type) => {
     setColorBtn(type)
@@ -110,15 +114,15 @@ export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo
   }, [ordenConcesionarios])
 
   return (
-    <section className={s.section} onClick={()=>{
+    <section className={s.section} onClick={() => {
       setDemo(false)
       setRed(false)
-      }}>
+    }}>
       {(demo || red) && <div id="close" className={s.filtro}></div>}
       <div className={s.navSpace}></div>
       {/* {mobileMenu === "show" && <div onClick={() => setMobileMenu("hide")} style={{ zIndex: "2", position: "absolute", width: "100%", height: "100%", backgroundColor: "#000000a3" }}></div>} */}
       <div className={s.imgContainer}>
-        <img src={pathImages+portada} alt="barco" />
+        <img src={pathImages + portada} alt="barco" />
       </div>
       {/* <div className={s.texto}>
         <h3>LOS MEJORES PRODUCTOS TIENEN A LOS MEJORES VENDEDORES. </h3>
@@ -182,7 +186,9 @@ export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo
               )
             })}
           </InfiniteScroll>
-            <MapaDos />
+          <button className={s.zonasBtn} onClick={handleEmailClick}>CONSULTE POR OTRAS ZONAS</button>
+
+          <MapaDos />
         </div>
       </div>
 
@@ -197,7 +203,7 @@ export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo
                 <button onClick={() => handleConcesionarios("servicios")} style={colorBtn === "servicios" ? { color: "#FFFFFF", backgroundColor: "#0c4c6b" } : {}}>Servicios</button>
               </div> */}
 
-{/* 
+              {/* 
               <div className={s.inputCont} onClick={() => inputRef.current.focus()}>
                 <IconContext.Provider value={{ className: s.icon, size: "0.7em" }}>
                   <BiSearch />
@@ -225,14 +231,14 @@ export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo
                   value={filterName}
                 />
               </div> */}
-              
+
               <InfiniteScroll
                 dataLength={chunkArray.length}
                 next={fetchMoreData}
                 hasMore={true}
                 height={"50vh"}
                 className={s.infinite}
-                // style={{width:"180%"}}
+              // style={{width:"180%"}}
               >
                 {ordenConcesionarios?.length && ordenConcesionarios.map((concecionario) => {
                   return (
@@ -240,6 +246,7 @@ export default function Concesionarios({ mobileMenu, setMobileMenu,setDemo, demo
                   )
                 })}
               </InfiniteScroll>
+              <button className={s.zonasBtn} onClick={handleEmailClick}>CONSULTE POR OTRAS ZONAS</button>
             </div>
             <div className={s.map}>
               <MapaDos concesionarios={ordenConcesionarios} />
