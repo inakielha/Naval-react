@@ -27,9 +27,9 @@ export default function BasicSelect({provincia, setProvincia}) {
           className={s.fontsize}
           onChange= {(e) => setProvincia(e.target.value)}
         >
-          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Cunning"}>Cunning</MenuItem>
+          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Canning"}>Buenos Aires, Canning</MenuItem>
           <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Mendoza"}>Mendoza</MenuItem>
-          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Vicente Lopez"}>Vicente Lopez</MenuItem>
+          <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Vicente Lopez"}>Buenos Aires, Vicente López</MenuItem>
           <MenuItem className={s.fontsize} style = { {fontSize: "inherit"}} value={"Otra"}>Otra</MenuItem>
         </Select>
       </FormControl>

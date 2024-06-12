@@ -16,6 +16,7 @@ const Marker = ({ className, lat, lng, markerId, onClick, email, telefono, direc
                         <img
                             className={className}
                             src={pathImages+mapa}
+                            // src={"https://navalmotor.com/mediaserver/web/ecooter/static/media/logo_ecooter.png"}
                             lat={lat}
                             lng={lng}
                             onClick={(e) => (onClick ? onClick(e, { markerId, lat, lng }) : null)}

@@ -8,7 +8,6 @@ import Snackbar from '@mui/material/Snackbar';
 import { Alert } from '@mui/material';
 import { pathImages } from '../../../pathImages';
 import axios from "axios"
-import axiosJsonp from 'axios-jsonp';
 import BasicSelect from './Select/BasicSelect';
 
 export default function Demo({ demo, setDemo, demoRoute }) {
@@ -35,9 +34,11 @@ export default function Demo({ demo, setDemo, demoRoute }) {
             let config = {
                 method: 'get',
                 maxBodyLength: Infinity,
-                url: `api/ecooter/demo/user/create?email=${email}&nombre=${nombre}&direccion=${direccion}&telefono=${telefono}&modelo=${button}`,
-                headers: {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8', 
-                'accept-language': 'en-US,en;q=0.9,es;q=0.8'}
+                url: `api/ecooter/demo/user/create?email=${email}&nombre=${nombre}&direccion=${direccion}&telefono=${telefono}&modelo=${button}&provincia=${provincia}`,
+                headers: {
+                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                    'accept-language': 'en-US,en;q=0.9,es;q=0.8'
+                }
             };
             const response = await axios.request(config);
             console.log("====RESPUESTAA===");
@@ -50,12 +51,12 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     }
 
 
-    
+
     // async function makeRequestFromEcooterDomain() {
     //     try {
     //         console.log("LLAMADA POSTMAN")
     //         let data = '';
-        
+
     //         let config = {
     //         method: 'get',
     //         maxBodyLength: Infinity,
@@ -84,7 +85,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
     // console.log(nombre , button , telefono , email, provincia)
     const handleEnviar = async (e) => {
 
-        
+
         // console.log("test")
         try {
             e.preventDefault()
@@ -109,26 +110,44 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                 if (pathImages) {
                     makeRequest()
                 } else {
-                    emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
-                        .then((result) => {
-                            // console.log("LISTOOOOOOOOOO", result.text);
-                            setOpen(true)
-                        }, (error) => {
-                            console.log(error.text);
-                        });
-                    // if (provincia == "Otra" ){
-
-                    // } else {
-                    //     // console.log("entre envio email")
-                    //     emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
+                    // TEMPLATE VIEJO NO PAGO 
+                    // emailjs.send('service_rxbmigl', 'template_sly5l64', templateParams, 'xSaC_xEv6lvaUI57S')
                     //     .then((result) => {
                     //         // console.log("LISTOOOOOOOOOO", result.text);
                     //         setOpen(true)
                     //     }, (error) => {
                     //         console.log(error.text);
                     //     });
-                    //     // makeRequestFromEcooterDomain()
-                    // }
+                    if (provincia == "Mendoza") {
+                        emailjs.send('service_0ggo7td', 'template_thsk18f', templateParams, 'Vj-Ne5y1DqXxLLAb2')
+                            .then((result) => {
+                                // console.log("LISTOOOOOOOOOO", result.text);
+                                setOpen(true)
+                            }, (error) => {
+                                console.log(error.text);
+                            });
+                    }
+
+                    else if (provincia == "Vicente Lopez") {
+                        emailjs.send('service_0ggo7td', 'template_253v3v3', templateParams, 'Vj-Ne5y1DqXxLLAb2')
+                            .then((result) => {
+                                // console.log("LISTOOOOOOOOOO", result.text);
+                                setOpen(true)
+                            }, (error) => {
+                                console.log(error.text);
+                            });
+                    }
+                    
+                    else {
+                        // console.log("entre envio email")
+                        emailjs.send('service_0ggo7td', 'template_q4l8wdf', templateParams, 'Vj-Ne5y1DqXxLLAb2')
+                            .then((result) => {
+                                // console.log("LISTOOOOOOOOOO", result.text);
+                                setOpen(true)
+                            }, (error) => {
+                                console.log(error.text);
+                            });
+                    }
                 }
 
                 setDemo(false)
@@ -172,8 +191,8 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                InputProps={{ style: { fontSize: "15px", width: "100%"  } }}
-                                InputLabelProps= {{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
+                                InputProps={{ style: { fontSize: "15px", width: "100%" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
                             // size="small"
                             />
 
@@ -184,8 +203,8 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
-                                InputProps={{ style: { fontSize: "15px", width: "100%"  } }}
-                                InputLabelProps= {{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
+                                InputProps={{ style: { fontSize: "15px", width: "100%" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit" } }}
 
                             />
 
@@ -202,16 +221,16 @@ export default function Demo({ demo, setDemo, demoRoute }) {
                             /> */}
 
 
-                          <BasicSelect  setProvincia= {setProvincia} provincia={provincia}/>
+                            <BasicSelect setProvincia={setProvincia} provincia={provincia} />
 
-                            <TextField 
+                            <TextField
                                 className={s.inputWeb}
                                 id="Telefono"
                                 label="Telefono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
                                 InputProps={{ style: { fontSize: "15px", width: "100%" } }}
-                                InputLabelProps= {{ style: { fontSize: "16.8px" } }}
+                                InputLabelProps={{ style: { fontSize: "16.8px" } }}
 
                             />
                         </div>
@@ -253,7 +272,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
 
                             /> */}
 
-                            <BasicSelect setProvincia= {setProvincia} provincia={provincia}/>
+                            <BasicSelect setProvincia={setProvincia} provincia={provincia} />
 
                             <TextField
                                 id="Telefono"
@@ -288,7 +307,7 @@ export default function Demo({ demo, setDemo, demoRoute }) {
             }
             <Snackbar open={open} autoHideDuration={6000} onClose={() => setOpen(false)}>
                 <Alert onClose={() => setOpen(false)} severity="success" sx={{ width: '100%' }}>
-                    Solicitud de demo
+                    Recibimos la solicitud correctamente. A la brevedad nos pondremos en contacto. Muchas gracias.
                 </Alert>
             </Snackbar>
             <Snackbar open={completeForm} autoHideDuration={6000} onClose={() => setCompleteForm(false)}>

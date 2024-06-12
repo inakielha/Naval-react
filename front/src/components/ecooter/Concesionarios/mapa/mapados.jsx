@@ -1,6 +1,6 @@
 import GoogleMap from 'google-maps-react-markers'
 import Marker from './marker/marker'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 const MapaDos = ({concesionarios}) => {
     const mapRef = useRef(null)
     const [mapReady, setMapReady] = useState(false)
@@ -17,6 +17,8 @@ const MapaDos = ({concesionarios}) => {
         mapRef.current.setCenter({ lat, lng })
         // ref. https://developers.google.com/maps/documentation/javascript/reference?hl=it
     }
+
+
 
 
     return (

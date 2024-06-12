@@ -47,13 +47,24 @@ export default function Red({ red, setRed, redRoute }) {
                 ciudad,
                 provincia
             };
-            emailjs.send('service_rxbmigl', 'template_6ybfc9i', templateParams, 'xSaC_xEv6lvaUI57S')
+            if (provincia == "Mendoza") {
+
+                emailjs.send('service_0ggo7td', 'template_9xulan8', templateParams, 'Vj-Ne5y1DqXxLLAb2')
+                    .then((result) => {
+                        // console.log("LISTOOOOOOOOOO", result.text);
+                        setOpen(true)
+                    }, (error) => {
+                        console.log(error.text);
+                    });
+            } else {
+                emailjs.send('service_0ggo7td', 'template_hlxfyal', templateParams, 'Vj-Ne5y1DqXxLLAb2')
                 .then((result) => {
                     // console.log("LISTOOOOOOOOOO", result.text);
                     setOpen(true)
                 }, (error) => {
                     console.log(error.text);
                 });
+            }
 
             setRed(false)
         } else {
@@ -95,7 +106,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
                             />
 
@@ -107,7 +118,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -119,7 +130,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={direccion}
                                 onChange={(e) => setDireccion(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -131,7 +142,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={ciudad}
                                 onChange={(e) => setCiudad(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -145,7 +156,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -157,7 +168,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={razon}
                                 onChange={(e) => setRazon(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
 
                             />
@@ -169,7 +180,7 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={empresa}
                                 onChange={(e) => setEmpresa(e.target.value)}
                                 InputProps={{ style: { fontSize: "10px", width: "100%" } }}
-                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit",backgroundColor: "white" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
                             // size="small"
 
                             />
