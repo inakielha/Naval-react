@@ -27,12 +27,13 @@ export default function Red({ red, setRed, redRoute }) {
     // console.log(`Ciudad: ${ciudad}, Provincia: ${provincia}, Descripcion: ${descripcion}, Nombre: ${nombre}, Tel: ${telefono}, razon: ${razon}, empresa: ${empresa}, Direccion: ${direccion}`)
     const handleEnviar = (e) => {
         e.preventDefault()
-        // console.log({
-        //     nombre,
-        //     direccion,
-        //     telefono,
-        //     email
-        // })
+        console.log({
+            provincia,
+            nombre,
+            direccion,
+            telefono,
+            email
+        })
         if (empresa && nombre && email && direccion && telefono && razon && descripcion, provincia, ciudad) {
             // console.log("entre")
             // Configurar EmailJS
@@ -147,7 +148,17 @@ export default function Red({ red, setRed, redRoute }) {
 
                             />
 
-                            <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} />
+                            {/* <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} /> */}
+                            <TextField
+                                id="Provincia"
+                                label="Provincia"
+                                value={provincia}
+                                onChange={(e) => setProvincia(e.target.value)}
+                                InputProps={{ style: { fontSize: "10px", width: "100%" } }}
+                                InputLabelProps={{ classes: { input: s.fontsize }, style: { fontSize: "inherit", backgroundColor: "white" } }}
+                            // size="small"
+
+                            />
 
                             <TextField
                                 className={s.inputWeb}
@@ -234,7 +245,18 @@ export default function Red({ red, setRed, redRoute }) {
 
                             />
 
-                            <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} />
+                            {/* <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} /> */}
+                            
+                            <TextField
+                                id="Provincia"
+                                label="Provincia"
+                                value={provincia}
+                                onChange={(e) => setProvincia(e.target.value)}
+                                InputProps={{ style: { fontSize: "8px" } }}
+                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                            // size="small"
+
+                            />
 
 
                             <TextField
