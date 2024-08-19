@@ -100,15 +100,11 @@
   display: none;
 }
 
-.navSpaceVercel {
-  height: 10vh;
-  padding: 1em 0;
-  display: none;
-}
+
 
 @media (max-width: 768px) {
   .navSpaceVercel {
-    height: 15vh;
+    height: 14vh;
     padding: 1em 0;
   }
 
