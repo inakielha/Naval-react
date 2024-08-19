@@ -20,7 +20,7 @@ export default function HeaderEcooter({ isMobile }) {
   };
   return (
     <>
-      <div className={s.navSpace}></div>
+      <div className={ pathImages == "" ? s.navSpaceVercel : s.navSpace} ></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
           <img src={isMobile ? pathImages + E5 : pathImages + img} alt="portada" />

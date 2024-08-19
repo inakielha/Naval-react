@@ -1,5 +1,5 @@
 .section {
-    padding-top: 3em;
+    padding-top: 10px;
     position: absolute;
     left: 0;
     right: 0;
@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5em;
+    gap: 0;
     z-index: 5;
     /* background-color: orange; */
     position: fixed;
@@ -72,6 +73,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5em;
+    gap: 5px;
     font-size: 14px;
     font-size: 0, 875rem;
     font-weight: bold;
@@ -111,6 +113,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    gap: 10px;
     width: 100%;
 }
 
@@ -145,7 +148,7 @@
 }
 
 .terminos {
-    margin-top: 3em;
+    margin-top: 10px;
     border-top: 1px solid #707070;
     width: 80%;
     display: flex;
@@ -192,6 +195,7 @@
     width: 100%;
     text-align: center;
     padding: 0.5em 0;
+    padding: 5px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,6 +221,14 @@
     display: none;
 }
 
+.MuiInputLabel-root {
+    font-size: 25px !important;
+    padding-bottom: 20px !important;
+  }
+  
+  .MuiInput-root {
+    height: 45px !important;
+  }
 
 @media (min-width: 768px) {
     .section {
@@ -229,6 +241,7 @@
 
     .form {
         gap: 1.5em;
+        gap: 10px;
     }
 
     .inputWeb {
@@ -239,6 +252,8 @@
         display: none;
     }
 
+   
+
     .back span {
         font-weight: bold;
     }
@@ -246,7 +261,7 @@
     .titleCont {
         font-size: 20px;
         width: 150%;
-        gap: 1em;
+        gap: 10px;
 
     }
 
@@ -263,6 +278,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1em;
+        gap: 10px;
         justify-content: space-between;
         width: 100%;
     }

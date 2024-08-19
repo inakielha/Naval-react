@@ -113,7 +113,8 @@
 .inputContMobile {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 10px;
+    /* gap: 1em; */
     width: 100%;
 }
 
@@ -148,7 +149,7 @@
 }
 
 .terminos {
-    margin-top: 3em;
+    margin-top: 10px;
     border-top: 1px solid #707070;
     width: 80%;
     display: flex;
@@ -166,9 +167,10 @@
 
 .selectMoto {
     width: 100%;
-    /* background-color: red; */
 }
-
+.selectMoto p {
+    margin-top: 0;
+}
 .btnCont {
     display: flex;
     align-items: center;
@@ -282,9 +284,6 @@
     }
 
     .terminos {
-        font-size: 21px;
-        font-size: 0, 5526315789473685rem;
-        font-size: 15px;
         font-size: 12px;
     }
 
@@ -350,8 +349,6 @@
     }
 
     .terminos {
-        font-size: 21px;
-        font-size: 0, 5526315789473685rem;
         font-size: 15px;
     }
 

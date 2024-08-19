@@ -1,7 +1,7 @@
-.navSpace{
+/* .navSpace{
   height: 15vh;
   padding: 1em 0;
-}
+} */
 
 .section {
   padding: 0;
@@ -13,12 +13,14 @@
 .imgContainer {
   width: 100%;
 }
+
 .imgContainer img {
   object-fit: cover;
   /* background-color: aqua; */
   /* border: 5px solid black; */
   width: 100%;
 }
+
 .absolute {
   width: 90%;
   height: 80%;
@@ -34,22 +36,27 @@
   justify-content: space-between;
   /* flex-direction: column; */
 }
+
 .textCont {
-    /* background-color: green; */
-    display: flex;
-    flex-direction: column;
-    text-transform: uppercase;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
 }
+
 .number {
   font-size: 2.447rem;
 }
+
 .texto {
   font-size: 0.632rem;
   padding-left: 0.5em;
 }
+
 .titContainer {
   display: flex;
 }
+
 .ltres {
   align-self: flex-start;
   text-align: end;
@@ -57,6 +64,7 @@
   font-weight: 500;
   font-size: 1.921rem;
 }
+
 .titulo {
   display: flex;
   flex-direction: column;
@@ -72,6 +80,7 @@
   line-height: 1em;
   font-weight: bold;
 }
+
 .titulo span {
   font-size: 0.632rem;
   font-weight: bold;
@@ -82,6 +91,7 @@
   padding: 1em 0;
   cursor: pointer;
 }
+
 .descargarFicha {
   display: none;
 }
@@ -90,25 +100,40 @@
   display: none;
 }
 
+.navSpaceVercel {
+  height: 10vh;
+  padding: 1em 0;
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .navSpace{
+  .navSpaceVercel {
+    height: 15vh;
+    padding: 1em 0;
+  }
+
+  .navSpace {
     height: 22.5vh;
     padding: 1em 0;
   }
+
   .section {
     height: 60vh;
   }
+
   .absolute {
     flex-direction: column-reverse;
     z-index: 3;
     height: 95%;
   }
+
   .titulo {
     /* background-color: red; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
+
   .titulo p {
     padding: 0;
     margin: 0;
@@ -117,6 +142,7 @@
     text-align: center;
     line-height: 1;
   }
+
   .titulo span {
     display: none;
   }
@@ -125,6 +151,7 @@
     /* background-color: orange; */
     height: 100%;
   }
+
   .info {
     width: 100%;
     display: flex;
@@ -132,17 +159,21 @@
     /* padding-bottom: 1em; */
     /* background-color: red; */
   }
+
   .textCont {
     text-align: center;
     width: 100%;
   }
+
   .number {
     font-size: 2rem;
   }
+
   .texto {
     font-size: 0.5rem;
     padding: 0;
   }
+
   .descargarFicha {
     padding-top: 1em;
     width: 100%;
@@ -150,6 +181,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .descargarFicha span {
     font-size: 0.5rem;
     font-weight: bold;
@@ -162,21 +194,38 @@
   .sectionTwo {
     height: 30vh;
   }
+
   .imgContainer {
     height: 100%;
     width: 100%;
   }
+
   .imgContainer img {
     height: 100%;
     object-fit: cover;
   }
+
   .filtro {
     display: block;
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(#00000000, #000000);    
+    background: linear-gradient(#00000000, #000000);
     z-index: 2;
     height: 20vh;
   }
+}
+
+
+
+@media screen and (min-width:768px) and (max-width: 1550px) {
+
+  .number {
+    font-size: 80px;
+  }
+
+  .texto {
+    font-size: 20px;
+  }
+
 }

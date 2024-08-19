@@ -1,8 +1,5 @@
 import s from "./Concesionarios.module.css";
-import { IconContext } from "react-icons";
-import { BiSearch } from "react-icons/bi";
 import { useEffect, useRef, useState } from "react";
-import MapaArgentina from "./mapa/mapa";
 import Card from "./cardConcesionario/card";
 import MapaDos from "./mapa/mapados";
 import jsonCordenadas from "./mapa/coordenadas/mercury_concesionarios.json"
@@ -20,6 +17,10 @@ export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, dem
   const [page, setPage] = useState(0)
   const [filterZone, setFilterZone] = useState("");
   const [filterName, setFilterName] = useState("");
+  const mapRef = useRef(null)
+  const mapRefMobile = useRef(null)
+
+
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
@@ -76,7 +77,20 @@ export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, dem
 
   const handleEmailClick = () => {
     window.location.href = 'mailto:info@ecooter.com.ar?subject=Asunto%20Predeterminado&body=Cuerpo%20del%20mensaje';
-};
+  };
+
+  const handleZoomMap = (lat, lng) => {
+    const map = mapRef.current;
+    const mapMobile = mapRefMobile.current;
+    // inside the map instance you can call any google maps method
+    let latLng = new window.google.maps.LatLng(lat, lng); //Makes a latlng
+    map.panTo(latLng); //Make map global
+    map?.setZoom(12)
+    console.log(map)
+
+    mapMobile.panTo(latLng); //Make map global
+    mapMobile?.setZoom(12)
+  }
 
 
   const handleConcesionarios = (type) => {
@@ -119,7 +133,7 @@ export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, dem
       setRed(false)
     }}>
       {(demo || red) && <div id="close" className={s.filtro}></div>}
-      <div className={s.navSpace}></div>
+      <div className={ pathImages == "" ? s.navSpaceVercel : s.navSpace} ></div>
       {/* {mobileMenu === "show" && <div onClick={() => setMobileMenu("hide")} style={{ zIndex: "2", position: "absolute", width: "100%", height: "100%", backgroundColor: "#000000a3" }}></div>} */}
       <div className={s.imgContainer}>
         <img src={pathImages + portada} alt="barco" />
@@ -137,7 +151,7 @@ export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, dem
       </div> */}
       <div className={s.mobile}>
         <div className={s.tienda}>
-          <h3>CONCESIONARIOS Y SERVICIOS</h3>
+          <h3 className={s.tiendaTitle}>CONCESIONARIOS Y SERVICIOS</h3>
 
           {/* <div className={s.inputCont} onClick={() => inputRef.current.focus()}>
             <IconContext.Provider value={{ className: s.icon, size: "0.7em" }}>
@@ -173,28 +187,29 @@ export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, dem
             <button>Concesionarios</button>
             <button>Servicios</button>
           </div> */}
-          <InfiniteScroll
-            dataLength={chunkArray.length}
-            next={fetchMoreData}
-            hasMore={true}
-            // height={"50vh"}
-            width={"100%"}
-          >
-            {ordenConcesionarios?.length && ordenConcesionarios.map((concecionario) => {
-              return (
-                <Card email={concecionario.email} telefono={concecionario.tel1} direccion={concecionario.direccion} nombre={concecionario.nombre} />
-              )
-            })}
-          </InfiniteScroll>
-          <button className={s.zonasBtn} onClick={handleEmailClick}>CONSULTE POR OTRAS ZONAS</button>
+          <div className={s.infiniteScroll}>
 
-          <MapaDos />
+            <InfiniteScroll
+              dataLength={chunkArray.length}
+              next={fetchMoreData}
+              hasMore={true}
+              width={"100%"}
+            >
+              {ordenConcesionarios?.length && ordenConcesionarios.map((concecionario) => {
+                return (
+                  <Card email={concecionario.email} telefono={concecionario.tel1} direccion={concecionario.direccion} nombre={concecionario.nombre} handleZoomMap={handleZoomMap} lat={concecionario.latitude} lng={concecionario.longitude} />
+                )
+              })}
+            </InfiniteScroll>
+          </div>
+          <button className={s.zonasBtn} onClick={handleEmailClick}>CONSULTE POR OTRAS ZONAS</button>
+          <MapaDos concesionarios={ordenConcesionarios} setOrdenConcesionarios={setOrdenConcesionarios} mapRef={mapRefMobile} />
         </div>
       </div>
 
       <div className={s.web}>
         <div className={s.tienda}>
-          <h3>CONCESIONARIOS Y SERVICIOS</h3>
+          <h3 className={s.tiendaTitle}>CONCESIONARIOS Y SERVICIOS</h3>
           <div className={s.tiendaContainer}>
             <div className={s.concesionarioInfo}>
               {/* <div className={s.botones}>
@@ -236,20 +251,20 @@ export default function Concesionarios({ mobileMenu, setMobileMenu, setDemo, dem
                 dataLength={chunkArray.length}
                 next={fetchMoreData}
                 hasMore={true}
-                height={"50vh"}
+                // height={"50vh"}
                 className={s.infinite}
-              // style={{width:"180%"}}
+                style={{ width: "100%" }}
               >
                 {ordenConcesionarios?.length && ordenConcesionarios.map((concecionario) => {
                   return (
-                    <Card email={concecionario.email} telefono={concecionario.tel1} direccion={concecionario.direccion} nombre={concecionario.nombre} />
+                    <Card email={concecionario.email} telefono={concecionario.tel1} direccion={concecionario.direccion} nombre={concecionario.nombre} handleZoomMap={handleZoomMap} lat={concecionario.latitude} lng={concecionario.longitude} />
                   )
                 })}
               </InfiniteScroll>
               <button className={s.zonasBtn} onClick={handleEmailClick}>CONSULTE POR OTRAS ZONAS</button>
             </div>
             <div className={s.map}>
-              <MapaDos concesionarios={ordenConcesionarios} />
+              <MapaDos concesionarios={ordenConcesionarios} setOrdenConcesionarios={setOrdenConcesionarios} mapRef={mapRef} />
 
             </div>
           </div>

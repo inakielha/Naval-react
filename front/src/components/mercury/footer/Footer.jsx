@@ -21,9 +21,9 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
           {/* <p>info@navalmotor.com</p> */}
           <p>info@ecooter.com.ar</p>
           <div className={s.numero}>
-            <div className={s.wspContainer}>
+            {/* <div className={s.wspContainer}>
               <img src={pathImages + whatsapp} alt="contact" />
-            </div>
+            </div> */}
             {/* <span>+541126661777</span> */}
             <span>1164344440</span>
           </div>
@@ -36,7 +36,7 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
                 target="_blank"
                 href={pathImages ? "https://www.instagram.com/naval_motor" : "https://www.instagram.com/ecooter_ar/"}
               >
-                <BsInstagram size={"2.5em"} color={"#707070"} />
+                <BsInstagram className={s.icon} color={"#707070"} />
               </a>
             </div>
             <div>
@@ -44,7 +44,7 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
                 href="https://www.youtube.com/channel/UCT1SJPaMSOsG1_3H0tflf0A"
                 target="_blank"
               >
-                <BsYoutube size={"2.5em"} color={"#707070"} />
+                <BsYoutube className={s.icon} color={"#707070"} />
               </a>
             </div>
           </div>

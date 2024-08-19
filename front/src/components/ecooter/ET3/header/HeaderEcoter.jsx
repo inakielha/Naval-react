@@ -21,7 +21,7 @@ export default function HeaderEcooterE3({ isMobile }) {
   };
   return (
     <>
-      <div className={s.navSpace}></div>
+      <div className={ pathImages == "" ? s.navSpaceVercel : s.navSpace} ></div>
       <div className={s.section}>
         <div className={s.imgContainer}>
           {/* <img src={E5} alt="portada" /> */}

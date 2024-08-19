@@ -1,6 +1,7 @@
+import Sidebar from "../../sidebarUniversal/Sidebar";
 import s from "./Hamburguer.module.css"
 
-import Sidebar from "./sideBar/Sidebar";
+// import Sidebar from "./sideBar/Sidebar";
 import MenuMobile from "./menuMobile/MenuMobile";
 import { useSelector } from "react-redux";
 
@@ -13,6 +14,7 @@ export default function Hamburger({setMobileMenu, show}) {
             <MenuMobile setMobileMenu={setMobileMenu} show={show}/>
             : 
             <Sidebar open={show} close={setMobileMenu}/>
+            // <Sidebar open={show} close={setMobileMenu}/>
         }
         </>
     )

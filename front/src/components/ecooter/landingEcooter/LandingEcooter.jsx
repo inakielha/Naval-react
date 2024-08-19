@@ -23,7 +23,7 @@ export default function LandingEcooter({setDemo, demo, red, setRed}) {
             setRed(false)
             }}>
             {(demo || red) && <div id="close" className={s.filtro}></div>}
-            <div className={s.navSpace}></div>
+            <div className={ pathImages == "" ? s.navSpaceVercel : s.navSpace} ></div>
             <section className={s.header}>
                 <img src={pathImages + img} alt="" />
             </section>

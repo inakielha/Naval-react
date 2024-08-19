@@ -200,6 +200,7 @@ export default function Red({ red, setRed, redRoute }) {
                         {/* -----------------------------------MOBILE-------------------------------------- */}
                         <div className={s.inputContMobile}>
                             <TextField
+                                size="small"
                                 id="Correo Electronico"
                                 label="Correo electronico"
                                 type="email"
@@ -207,40 +208,43 @@ export default function Red({ red, setRed, redRoute }) {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
                             />
 
                             <TextField
+                                size="small"
                                 id="Nombre Y Apellido"
                                 label="Nombre y apellido"
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
 
                             />
 
                             <TextField
+                                size="small"
                                 id="Dirección"
                                 label="Dirección"
                                 value={direccion}
                                 onChange={(e) => setDireccion(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
 
                             />
 
                             <TextField
+                                size="small"
                                 className={s.inputWeb}
                                 id="Ciudad"
                                 label="Ciudad"
                                 value={ciudad}
                                 onChange={(e) => setCiudad(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
 
                             />
@@ -248,48 +252,52 @@ export default function Red({ red, setRed, redRoute }) {
                             {/* <BasicSelect estilo={s.inputWeb} setProvincia={setProvincia} provincia={provincia} /> */}
                             
                             <TextField
+                                size="small"
                                 id="Provincia"
                                 label="Provincia"
                                 value={provincia}
                                 onChange={(e) => setProvincia(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
 
                             />
 
 
                             <TextField
+                                size="small"
                                 id="Telefono"
                                 label="Telefono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
 
                             />
 
                             <TextField
+                                size="small"
                                 className={s.inputWeb}
                                 id="Razon social"
                                 label="Razon social"
                                 value={razon}
                                 onChange={(e) => setRazon(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
 
                             />
 
                             <TextField
+                                size="small"
                                 className={s.inputWeb}
                                 id="Empresa"
                                 label="Empresa"
                                 value={empresa}
                                 onChange={(e) => setEmpresa(e.target.value)}
                                 InputProps={{ style: { fontSize: "8px" } }}
-                                InputLabelProps={{ style: { fontSize: "10px" } }}
+                                InputLabelProps={{ style: { fontSize: "9px" } }}
                             // size="small"
 
                             />

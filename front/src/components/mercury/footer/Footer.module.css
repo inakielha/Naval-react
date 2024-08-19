@@ -7,6 +7,7 @@ footer {
   padding: 1em 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
+  user-select: text;
 }
 .filtro {
   z-index: 3;
@@ -38,27 +39,18 @@ footer {
 }
 
 footer .text {
-  color: #DF0404;
   font-family: "Segoe UI", "Open Sans";
   font-weight: bold;
   font-size: 0.632rem;
 }
-
-
-.info p:nth-child(2) {
+.info p {
   color: #000000;
   font-family: "Segoe UI", "Open Sans";
   font-weight: bold;
   font-size: 0.632rem;
-  
+  user-select: text;
 }
 
-.info p:nth-child(3) {
-  color: #000000;
-  font-family: "Segoe UI", "Open Sans";
-  font-weight: bold;
-  font-size: 0.632rem;
-}
 
 .numero {
   display: flex;
@@ -75,6 +67,8 @@ footer .text {
   font-family: "Segoe UI", "Open Sans";
   font-weight: bold;
   font-size: 0.632rem;
+  user-select: text;
+
 }
 
 .wspContainer {
@@ -93,10 +87,12 @@ footer .text {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  align-self: center;
   /* justify-content: space-between;
   align-items: start; */
 }
 .follow {
+  display: none;
   color: #6e6e6e;
   font-size: 0.632rem;
   margin: 0;
@@ -144,41 +140,62 @@ footer .text {
   display: none;
 }
 
+
+.icon {
+  font-size: 30px;
+}
 /* MOBIULe */
 @media only screen and (max-width: 640px) {
-
+  
   .footerContainer {
     flex-direction: column;
     gap: 1.5em;
   }
+
+  .redes {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   .redesContainer {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+  }
+  .redes p {
+    display: block;
+    color: #6EC1E4;
+    font-family: "Segoe UI", "Open Sans";
+    font-weight: bold;
+    font-size: 16px;
   }
 
-  .redes p {
-    display: none;
-    background-color: #DF0404;
-  }
   footer .text {
-    font-size: 1.31rem;
+    font-size: 16px;
   }
+
   .redesContainer div {
     width: 11vw;
     height: 11vw;
   }
-
-  .numero span {
-    font-size: 1.125rem;
-  }
-  .info p:nth-child(2) {
-    font-size: 1.125rem;
-  }
-
-  .info p:nth-child(3) {
-    font-size: 1.125rem;
+  .icon {
+    font-size: 40px;
   }
 
 }
 
 
+@media screen and (min-width:768px) {
+  /* @media screen and (min-width:768px) and (max-width: 1550px) { */
+  footer .text {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .numero span {
+    font-size: 16px;
+  }
+}
