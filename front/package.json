@@ -8,7 +8,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.3",
     "@react-google-maps/api": "^2.19.3",
-    "google-maps-react-markers": "^2.0.5",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -26,7 +25,8 @@
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "google-maps-react-markers": "^2.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

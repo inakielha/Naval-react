@@ -25,7 +25,7 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
               <img src={pathImages + whatsapp} alt="contact" />
             </div> */}
             {/* <span>+541126661777</span> */}
-            <span>1164344440</span>
+            <span>+54 9 11 7100-0090</span>
           </div>
         </div>
         <div className={s.redes}>

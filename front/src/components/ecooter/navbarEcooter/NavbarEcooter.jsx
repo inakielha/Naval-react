@@ -61,7 +61,7 @@ export default function Navbar({ setMobileMenu, mobileMenu, setDemo, demo, red, 
   }
 
   const openWhatsApp = () => {
-    const url = "https://api.whatsapp.com/send?phone=1164344440&";
+    const url = "https://api.whatsapp.com/send?phone=5491171000090&";
     const windowFeatures = "width=400,height=600"; // Establece las dimensiones de la ventana
 
     window.open(url, '_blank', windowFeatures);
