@@ -54,7 +54,7 @@ export default function NavMobileEcooter({ isMobile, landing, setDemo, demo, red
       } else setScroll(false)
     })
   }, [])
-
+  console.log("path",pathImages, pathImages != "")
   return (
     <div className={style.nabMobile}>
       {mobileMenu === "show" && <div onClick={() => setMobileMenu("hide")} className={style.filtro}></div>}
