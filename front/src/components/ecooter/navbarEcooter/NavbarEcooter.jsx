@@ -81,23 +81,24 @@ export default function Navbar({ setMobileMenu, mobileMenu, setDemo, demo, red, 
 
       <nav className={(scroll && mobileMenu !== "show") || demo || red ? style.navbar : style.navbarNoScroll} >
         {mobileMenu === "show" && <div onClick={() => setMobileMenu("hide")} className={style.filtro}></div>}
+        {pathImages != "" &&
+          <div className={style.container} style={(scroll && mobileMenu !== "show") || demo || red ? { display: "none" } : {}}>
+            <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>
+              <LuMenu onClick={() => setMobileMenu("show")} />
+            </IconContext.Provider>
+            {mobileMenu === "show" &&
+              // <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} />
+              <Sidebar open={mobileMenu} close={setMobileMenu} />
+            }
+            <div className={style.imgContainer} onClick={() => window.location.href = "https://www.navalmotor.com/"}>
+              <img src={pathImages + logo} alt="logo" />
+            </div>
+            <div>
 
-        <div className={style.container} style={(scroll && mobileMenu !== "show") || demo || red ? { display: "none" } : {}}>
-          <IconContext.Provider value={{ className: style.icon, size: "2.5em" }}>
-            <LuMenu onClick={() => setMobileMenu("show")} />
-          </IconContext.Provider>
-          {mobileMenu === "show" &&
-            // <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} />
-            <Sidebar open={mobileMenu} close={setMobileMenu} />
-          }
-          <div className={style.imgContainer} onClick={() => window.location.href = "https://www.navalmotor.com/"}>
-            <img src={pathImages + logo} alt="logo" />
+              <IoLogoWhatsapp color="#25D366" className={style.iconWsp} onClick={() => openWhatsApp()} />
+            </div>
           </div>
-          <div>
-
-            <IoLogoWhatsapp color="#25D366" className={style.iconWsp} onClick={() => openWhatsApp()} />
-          </div>
-        </div>
+        }
         <div className={style.navWeb}>
           <div className={style.mercuryLogo}><img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={pathImages + ecooterLogo} alt="logoMercury" /></div>
           <div className={style.secciones}>
@@ -122,7 +123,11 @@ export default function Navbar({ setMobileMenu, mobileMenu, setDemo, demo, red, 
               navigateConcesionarios(e)
               handleCategory(e)
             }} id={"concesionarios"}>CONCESIONARIOS</span>
+            {pathImages == "" ? 
+            <span style={category === "contacto" ? { color: "#6ec1e4" } : {}} onClick={(e) => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })} id={"contacto"}>Contacto</span>
+            :
             <span style={category === "contacto" ? { color: "#6ec1e4" } : {}} onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')} id={"contacto"}>Contacto</span>
+          }
           </div>
         </div>
         <div className={style.navMobile} >
@@ -137,13 +142,19 @@ export default function Navbar({ setMobileMenu, mobileMenu, setDemo, demo, red, 
                 Accesorios</div></div>
               <div className={style.fondoText}><div style={category === "concesionarios" ? { backgroundColor: "#0c4c6b", color: "#ffffff" } : {}} className={style.texto} id={"concesionarios"} onClick={(e) => navigateConcesionarios(e)}>Concesionarios y
                 Servicios</div></div>
-              <div className={style.fondoText}><div style={category === "contacto" ? { backgroundColor: "#0c4c6b", color: "#ffffff" } : {}} className={style.texto} id={"contacto"} onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}>Contacto</div></div>
+
+
+              {pathImages == "" ?
+                <div className={style.fondoText}><div style={category === "contacto" ? { backgroundColor: "#0c4c6b", color: "#ffffff" } : {}} className={style.texto} id={"contacto"} onClick={(e) => window.open("https://www.navalmotor.com/contacto", '_blank')}>Contacto</div>  </div>
+                :
+                <div className={style.fondoText}><div style={category === "contacto" ? { backgroundColor: "#0c4c6b", color: "#ffffff" } : {}} className={style.texto} id={"contacto"} onClick={(e) => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })}>Contacto</div></div>
+              }
             </Slider>
           </div>
-        </div>
-      </nav>
+        </div >
+      </nav >
       <div className={scroll || demo || red ? style.espacioScroll : style.espacio} ></div>
-    </div>
+    </div >
   );
 }
 
