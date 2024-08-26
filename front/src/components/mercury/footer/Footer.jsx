@@ -17,7 +17,7 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
       <div className={s.footerContainer}>
         <div className={s.info}>
           <p className={s.text} style={color ? { color: color } : { color: "#DF0404" }}>EXPOSICIÓN, VENTAS Y SHOWROOM</p>
-          <p>Av. del Libertador 701, Vicente López, Buenos Aires</p>
+          <p>Av del Libertador 520, Vicente López, Buenos Aires 1638</p>
           {/* <p>info@navalmotor.com</p> */}
           <p>info@ecooter.com.ar</p>
           <div className={s.numero}>
@@ -34,7 +34,8 @@ export default function Footer({ color, demo, setDemo, red, setRed }) {
             <div>
               <a
                 target="_blank"
-                href={pathImages ? "https://www.instagram.com/naval_motor" : "https://www.instagram.com/ecooter_ar/"}
+                // href={pathImages ? "https://www.instagram.com/naval_motor" : "https://www.instagram.com/ecooter_ar/"}
+                href={"https://www.instagram.com/ecooter_ar/"}
               >
                 <BsInstagram className={s.icon} color={"#707070"} />
               </a>
