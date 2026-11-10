@@ -108,9 +108,12 @@
     padding: 1em 0;
   }
 
-  .navSpace {
+  /* .navSpace {
     height: 22.5vh;
     padding: 1em 0;
+  } */
+  .navSpace {
+    height: 16vh;
   }
 
   .section {
@@ -224,4 +227,26 @@
     font-size: 20px;
   }
 
+}
+
+@media (min-width: 768px) {
+
+  .absolute {
+    width: 80%;
+  }
+
+  /* .descargarFicha span {
+    font-size: 24px;
+  }
+  .titulo p {
+    font-size: 350px;
+  }
+  
+  .titulo span {
+    font-size: 24px;
+  }
+  .ltres {
+    line-height: 190px;
+    font-size: 72px;
+  } */
 }

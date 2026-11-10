@@ -102,8 +102,7 @@
     }
 
     .navSpace {
-        height: 22.5vh;
-        padding: 1em 0;
+        height: 16vh;
     }
 
     .menu h2 {
@@ -135,4 +134,11 @@
     .menu h2 {
         font-size: 50px;
     }
+}
+
+@media (min-width: 768px) {
+    .menu {
+        width: 80%;
+    }
+
 }

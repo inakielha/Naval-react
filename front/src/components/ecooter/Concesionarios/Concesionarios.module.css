@@ -167,10 +167,10 @@ input:active {
     background-color: #000000a3;
 }
 
-.navSpace {
+/* .navSpace {
     height: 25vh;
     padding: 1em 0;
-}
+} */
 
 .navSpaceVercel {
     height: 15vh;
@@ -199,6 +199,10 @@ input:active {
         height: 40vh;
     }
 
+    .texto {
+        width: 80%;
+    }
+
     .texto h3 {
         font-size: 32px;
     }
@@ -206,7 +210,9 @@ input:active {
     .texto span {
         font-size: 24px;
     }
-
+    .tienda {
+        width: 80%;
+    }
     .tiendaTitle {
         font-size: 32px;
         padding: 0.5em 0;
@@ -215,7 +221,9 @@ input:active {
     .inputCont input::placeholder {
         font-size: 21px;
     }
-
+    .inputCont {
+        width: 80%;
+    }
     .inputCont input {
         /* padding-bottom: 1%; */
         padding: 1em 0;

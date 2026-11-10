@@ -8,22 +8,22 @@ import { useNavigate } from "react-router-dom"
 import { pathImages } from "../../../pathImages"
 
 
-export default function LandingEcooter({setDemo, demo, red, setRed}) {
+export default function LandingEcooter({ setDemo, demo, red, setRed }) {
     const navigate = useNavigate()
     const handleRedirect = (root) => {
         if (!pathImages) {
-            root = root.replace("/ecooter","")
+            root = root.replace("/ecooter", "")
         }
         window.scrollTo(0, 0); // Llevar la ventana al principio
         navigate(root); // Realizar la redirección
     };
     return (
-        <div className={s.landing} onClick={()=>{
+        <div className={s.landing} onClick={() => {
             setDemo(false)
             setRed(false)
-            }}>
+        }}>
             {(demo || red) && <div id="close" className={s.filtro}></div>}
-            <div className={ pathImages == "" ? s.navSpaceVercel : s.navSpace} ></div>
+            <div className={pathImages == "" ? s.navSpaceVercel : s.navSpace} ></div>
             <section className={s.header}>
                 <img src={pathImages + img} alt="" />
             </section>

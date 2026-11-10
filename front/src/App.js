@@ -1,7 +1,6 @@
 import { Route, Routes, } from 'react-router-dom';
 import Mercury from './components/mercury/Mercury';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/mercury/footer/Footer';
 import { useEffect, useState } from 'react';
 import NavbarWeb from './components/navbar/navbarWeb/NavbarWeb';
 import Ecooter from './components/ecooter/E5/EcooterE5';
@@ -16,6 +15,8 @@ import LandingEcooter from './components/ecooter/landingEcooter/LandingEcooter';
 import Demo from './components/ecooter/demo/Demo';
 import Red from './components/ecooter/red/Red';
 import Concesionarios from './components/ecooter/Concesionarios/Concesionarios';
+import Footer from './components/ecooter/footerUniversal/Footer';
+import NavbarGenerac from './components/ecooter/navbar generac/navbar';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
   const [red, setRed] = useState(false);
   const dispatch = useDispatch()
   const [mobileMenu, setMobileMenu] = useState("hide")
+
+  const [currentPath, setCurrentPath] = useState("/");
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768); // Establece el límite de ancho para considerarlo "mobile"
@@ -49,10 +52,22 @@ function App() {
     <Route path='/ecooter/demo' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter setMobileMenu={setMobileMenu} mobileMenu={mobileMenu} red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo demoRoute = {true} setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/ecooter/red' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter setMobileMenu={setMobileMenu} mobileMenu={mobileMenu} red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo demoRoute = {false} setDemo={setDemo} demo={demo}/> <Red redRoute={true} setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/ecooter/concesionarios' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={true}/> : <NavbarEcooter setMobileMenu={setMobileMenu} mobileMenu={mobileMenu} red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={true}/>} <Concesionarios red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo  setDemo={setDemo} demo={demo}/> <Red  setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/> */}
+    
+    <Route path='/ecooter/' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/><Footer/></>}/>
+    <Route path='/ecooter/e5' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <Ecooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer/></>}/>
+    <Route path='/ecooter/e3' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <EcooterE3 red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer/></>}/>
+    <Route path='/ecooter/e3l1' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <EcooterE3L1 red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer/></>}/>
+    <Route path='/ecooter/et3' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <EcooterET3 red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer/></>}/>
+    <Route path='/ecooter/demo' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo demoRoute = {true} setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer/></>}/>
+    <Route path='/ecooter/red' element={<> <NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo demoRoute = {false} setDemo={setDemo} demo={demo}/> <Red redRoute={true} setRed={setRed} red={red}/> <Footer/></>}/>
+    <Route path='/ecooter/concesionarios' element={<><NavbarGenerac red={red} setRed={setRed} demo={demo} setDemo={setDemo} setCurrentPath={setCurrentPath} currentPath={currentPath}/> <Concesionarios red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo  setDemo={setDemo} demo={demo}/> <Red  setRed={setRed} red={red}/> <Footer/></>}/>
+
+
+
 
     {/* ---------------- */}
     {/* VERCEL */}
-    <Route path='/' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={true} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={true} concesionarios={false}/>} <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/><Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
+    {/* <Route path='/' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={true} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={true} concesionarios={false}/>} <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/><Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/e5' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <Ecooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/e3' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <EcooterE3 red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/e3l1' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <EcooterE3L1 red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
@@ -60,7 +75,7 @@ function App() {
     <Route path='/demo' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo demoRoute = {true} setDemo={setDemo} demo={demo}/> <Red setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/red' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={false}/>} <LandingEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo demoRoute = {false} setDemo={setDemo} demo={demo}/> <Red redRoute={true} setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
     <Route path='/concesionarios' element={<>{isMobile ? <NavMobileEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={true}/> : <NavbarEcooter red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} landing={false} concesionarios={true}/>} <Concesionarios red={red} setRed={setRed} demo={demo} setDemo={setDemo} isMobile={isMobile} /> <Demo  setDemo={setDemo} demo={demo}/> <Red  setRed={setRed} red={red}/> <Footer red={red} setRed={setRed} demo={demo} setDemo={setDemo} color={"#6EC1E4"}/></>}/>
-   
+    */}
    </Routes>
    </>
   );

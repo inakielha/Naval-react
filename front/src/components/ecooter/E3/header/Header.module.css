@@ -132,9 +132,13 @@
 
 
 @media (max-width: 768px) {
-  .navSpace {
+
+  /* .navSpace {
     height: 22.5vh;
     padding: 1em 0;
+  } */
+  .navSpace {
+    height: 16vh;
   }
 
   .navSpaceVercel {
@@ -261,5 +265,14 @@
   .texto {
     font-size: 20px;
   }
+
+}
+
+@media (min-width: 768px) {
+
+  .absolute {
+    width: 80%;
+  }
+
 
 }

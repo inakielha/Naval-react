@@ -98,10 +98,7 @@ div {
         text-align: start;
         padding-left: 0.5em;
     }
-    /* .texto ul {
-        margin: 0;
-        background-color: blue;
-    } */
+   
     .texto ul {
         padding-left: 1em;
         width: 80%;
@@ -126,3 +123,14 @@ div {
         height: 35vh;
     }
 }
+
+/* @media (min-width: 768px) {
+
+.texto h5 {
+    font-size: 22px;
+}
+.texto ul li {
+    padding: 0.2em 0;
+    font-size: 18px;
+}
+} */
